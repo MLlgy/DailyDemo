@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_tinting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.androidwebviewdemo.mddemo.TintingActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:elevation="5dp"
+            android:src="@mipmap/ic_launcher" />
+        <TextView
+            android:visibility="gone"
+            android:text="no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:elevation="5dip"
+            android:src="@mipmap/ic_launcher"
+            android:tint="@android:color/holo_blue_bright" />
+        <TextView
+            android:text="mode--no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:elevation="5dp"
+            android:src="@mipmap/ic_launcher"
+            android:tint="@android:color/holo_blue_bright"
+            android:tintMode="add" />
+        <TextView
+            android:text="mode-add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:elevation="5dp"
+            android:src="@mipmap/ic_launcher"
+            android:tint="@android:color/holo_blue_bright"
+            android:tintMode="multiply" />
+        <TextView
+            android:text="mode--multiply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:src="@mipmap/ic_launcher"
+            android:layout_gravity="center"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:elevation="5dp"
+            android:tint="@android:color/holo_blue_bright"
+            android:tintMode="screen"
+            />
+        <TextView
+            android:text="screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@mipmap/ic_launcher"
+            android:tint="@android:color/holo_blue_bright"
+            android:tintMode="src_atop"
+            style="@style/base_tint" />
+        <TextView
+            android:text="src_atop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:src="@mipmap/ic_launcher"
+            style="@style/base_tint"
+            android:tint="@android:color/holo_blue_bright"
+            android:tintMode="src_in"/>
+        <TextView
+            android:text="src_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            style="@style/base_tint"
+            android:src="@mipmap/ic_launcher"
+            android:tint="@android:color/holo_blue_bright"
+            android:tintMode="src_over"/>
+        <TextView
+            android:text="srv_over"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+   
+</LinearLayout>

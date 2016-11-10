@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.androidwebviewdemo.mddemo.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_palette"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="Palette"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_z_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="Z show"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_tinting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="tinting(着色)"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_cliping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="cliping(裁切)"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_activity_animation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="Activity过渡动画"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_ripple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="Ripple(波纹)"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/circle_reveal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="circle reveal"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/change_animation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="Change Animation"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/catch_expection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="异常的捕获和程序的重启"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/tv_md_design"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="Meterial Design"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/tv_mvp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="框架MVP"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_recyclerview_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="RecyclerView+CardView"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/tv_right_left_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="页面的左右滑动"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/tv_designer_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="设计模式"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/tv_sigle_thread_download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="单线程断点续传"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/tv_muti_threads_download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_horizontal"
+            android:padding="2dp"
+            android:text="多线程断点续传"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+</ScrollView>

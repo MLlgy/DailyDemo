@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">demo</string>
+    <string name="down_show_text">文件下载</string>
+</resources>

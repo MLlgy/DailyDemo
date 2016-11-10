@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_second"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.androidwebviewdemo.mddemo.SecondActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="explode"
+        android:text="explode" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="slide"
+        android:text="slide" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="fade"
+        android:text="fade" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="share"
+        android:text="share" />
+
+    <Button
+        android:id="@+id/fab_button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/iv_guide1"
+        android:transitionName="fab"
+        android:elevation="5dp"/>
+    <View
+        android:id="@+id/share_view_second"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="?android:colorPrimary"
+        android:transitionName="share" />
+
+
+</LinearLayout>

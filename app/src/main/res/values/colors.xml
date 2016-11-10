@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#48ef3d11</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--自定义颜色-->
+    <color name="white">#fff</color>
+    <color name="red1">#ff0d00</color>
+    <color name="blue_stroke_unpress">#dd0ad7e6</color>
+    <color name="blue_stroke_press">#dd323636</color>
+</resources>
