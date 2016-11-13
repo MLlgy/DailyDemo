@@ -32,6 +32,8 @@ public class MutThreadsDownLoadService extends Service {
     public static final String ACTION_UPDATA = "ACTION_UPDATA";
     public static final String ACTION_FINISH = "ACTION_FINISH";
 
+    private InitThread mInitThread;
+
     private static final int MSG_IINIT = 1;
     //下载任务集合----因为为多线程（用集合对下载任务进行管理）
     private Map<Integer, DownloadTask> mTasks = new LinkedHashMap<>();
@@ -43,10 +45,15 @@ public class MutThreadsDownLoadService extends Service {
             FileInfo fileInfo = (FileInfo) intent.getSerializableExtra("fileInfo");
             Log.e(TAG, "onStartCommand: start:" + fileInfo.toString());
 
-            /**启动初始化线程----得到下载文件的大小，用以在本地创建相同大小的文件
-             * fileInfo 要下载的文件信息对象
+//            /**启动初始化线程----得到下载文件的大小，用以在本地创建相同大小的文件
+//             * fileInfo 要下载的文件信息对象
+//             */
+//            new InitThread(fileInfo).start();
+            /**
+             * 使用线程池
              */
-            new InitThread(fileInfo).start();
+            mInitThread = new InitThread(fileInfo);
+            DownloadTask.sExecutorService.execute(mInitThread);
         } else if (intent.getAction().equals(ACTION_STOP)) {
             FileInfo fileInfo = (FileInfo) intent.getSerializableExtra("fileInfo");
             //从集合中取出下载任务
