@@ -57,7 +57,6 @@ public class DownloadTask {
             for (int i = 0; i < threadCount; i++) {
                 //创建每个线程信息对象，设置每个线程的下载开始、结束位置
                 ThreadInfo threadInfo = new ThreadInfo(i, mFileInfo.getUrl(), length * i, (i + 1) * length - 1, 0);
-
                 //最后线程的结束位置
                 if (i == threadCount - 1) {
                     threadInfo.setEnd(mFileInfo.getLength());
@@ -92,26 +91,27 @@ public class DownloadTask {
             //下载完毕，删除当前线程信息
             mDao.deleteThread(mFileInfo.getUrl());
             //发送广播通知ui下载任务结束
-            Intent intent = new Intent(MutThreadsDownLoadService.ACTION_FINISHED);
+            Intent intent = new Intent(MutThreadsDownLoadService.ACTION_FINISH);
             intent.putExtra("fileInfo", mFileInfo);//携带正在下载的文件
             mContext.sendBroadcast(intent);
         }
     }
 
     /**
-     * 下载文件的线程
+     * 开启新线程，下载文件
      */
     class DownloadThread extends Thread {
+
         public boolean isFinished = false;//标示线程是否执行完毕
         private ThreadInfo mThreadInfo = null;
-
         public DownloadThread(ThreadInfo mThreadInfo) {
             this.mThreadInfo = mThreadInfo;
         }
 
+        /**
+         * run()方法是一个无限循环，直到任务执行完毕
+         */
         public void run() {
-
-
             HttpURLConnection conn = null;
             RandomAccessFile raf = null;
             InputStream input = null;
@@ -149,12 +149,15 @@ public class DownloadTask {
                         if (System.currentTimeMillis() - time > 1000) {
                             time = System.currentTimeMillis();
                             long go = mFinished * 100;
-                            Log.e(TAG, "run: " + go);
+                            Log.e(TAG, "run: " + go+",start:"+mThreadInfo.getStart()+",end:"+mThreadInfo.getEnd()+",threadId："+Thread.currentThread().getId());
                             intent.putExtra("finished", (int) (go / mFileInfo.getLength()));
                             intent.putExtra("id", mFileInfo.getId());
                             mContext.sendBroadcast(intent);
                         }
-                        //下载暂停时，保存当前线程的下载进度到数据库
+                        /**
+                         *由于run()方法会一直运行，直到任务结束，所以此处会将所有的下载线程停止
+                         *下载暂停时，保存当前线程的下载进度到数据库
+                         */
                         if (isPause) {
                             mDao.updataThread(mThreadInfo.getUrl(), mThreadInfo.getId(), mThreadInfo.getFinished());
                             return;//结束该方法，停止下载

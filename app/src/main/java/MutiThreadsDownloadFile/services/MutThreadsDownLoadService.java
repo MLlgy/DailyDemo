@@ -30,7 +30,7 @@ public class MutThreadsDownLoadService extends Service {
     public static final String ACTION_START = "ACTION_START";
     public static final String ACTION_STOP = "ACTION_STOP";
     public static final String ACTION_UPDATA = "ACTION_UPDATA";
-    public static final String ACTION_FINISHED = "ACTION_FINISHED";
+    public static final String ACTION_FINISH = "ACTION_FINISH";
 
     private static final int MSG_IINIT = 1;
     //下载任务集合----因为为多线程（用集合对下载任务进行管理）
@@ -39,10 +39,11 @@ public class MutThreadsDownLoadService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         if (intent.getAction().equals(ACTION_START)) {
+            //得到要下载的文件对象
             FileInfo fileInfo = (FileInfo) intent.getSerializableExtra("fileInfo");
             Log.e(TAG, "onStartCommand: start:" + fileInfo.toString());
-            // 启动初始化线程----得到下载文件的大小，用以在本地创建相同大小的文件
-            /**
+
+            /**启动初始化线程----得到下载文件的大小，用以在本地创建相同大小的文件
              * fileInfo 要下载的文件信息对象
              */
             new InitThread(fileInfo).start();
@@ -50,7 +51,7 @@ public class MutThreadsDownLoadService extends Service {
             FileInfo fileInfo = (FileInfo) intent.getSerializableExtra("fileInfo");
             //从集合中取出下载任务
             DownloadTask task = mTasks.get(fileInfo.getId());
-            if(task !=null){
+            if (task != null) {
                 //停止下载任务
                 task.isPause = true;
             }
@@ -71,7 +72,7 @@ public class MutThreadsDownLoadService extends Service {
                     FileInfo fileInfo = (FileInfo) msg.obj;
 //                    Log.e(TAG, "handleMessage: fileInfo:" + fileInfo.toString());
                     //启动下载任务  - 定义使用3个下载线程
-                    DownloadTask mTask = new DownloadTask(fileInfo,MutThreadsDownLoadService.this,3);
+                    DownloadTask mTask = new DownloadTask(fileInfo, MutThreadsDownLoadService.this, 3);
                     mTask.download();
                     //启动下载任务，并把下载任务添加到集合中
                     mTasks.put(fileInfo.getId(), mTask);

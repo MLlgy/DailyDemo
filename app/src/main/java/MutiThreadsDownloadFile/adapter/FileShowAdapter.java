@@ -63,8 +63,7 @@ public class FileShowAdapter extends BaseAdapter {
             holder.mStop = (TextView) convertView.findViewById(R.id.tv_muti_down_stop);
             holder.pb = (ProgressBar) convertView.findViewById(R.id.muti_pb_show);
             /**
-             只需创建一次的变量，放到这里面来
-             *
+             * 只需创建一次的变量，放到这里面来
              */
             holder.fileName.setText(info.getFileName());
             holder.pb.setMax(100);
