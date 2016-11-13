@@ -53,6 +53,7 @@ public class FileShowAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        final FileInfo info = fileInfoList.get(position);
         ViewHolder holder = null;
         if (convertView == null) {
             convertView = LayoutInflater.from(mContext).inflate(R.layout.muti_threads_download_item_list, null);
@@ -61,34 +62,49 @@ public class FileShowAdapter extends BaseAdapter {
             holder.mStart = (TextView) convertView.findViewById(R.id.tv_muti_down_start);
             holder.mStop = (TextView) convertView.findViewById(R.id.tv_muti_down_stop);
             holder.pb = (ProgressBar) convertView.findViewById(R.id.muti_pb_show);
+            /**
+             只需创建一次的变量，放到这里面来
+             *
+             */
+            holder.fileName.setText(info.getFileName());
+            holder.pb.setMax(100);
+            holder.mStart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mContext, MutThreadsDownLoadService.class);
+                    intent.setAction(MutThreadsDownLoadService.ACTION_START);
+                    intent.putExtra("fileInfo", info);
+                    mContext.startService(intent);
+                }
+            });
+            holder.mStop.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mContext, MutThreadsDownLoadService.class);
+                    intent.setAction(MutThreadsDownLoadService.ACTION_STOP);
+                    intent.putExtra("fileInfo", info);
+                    mContext.startService(intent);
+                }
+            });
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
-        final FileInfo info = fileInfoList.get(position);
-        holder.fileName.setText(info.getFileName());
-        holder.mStart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(mContext, MutThreadsDownLoadService.class);
-                intent.setAction(MutThreadsDownLoadService.ACTION_START);
-                intent.putExtra("fileInfo", info);
-                mContext.startService(intent);
-            }
-        });
-        holder.mStop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(mContext, MutThreadsDownLoadService.class);
-                intent.setAction(MutThreadsDownLoadService.ACTION_STOP);
-                intent.putExtra("fileInfo", info);
-                mContext.startService(intent);
-            }
-        });
+        holder.pb.setProgress((int) info.getFinished());
+
         return convertView;
     }
 
-     static class ViewHolder {
+    /**
+     * 更新列表项的进度条
+     */
+    public void updataProgress(int id, int progress) {
+        FileInfo fileInfo = fileInfoList.get(id);
+        fileInfo.setFinished(progress);
+        notifyDataSetChanged();//getView()会重新调用
+    }
+
+    static class ViewHolder {
         TextView fileName;
         TextView mStart;
         TextView mStop;

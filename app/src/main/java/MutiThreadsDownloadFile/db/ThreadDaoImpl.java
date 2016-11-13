@@ -12,6 +12,8 @@ import MutiThreadsDownloadFile.entities.ThreadInfo;
 /**
  * 数据访问接口实现
  * 数据库中存储的为线程信息对象
+ *
+ * 多线程需要保证线程安全
  */
 
 public class ThreadDaoImpl implements ThreadDao {
@@ -19,7 +21,7 @@ public class ThreadDaoImpl implements ThreadDao {
     private DBhelper mHelper;
 
     public ThreadDaoImpl(Context context) {
-        mHelper = new DBhelper(context);
+        mHelper = DBhelper.INSTANCE(context);
     }
 
     @Override
@@ -29,16 +31,16 @@ public class ThreadDaoImpl implements ThreadDao {
                 new Object[]{threadInfo.getId(), threadInfo.getUrl(), threadInfo.getStart(), threadInfo.getEnd(), threadInfo.getFinished()});
         db.close();
     }
-
+    //加入线程安全锁
     @Override
-    public void deleteThread(String url, int thread_id) {
+    public synchronized void  deleteThread(String url) {
         SQLiteDatabase db = mHelper.getWritableDatabase();
-        db.execSQL("delete from threads_info where url = ? and thread_id = ? ", new Object[]{url, thread_id});
+        db.execSQL("delete from threads_info where url = ? ", new Object[]{url});
         db.close();
     }
 
     @Override
-    public void updataThread(String url, int thread_id, long finished) {
+    public synchronized void updataThread(String url, int thread_id, long finished) {
         SQLiteDatabase db = mHelper.getWritableDatabase();
         db.execSQL("update threads_info set finished = ? , url = ? where thread_id = ?",
                 new Object[]{finished, url, thread_id});
@@ -47,7 +49,7 @@ public class ThreadDaoImpl implements ThreadDao {
 
     @Override
     public List<ThreadInfo> getThread(String url) {
-        SQLiteDatabase db = mHelper.getWritableDatabase();
+        SQLiteDatabase db = mHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery("select * from threads_info where url = ?", new String[]{url});
         List<ThreadInfo> list = new ArrayList<ThreadInfo>();
         while (cursor.moveToNext()) {

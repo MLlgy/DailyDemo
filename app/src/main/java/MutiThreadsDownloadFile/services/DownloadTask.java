@@ -22,6 +22,8 @@ import MutiThreadsDownloadFile.entities.FileInfo;
  * 下载任务类
  * Created by Monkey
  * on 2016/11/3.
+ *
+ * 尽量避免在数据库中访问数据库
  */
 
 public class DownloadTask {
@@ -57,32 +59,38 @@ public class DownloadTask {
                 ThreadInfo threadInfo = new ThreadInfo(i, mFileInfo.getUrl(), length * i, (i + 1) * length - 1, 0);
 
                 //最后线程的结束位置
-                if(i == threadCount - 1){
+                if (i == threadCount - 1) {
                     threadInfo.setEnd(mFileInfo.getLength());
                 }
                 //添加到线程信息集合中
                 threads.add(threadInfo);
+                //向数据库插入线程信息
+                mDao.insertThread(threadInfo);
             }
         }
         mThreadList = new ArrayList<>();
         //启动多个线程进行下载
-        for(ThreadInfo info : threads){
+        for (ThreadInfo info : threads) {
             DownloadThread thread = new DownloadThread(info);
-                thread.start();
+            thread.start();
             mThreadList.add(thread);
         }
     }
-    //判断所有线程是否执行完毕
-    private synchronized void checkAllThreadFinished(){
+
+    //判断所有线程是否执行完毕---使用同步线程，保证只有一个线程运行此方法
+    private synchronized void checkAllThreadFinished() {
         boolean allFinished = true;
         //遍历集合，判断线程是否执行完毕
-        for(DownloadThread thread : mThreadList){
-            if(!thread.isFinished){
+        for (DownloadThread thread : mThreadList) {
+            //当前线程没有执行完毕，则结束此方法
+            if (!thread.isFinished) {
                 allFinished = false;
                 break;
             }
         }
-        if(allFinished){
+        if (allFinished) {
+            //下载完毕，删除当前线程信息
+            mDao.deleteThread(mFileInfo.getUrl());
             //发送广播通知ui下载任务结束
             Intent intent = new Intent(MutThreadsDownLoadService.ACTION_FINISHED);
             intent.putExtra("fileInfo", mFileInfo);//携带正在下载的文件
@@ -94,7 +102,7 @@ public class DownloadTask {
      * 下载文件的线程
      */
     class DownloadThread extends Thread {
-        public boolean isFinished = false;//标示线程是否结束
+        public boolean isFinished = false;//标示线程是否执行完毕
         private ThreadInfo mThreadInfo = null;
 
         public DownloadThread(ThreadInfo mThreadInfo) {
@@ -103,10 +111,7 @@ public class DownloadTask {
 
         public void run() {
 
-            if (!mDao.isExists(mThreadInfo.getUrl(), mThreadInfo.getId())) {//线程是否存在于数据库中
-                //向数据库插入线程信息
-                mDao.insertThread(mThreadInfo);
-            }
+
             HttpURLConnection conn = null;
             RandomAccessFile raf = null;
             InputStream input = null;
@@ -141,23 +146,23 @@ public class DownloadTask {
                         mFinished += len;//整个文件的下载进度
                         //累加每个线程的下载进度
                         mThreadInfo.setFinished(mThreadInfo.getFinished() + len);
-                        if (System.currentTimeMillis() - time > 500) {
+                        if (System.currentTimeMillis() - time > 1000) {
                             time = System.currentTimeMillis();
                             long go = mFinished * 100;
                             Log.e(TAG, "run: " + go);
                             intent.putExtra("finished", (int) (go / mFileInfo.getLength()));
+                            intent.putExtra("id", mFileInfo.getId());
                             mContext.sendBroadcast(intent);
                         }
-                        //下载暂停时，保存下载进度到数据库
+                        //下载暂停时，保存当前线程的下载进度到数据库
                         if (isPause) {
                             mDao.updataThread(mThreadInfo.getUrl(), mThreadInfo.getId(), mThreadInfo.getFinished());
                             return;//结束该方法，停止下载
                         }
                     }
-                    //标示线程执行完毕
+                    //标示当前线程执行完毕
                     isFinished = true;
-                    //下载完毕，删除线程信息
-                    mDao.deleteThread(mThreadInfo.getUrl(), mThreadInfo.getId());
+
                     //检查下载任务是否完成
                     checkAllThreadFinished();
                 }

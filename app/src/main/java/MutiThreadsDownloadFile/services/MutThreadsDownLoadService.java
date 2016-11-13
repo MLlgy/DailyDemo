@@ -33,7 +33,7 @@ public class MutThreadsDownLoadService extends Service {
     public static final String ACTION_FINISHED = "ACTION_FINISHED";
 
     private static final int MSG_IINIT = 1;
-    //下载任务集合
+    //下载任务集合----因为为多线程（用集合对下载任务进行管理）
     private Map<Integer, DownloadTask> mTasks = new LinkedHashMap<>();
 
     @Override
@@ -69,11 +69,11 @@ public class MutThreadsDownLoadService extends Service {
             switch (msg.what) {
                 case MSG_IINIT:
                     FileInfo fileInfo = (FileInfo) msg.obj;
-                    Log.e(TAG, "handleMessage: fileInfo:" + fileInfo.toString());
-                    //启动下载任务
+//                    Log.e(TAG, "handleMessage: fileInfo:" + fileInfo.toString());
+                    //启动下载任务  - 定义使用3个下载线程
                     DownloadTask mTask = new DownloadTask(fileInfo,MutThreadsDownLoadService.this,3);
                     mTask.download();
-                    //把下载任务添加到集合中
+                    //启动下载任务，并把下载任务添加到集合中
                     mTasks.put(fileInfo.getId(), mTask);
                     break;
             }
