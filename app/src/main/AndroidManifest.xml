@@ -38,7 +38,7 @@
         <activity android:name="designer.DesignerModeActivity" />
         <activity android:name="SigleThreadDownloadFile.DownloaderFileActivity" />
         <activity android:name="MutiThreadsDownloadFile.MutiThreadsDownloadFileActivity" />
-
+        <activity android:name="PermissionRequest_6.PerssionRequestTestActivity"/>
         <!-- 服务 -->
         <service android:name="SigleThreadDownloadFile.services.DownLoadService" />
         <service android:name="MutiThreadsDownloadFile.services.MutThreadsDownLoadService" />

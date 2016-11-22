@@ -198,6 +198,17 @@
             android:padding="10dp"
             android:text="多线程断点续传"
             android:textSize="20sp" />
+        <TextView
+            android:id="@+id/tv_permission_request"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:background="@drawable/bac_btn"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="权限管理"
+            android:textSize="20sp" />
     </LinearLayout>
 
 

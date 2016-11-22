@@ -19,6 +19,7 @@ import com.androidwebviewdemo.mddemo.ZActivity;
 import ExceptionCatch.ExceptionCatchActivity;
 import MVP.view.UserActivity;
 import MutiThreadsDownloadFile.MutiThreadsDownloadFileActivity;
+import PermissionRequest_6.PerssionRequestTestActivity;
 import meterial_design.DrawerLayoutActivity;
 import TouchRightLef.TouchRightLeftActivity;
 import designer.DesignerModeActivity;
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tv_sigle_thread_download).setOnClickListener(this);
         findViewById(R.id.tv_mvp).setOnClickListener(this);
         findViewById(R.id.tv_muti_threads_download).setOnClickListener(this);
+        findViewById(R.id.tv_permission_request).setOnClickListener(this);
 
     }
 
@@ -101,6 +103,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tv_muti_threads_download:
                 startActivity(new Intent(this, MutiThreadsDownloadFileActivity.class));
+                break;
+            case R.id.tv_permission_request:
+                startActivity(new Intent(this, PerssionRequestTestActivity.class));
                 break;
 
         }
