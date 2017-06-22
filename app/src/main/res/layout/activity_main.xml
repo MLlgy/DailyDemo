@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.androidwebviewdemo.mddemo.MainActivity">
+    tools:context="com.MainActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -208,6 +208,17 @@
             android:gravity="center_horizontal"
             android:padding="10dp"
             android:text="权限管理"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/tv_nmrunner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:background="@drawable/bac_btn"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="计步器效果"
             android:textSize="20sp" />
     </LinearLayout>
 

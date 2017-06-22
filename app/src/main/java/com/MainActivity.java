@@ -1,4 +1,4 @@
-package com.androidwebviewdemo.mddemo;
+package com;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -9,8 +9,17 @@ import android.view.View;
 //import ExceptionCatch.ExceptionCatchActivity;
 import com.MVP.view.UserActivity;
 import com.MutiThreadsDownloadFile.MutiThreadsDownloadFileActivity;
+import com.NumberRunner.NumberRunnerMainActivity;
 import com.PermissionRequest_6.PerssionRequestTestActivity;
 import com.R;
+import com.androidwebviewdemo.mddemo.Change_Animation_Activity;
+import com.androidwebviewdemo.mddemo.Circle_Reveal_Activity;
+import com.androidwebviewdemo.mddemo.ClipingActivity;
+import com.androidwebviewdemo.mddemo.PaletteActivity;
+import com.androidwebviewdemo.mddemo.RippleAcitvity;
+import com.androidwebviewdemo.mddemo.SecondActivity;
+import com.androidwebviewdemo.mddemo.TintingActivity;
+import com.androidwebviewdemo.mddemo.ZActivity;
 import com.meterial_design.DrawerLayoutActivity;
 import com.TouchRightLef.TouchRightLeftActivity;
 import com.designer.DesignerModeActivity;
@@ -41,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tv_mvp).setOnClickListener(this);
         findViewById(R.id.tv_muti_threads_download).setOnClickListener(this);
         findViewById(R.id.tv_permission_request).setOnClickListener(this);
+        findViewById(R.id.tv_nmrunner).setOnClickListener(this);
 
     }
 
@@ -97,6 +107,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tv_permission_request:
                 startActivity(new Intent(this, PerssionRequestTestActivity.class));
+                break;
+            case R.id.tv_nmrunner:
+                startActivity(new Intent(this, NumberRunnerMainActivity.class));
                 break;
 
         }
