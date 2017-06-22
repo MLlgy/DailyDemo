@@ -6,25 +6,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.androidwebviewdemo.mddemo.Change_Animation_Activity;
-import com.androidwebviewdemo.mddemo.Circle_Reveal_Activity;
-import com.androidwebviewdemo.mddemo.ClipingActivity;
-import com.androidwebviewdemo.mddemo.PaletteActivity;
-import com.androidwebviewdemo.mddemo.R;
-import com.androidwebviewdemo.mddemo.RippleAcitvity;
-import com.androidwebviewdemo.mddemo.SecondActivity;
-import com.androidwebviewdemo.mddemo.TintingActivity;
-import com.androidwebviewdemo.mddemo.ZActivity;
-
-import ExceptionCatch.ExceptionCatchActivity;
-import MVP.view.UserActivity;
-import MutiThreadsDownloadFile.MutiThreadsDownloadFileActivity;
-import PermissionRequest_6.PerssionRequestTestActivity;
-import meterial_design.DrawerLayoutActivity;
-import TouchRightLef.TouchRightLeftActivity;
-import designer.DesignerModeActivity;
-import myrecyclerview.RecyclerView_CardViewActivity;
-import SigleThreadDownloadFile.DownloaderFileActivity;
+//import ExceptionCatch.ExceptionCatchActivity;
+import com.MVP.view.UserActivity;
+import com.MutiThreadsDownloadFile.MutiThreadsDownloadFileActivity;
+import com.PermissionRequest_6.PerssionRequestTestActivity;
+import com.R;
+import com.meterial_design.DrawerLayoutActivity;
+import com.TouchRightLef.TouchRightLeftActivity;
+import com.designer.DesignerModeActivity;
+import com.myrecyclerview.RecyclerView_CardViewActivity;
+import com.SigleThreadDownloadFile.DownloaderFileActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     @NonNull
@@ -84,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this,Change_Animation_Activity.class));
                 break;
             case R.id.catch_expection:
-                startActivity(new Intent(this, ExceptionCatchActivity.class));
+//                startActivity(new Intent(this, ExceptionCatchActivity.class));
                 break;
             case R.id.tv_md_design:
                 startActivity(new Intent(this, DrawerLayoutActivity.class));

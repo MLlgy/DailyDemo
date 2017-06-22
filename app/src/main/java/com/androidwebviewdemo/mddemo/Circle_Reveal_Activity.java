@@ -9,6 +9,8 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
 
+import com.R;
+
 public class Circle_Reveal_Activity extends AppCompatActivity {
 
     @Override

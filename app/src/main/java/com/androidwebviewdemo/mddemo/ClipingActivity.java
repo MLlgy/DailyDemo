@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewOutlineProvider;
 import android.widget.TextView;
 
+import com.R;
+
 public class ClipingActivity extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)

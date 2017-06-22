@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="myrecyclerview.RecyclerView_CardViewActivity">
+    tools:context="com.myrecyclerview.RecyclerView_CardViewActivity">
     <LinearLayout
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"

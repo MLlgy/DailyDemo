@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.util.Pair;
 import android.view.View;
 
+import com.R;
+
 public class SecondActivity extends AppCompatActivity {
     private Intent intent;
     @Override

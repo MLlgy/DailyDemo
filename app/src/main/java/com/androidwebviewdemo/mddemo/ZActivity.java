@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.R;
+
 public class ZActivity extends AppCompatActivity {
     private TextView textView;
 

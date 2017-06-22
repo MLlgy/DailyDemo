@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.support.v7.graphics.Palette;
 import android.view.Window;
 
+import com.R;
+
 public class PaletteActivity extends AppCompatActivity {
 
     @Override

@@ -8,6 +8,8 @@ import android.transition.Fade;
 import android.transition.Slide;
 import android.view.Window;
 
+import com.R;
+
 /**
  * Created by Monkey
  * on 2016/10/16.
