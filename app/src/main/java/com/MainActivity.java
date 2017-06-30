@@ -23,6 +23,7 @@ import com.androidwebviewdemo.mddemo.ZActivity;
 import com.meterial_design.DrawerLayoutActivity;
 import com.TouchRightLef.TouchRightLeftActivity;
 import com.designer.DesignerModeActivity;
+import com.myrecyclerview.NotificationActivity;
 import com.myrecyclerview.RecyclerView_CardViewActivity;
 import com.SigleThreadDownloadFile.DownloaderFileActivity;
 
@@ -51,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tv_muti_threads_download).setOnClickListener(this);
         findViewById(R.id.tv_permission_request).setOnClickListener(this);
         findViewById(R.id.tv_nmrunner).setOnClickListener(this);
+        findViewById(R.id.tv_notification).setOnClickListener(this);
 
     }
 
@@ -110,6 +112,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tv_nmrunner:
                 startActivity(new Intent(this, NumberRunnerMainActivity.class));
+                break;
+            case R.id.tv_notification:
+                startActivity(new Intent(this,NotificationActivity.class));
                 break;
 
         }

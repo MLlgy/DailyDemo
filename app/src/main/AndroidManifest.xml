@@ -37,13 +37,14 @@
         <activity android:name=".SigleThreadDownloadFile.DownloaderFileActivity" />
         <activity android:name=".MutiThreadsDownloadFile.MutiThreadsDownloadFileActivity" />
         <activity android:name=".PermissionRequest_6.PerssionRequestTestActivity" />
-        <activity android:name=".NumberRunner.NumberRunnerMainActivity"/>
+        <activity android:name=".NumberRunner.NumberRunnerMainActivity" />
         <!-- 服务 -->
         <service android:name=".SigleThreadDownloadFile.services.DownLoadService" />
         <service android:name=".MutiThreadsDownloadFile.services.MutThreadsDownLoadService" />
 
         <activity android:name=".designer.WatchMode.WatchModeActivity" />
-        <activity android:name=".ExceptionCatch.ExceptionCatchActivity"></activity>
+        <activity android:name=".ExceptionCatch.ExceptionCatchActivity" />
+        <activity android:name=".myrecyclerview.NotificationActivity"></activity>
     </application>
 
 </manifest>
