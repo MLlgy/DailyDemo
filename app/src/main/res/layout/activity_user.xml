@@ -11,7 +11,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    tools:context="com.MVP.view.UserActivity">
+    tools:context="com.mvp.view.UserActivity">
     <TextView
         android:id="@+id/tv_id_tip"
         android:layout_width="wrap_content"

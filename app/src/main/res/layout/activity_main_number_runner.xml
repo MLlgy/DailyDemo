@@ -6,5 +6,5 @@
     android:paddingTop="15dp"
     android:paddingLeft="15dp"
     android:background="@android:color/white"
-    tools:context="com.NumberRunner.NumberRunnerMainActivity"
+    tools:context="com.numberRunner.NumberRunnerMainActivity"
     tools:ignore="MergeRootFrame" />

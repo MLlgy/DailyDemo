@@ -4,7 +4,9 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.CAMERA" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -28,23 +30,37 @@
         <activity android:name=".androidwebviewdemo.mddemo.RippleAcitvity" />
         <activity android:name=".androidwebviewdemo.mddemo.Circle_Reveal_Activity" />
         <activity android:name=".androidwebviewdemo.mddemo.Change_Animation_Activity" />
-        <activity android:name=".MVP.view.UserActivity" />
+        <activity android:name=".mvp.view.UserActivity" />
         <activity
             android:name=".meterial_design.DrawerLayoutActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".TouchRightLef.TouchRightLeftActivity" />
+        <activity android:name=".touchRightLef.TouchRightLeftActivity" />
         <activity android:name=".designer.DesignerModeActivity" />
-        <activity android:name=".SigleThreadDownloadFile.DownloaderFileActivity" />
-        <activity android:name=".MutiThreadsDownloadFile.MutiThreadsDownloadFileActivity" />
-        <activity android:name=".PermissionRequest_6.PerssionRequestTestActivity" />
-        <activity android:name=".NumberRunner.NumberRunnerMainActivity" />
+        <activity android:name=".sigleThreadDownloadFile.DownloaderFileActivity" />
+        <activity android:name=".mutiThreadsDownloadFile.MutiThreadsDownloadFileActivity" />
+        <activity android:name=".permissionRequest_6.PerssionRequestTestActivity" />
+        <activity android:name=".numberRunner.NumberRunnerMainActivity" />
         <!-- 服务 -->
-        <service android:name=".SigleThreadDownloadFile.services.DownLoadService" />
-        <service android:name=".MutiThreadsDownloadFile.services.MutThreadsDownLoadService" />
+        <service android:name=".sigleThreadDownloadFile.services.DownLoadService" />
+        <service android:name=".mutiThreadsDownloadFile.services.MutThreadsDownLoadService" />
 
-        <activity android:name=".designer.WatchMode.WatchModeActivity" />
-        <activity android:name=".ExceptionCatch.ExceptionCatchActivity" />
-        <activity android:name=".myrecyclerview.NotificationActivity"></activity>
+        <activity android:name=".designer.watchMode.WatchModeActivity" />
+        <activity android:name=".exceptionCatch.ExceptionCatchActivity" />
+        <activity android:name=".myrecyclerview.NotificationActivity"/>
+        <activity android:name=".takePhotoWithPerssion.TakePhotoWithPerssionActivity"/>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.mk.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>

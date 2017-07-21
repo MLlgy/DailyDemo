@@ -7,11 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 
 //import ExceptionCatch.ExceptionCatchActivity;
-import com.MVP.view.UserActivity;
-import com.MutiThreadsDownloadFile.MutiThreadsDownloadFileActivity;
-import com.NumberRunner.NumberRunnerMainActivity;
-import com.PermissionRequest_6.PerssionRequestTestActivity;
-import com.R;
+import com.mvp.view.UserActivity;
+import com.mutiThreadsDownloadFile.MutiThreadsDownloadFileActivity;
+import com.numberRunner.NumberRunnerMainActivity;
+import com.permissionRequest_6.PerssionRequestTestActivity;
+import com.takePhotoWithPerssion.TakePhotoWithPerssionActivity;
 import com.androidwebviewdemo.mddemo.Change_Animation_Activity;
 import com.androidwebviewdemo.mddemo.Circle_Reveal_Activity;
 import com.androidwebviewdemo.mddemo.ClipingActivity;
@@ -21,11 +21,11 @@ import com.androidwebviewdemo.mddemo.SecondActivity;
 import com.androidwebviewdemo.mddemo.TintingActivity;
 import com.androidwebviewdemo.mddemo.ZActivity;
 import com.meterial_design.DrawerLayoutActivity;
-import com.TouchRightLef.TouchRightLeftActivity;
+import com.touchRightLef.TouchRightLeftActivity;
 import com.designer.DesignerModeActivity;
 import com.myrecyclerview.NotificationActivity;
 import com.myrecyclerview.RecyclerView_CardViewActivity;
-import com.SigleThreadDownloadFile.DownloaderFileActivity;
+import com.sigleThreadDownloadFile.DownloaderFileActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     @NonNull
@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tv_permission_request).setOnClickListener(this);
         findViewById(R.id.tv_nmrunner).setOnClickListener(this);
         findViewById(R.id.tv_notification).setOnClickListener(this);
+        findViewById(R.id.tv_take_photo_with_perssion).setOnClickListener(this);
 
     }
 
@@ -116,7 +117,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.tv_notification:
                 startActivity(new Intent(this,NotificationActivity.class));
                 break;
-
+            case R.id.tv_take_photo_with_perssion:
+                startActivity(new Intent(this,TakePhotoWithPerssionActivity.class));
+                break;
         }
     }
 }
