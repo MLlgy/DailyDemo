@@ -1,17 +1,12 @@
 package com;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 
-//import ExceptionCatch.ExceptionCatchActivity;
-import com.mvp.view.UserActivity;
-import com.mutiThreadsDownloadFile.MutiThreadsDownloadFileActivity;
-import com.numberRunner.NumberRunnerMainActivity;
-import com.permissionRequest_6.PerssionRequestTestActivity;
-import com.takePhotoWithPerssion.TakePhotoWithPerssionActivity;
+import com.BRAVHAdapter.BRAVHAdapterActivity;
 import com.androidwebviewdemo.mddemo.Change_Animation_Activity;
 import com.androidwebviewdemo.mddemo.Circle_Reveal_Activity;
 import com.androidwebviewdemo.mddemo.ClipingActivity;
@@ -20,12 +15,19 @@ import com.androidwebviewdemo.mddemo.RippleAcitvity;
 import com.androidwebviewdemo.mddemo.SecondActivity;
 import com.androidwebviewdemo.mddemo.TintingActivity;
 import com.androidwebviewdemo.mddemo.ZActivity;
-import com.meterial_design.DrawerLayoutActivity;
-import com.touchRightLef.TouchRightLeftActivity;
 import com.designer.DesignerModeActivity;
+import com.meterial_design.DrawerLayoutActivity;
+import com.mutiThreadsDownloadFile.MutiThreadsDownloadFileActivity;
+import com.mvp.view.UserActivity;
 import com.myrecyclerview.NotificationActivity;
 import com.myrecyclerview.RecyclerView_CardViewActivity;
+import com.numberRunner.NumberRunnerMainActivity;
+import com.permissionRequest_6.PerssionRequestTestActivity;
 import com.sigleThreadDownloadFile.DownloaderFileActivity;
+import com.takePhotoWithPerssion.TakePhotoWithPerssionActivity;
+import com.touchRightLef.TouchRightLeftActivity;
+
+//import ExceptionCatch.ExceptionCatchActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     @NonNull
@@ -54,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tv_nmrunner).setOnClickListener(this);
         findViewById(R.id.tv_notification).setOnClickListener(this);
         findViewById(R.id.tv_take_photo_with_perssion).setOnClickListener(this);
-
+        findViewById(R.id.tv_recycler_user_adapter).setOnClickListener(this);
     }
 
     @Override
@@ -119,6 +121,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tv_take_photo_with_perssion:
                 startActivity(new Intent(this,TakePhotoWithPerssionActivity.class));
+                break;
+            case R.id.tv_recycler_user_adapter:
+                startActivity(new Intent(this,BRAVHAdapterActivity.class));
                 break;
         }
     }

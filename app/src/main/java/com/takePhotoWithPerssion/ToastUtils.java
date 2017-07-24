@@ -84,12 +84,11 @@ public class ToastUtils
 
 	/**
 	 * 自定义显示Toast时间
-	 * 
-	 * @param context
+	 *  @param context
 	 * @param message
 	 * @param duration
 	 */
-	public static void show(Context context, int message, int duration)
+	public static void show(Context context, String message, int duration)
 	{
 		if (isShow)
 			Toast.makeText(context, message, duration).show();

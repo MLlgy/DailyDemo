@@ -252,6 +252,17 @@
             android:text="android 拍照 相册 裁切（6.0 权限）"
             android:textColor="@color/white"
             android:textSize="20sp" />
+        <TextView
+            android:id="@+id/tv_recycler_user_adapter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bac_btn"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="集成 第三方的 adapter"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
     </LinearLayout>
 
 
