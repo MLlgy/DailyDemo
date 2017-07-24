@@ -38,7 +38,7 @@ public class BRAVHAdapterActivity extends AppCompatActivity implements View.OnCl
 
     private void initAadpter() {
         BaseQuickAdapter homeAdapter = new BRAVHAdapter(R.layout.item_bravh_adapter_view, mList);
-        homeAdapter.openLoadAnimation();
+        homeAdapter.openLoadAnimation(BaseQuickAdapter.SLIDEIN_BOTTOM);//设置 item 加载动画
         View top = getLayoutInflater().inflate(R.layout.top_view, (ViewGroup) mRecyclerView.getParent(), false);
         homeAdapter.addHeaderView(top);
         homeAdapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
