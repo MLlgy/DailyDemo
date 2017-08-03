@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_marginBottom="@dimen/dp_5"
     tools:context="com.MainActivity">
 
     <LinearLayout
@@ -14,255 +16,150 @@
 
         <TextView
             android:id="@+id/tv_palette"
+            style="@style/main_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/bac_btn"
-            android:gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="Palette"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:text="Palette" />
 
         <TextView
             android:id="@+id/tv_z_show"
+            style="@style/main_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/bac_btn"
-            android:gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="Z show"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:text="Z show" />
 
         <TextView
             android:id="@+id/tv_tinting"
+            style="@style/main_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/bac_btn"
-            android:gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="tinting(着色)"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:text="tinting(着色)" />
 
         <TextView
             android:id="@+id/tv_cliping"
+            style="@style/main_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/bac_btn"
-            android:gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="cliping(裁切)"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:text="cliping(裁切)" />
 
         <TextView
             android:id="@+id/tv_activity_animation"
+            style="@style/main_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/bac_btn"
-            android:gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="Activity过渡动画"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:text="Activity过渡动画" />
 
         <TextView
             android:id="@+id/tv_ripple"
+            style="@style/main_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/bac_btn"
-            android:gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="Ripple(波纹)"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:text="Ripple(波纹)" />
 
         <TextView
             android:id="@+id/circle_reveal"
+            style="@style/main_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/bac_btn"
-            android:gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="circle reveal"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:text="circle reveal" />
 
         <TextView
             android:id="@+id/change_animation"
+            style="@style/main_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/bac_btn"
-            android:gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="Change Animation"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:text="Change Animation" />
 
         <TextView
             android:id="@+id/catch_expection"
+            style="@style/main_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/bac_btn"
-
-            android:gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="异常的捕获和程序的重启"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:text="异常的捕获和程序的重启" />
 
         <TextView
             android:id="@+id/tv_md_design"
+            style="@style/main_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/bac_btn"
-            android:gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="Meterial Design"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:text="Meterial Design" />
 
         <TextView
             android:id="@+id/tv_mvp"
+            style="@style/main_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/bac_btn"
-            android:gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="框架MVP"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:text="框架MVP" />
 
         <TextView
             android:id="@+id/tv_recyclerview_cardview"
+            style="@style/main_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/bac_btn"
-            android:gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="RecyclerView+CardView"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:text="RecyclerView+CardView" />
 
         <TextView
             android:id="@+id/tv_right_left_scroll"
+            style="@style/main_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/bac_btn"
-            android:gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="页面的左右滑动"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:text="页面的左右滑动" />
 
         <TextView
             android:id="@+id/tv_designer_mode"
+            style="@style/main_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/bac_btn"
-            android:gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="设计模式"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:text="设计模式" />
 
         <TextView
             android:id="@+id/tv_sigle_thread_download"
+            style="@style/main_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/bac_btn"
-            android:gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="单线程断点续传"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:text="单线程断点续传" />
 
         <TextView
             android:id="@+id/tv_muti_threads_download"
+            style="@style/main_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/bac_btn"
-            android:gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="多线程断点续传"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:text="多线程断点续传" />
 
         <TextView
             android:id="@+id/tv_permission_request"
+            style="@style/main_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/bac_btn"
-            android:gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="权限管理"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:text="权限管理" />
 
         <TextView
             android:id="@+id/tv_nmrunner"
+            style="@style/main_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/bac_btn"
-            android:gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="计步器效果"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:text="计步器效果" />
 
         <TextView
             android:id="@+id/tv_notification"
+            style="@style/main_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/bac_btn"
-            android:gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="通知栏相关"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:text="通知栏相关" />
 
         <TextView
             android:id="@+id/tv_take_photo_with_perssion"
+            style="@style/main_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/bac_btn"
-            android:gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="android 拍照 相册 裁切（6.0 权限）"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:text="android 拍照 相册 裁切（6.0 权限）" />
+
         <TextView
             android:id="@+id/tv_recycler_user_adapter"
+            style="@style/main_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/bac_btn"
-            android:gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="集成 第三方的 adapter"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:text="recyclerview 集成 第三方的 adapter" />
     </LinearLayout>
 
 
