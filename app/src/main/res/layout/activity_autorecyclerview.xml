@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey3"
+    android:orientation="vertical">
+
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/ptr_auditor_seal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.widget.AutoRecyclerView
+            android:id="@+id/rv_auditor_seal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"/>
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+</LinearLayout>
+
+
+
