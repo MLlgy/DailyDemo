@@ -6,6 +6,8 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.mengban.MengBanActivity;
+import com.mengban.MengBanActivity1;
 import com.BRAVHAdapter.BRAVHAdapterActivity;
 import com.androidwebviewdemo.mddemo.Change_Animation_Activity;
 import com.androidwebviewdemo.mddemo.Circle_Reveal_Activity;
@@ -57,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tv_notification).setOnClickListener(this);
         findViewById(R.id.tv_take_photo_with_perssion).setOnClickListener(this);
         findViewById(R.id.tv_recycler_user_adapter).setOnClickListener(this);
+        findViewById(R.id.tv_mengBan).setOnClickListener(this);
     }
 
     @Override
@@ -124,6 +127,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tv_recycler_user_adapter:
                 startActivity(new Intent(this,BRAVHAdapterActivity.class));
+                break;
+            case R.id.tv_mengBan:
+                startActivity(new Intent(this,MengBanActivity.class));
                 break;
         }
     }

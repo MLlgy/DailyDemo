@@ -159,6 +159,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="recyclerview 集成 第三方的 adapter" />
+        <TextView
+            android:id="@+id/tv_mengBan"
+            style="@style/main_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="蒙版" />
     </LinearLayout>
 
 
