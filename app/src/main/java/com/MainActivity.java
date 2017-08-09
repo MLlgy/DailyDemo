@@ -130,7 +130,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.tv_recycler_user_adapter:
                 startActivity(new Intent(this,BRAVHAdapterActivity.class));
                 break;
-
             case R.id.tv_mengBan:
                 startActivity(new Intent(this,MengBanActivity.class));
             case R.id.tv_clear_cache:

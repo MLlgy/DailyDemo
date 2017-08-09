@@ -10,6 +10,11 @@ import java.math.BigDecimal;
 /**
  * Created by ${liguoying} on 2017/8/9.
  * 本应用数据清除管理器
+ * getCacheDir用法
+ * <p>
+ * 注： 在Activity中有 getFileDir() 和 getCacheDir(); 方法可以获得当前的手机自带的存储空间中的当前包文件的路径
+ * getFileDir() ----- /data/data/cn.xxx.xxx(当前包)/files
+ * getCacheDir() ----- /data/data/cn.xxx.xxx（当前包）/cache
  */
 
 public class DataCleanManager {
@@ -72,11 +77,12 @@ public class DataCleanManager {
             deleteFilesByDirectory(context.getExternalCacheDir());
         }
     }
+
     /**
      * * 清除自定义路径下的文件，使用需小心，请不要误删。而且只支持目录下的文件删除 * *
      *
      * @param filePath
-     * */
+     */
     public static void cleanCustomCache(String filePath) {
         deleteFilesByDirectory(new File(filePath));
     }

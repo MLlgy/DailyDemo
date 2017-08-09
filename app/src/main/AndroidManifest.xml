@@ -67,9 +67,7 @@
         </provider>
 
         <activity android:name=".BRAVHAdapter.BRAVHAdapterActivity" />
-<<<<<<< HEAD
         <activity android:name=".mengban.MengBanActivity"></activity>
-=======
         <activity android:name=".CommonActivities.ClearCacheActivity"></activity>
 >>>>>>> 内存清理
     </application>
