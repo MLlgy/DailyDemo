@@ -4,8 +4,8 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:layout_marginBottom="@dimen/dp_5"
+    android:orientation="vertical"
     tools:context="com.MainActivity">
 
     <LinearLayout
@@ -159,12 +159,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="recyclerview 集成 第三方的 adapter" />
+
         <TextView
             android:id="@+id/tv_mengBan"
             style="@style/main_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="蒙版" />
+
+        <TextView
+            android:id="@+id/tv_clear_cache"
+            style="@style/main_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="内存清理" />
     </LinearLayout>
 
 

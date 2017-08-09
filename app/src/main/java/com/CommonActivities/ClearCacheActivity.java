@@ -1,0 +1,49 @@
+package com.CommonActivities;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.R;
+import com.utils.DataCleanManager;
+
+public class ClearCacheActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private TextView tv_cache_size;
+    private Button btn_clear_cache;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_clear_cache);
+        initView();
+        initSizeData();
+    }
+
+    private void initSizeData() {
+        try {
+            tv_cache_size.setText(DataCleanManager.getTotalCacheSize(ClearCacheActivity.this));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void initView() {
+        tv_cache_size = (TextView) findViewById(R.id.tv_cache_size);
+        btn_clear_cache = (Button) findViewById(R.id.btn_clear_cache);
+        btn_clear_cache.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_clear_cache:
+                DataCleanManager.clearAllCache(ClearCacheActivity.this);
+                DataCleanManager.cleanDatabases(ClearCacheActivity.this);
+                initSizeData();
+                break;
+        }
+    }
+}
