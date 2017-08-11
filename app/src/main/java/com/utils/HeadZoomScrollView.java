@@ -4,6 +4,7 @@ import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,6 +64,12 @@ public class HeadZoomScrollView extends ScrollView {
         this.mReplyRatio = mReplyRatio;
     }
 
+    /**
+     * Finalize inflating a view from XML. This is called as the last phase of inflation, after all child views have been added.(在所有的子view被添加后，调用该方法)
+     * Even if the subclass overrides onFinishInflate, they should always be sure to call the super method, so that we get called.
+     * If you override this method you must call through to the superclass implementation.
+     */
+//    当View和它的所有子对象从XML中导入之后，调用此方法，，，，填充完视图后（个人理解 .mk）
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
@@ -88,14 +95,15 @@ public class HeadZoomScrollView extends ScrollView {
         }
         switch (ev.getAction()) {
             case MotionEvent.ACTION_MOVE:
+                Log.e("getx", "getScrollY() :  " + getScrollY() + "   ev.getY() :" + ev.getY());
                 if (!mScaling) {
                     if (getScrollY() == 0) {
-                        y = ev.getY();//滑动到顶部时，记录位置
+                        y = ev.getY();//滑动到顶部时，记录位置，因为只有到了顶点才是放大的开始，这一点很重要 *****
                     } else {
                         break;
                     }
                 }
-                int distance = (int) ((ev.getY() - y) * mScaleRatio);
+                int distance = (int) ((ev.getY() - y) * mScaleRatio);// 滑动放大系数，系数越大，滑动时放大程度越大
                 if (distance < 0) break;//若往下滑动
                 mScaling = true;
                 setZoom(distance);
