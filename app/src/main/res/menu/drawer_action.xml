@@ -3,11 +3,9 @@
     <item
         android:id="@+id/action_one"
         android:icon="@mipmap/ic_launcher"
-        android:title="to_do_one"
-        />
+        android:title="to_do_one" />
     <item
         android:id="@+id/action_two"
         android:icon="@mipmap/ic_launcher"
-        android:title="to_do_two"
-        />
+        android:title="to_do_two" />
 </menu>

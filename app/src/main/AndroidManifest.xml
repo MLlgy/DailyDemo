@@ -69,7 +69,8 @@
         <activity android:name=".BRAVHAdapter.BRAVHAdapterActivity" />
         <activity android:name=".mengban.MengBanActivity" />
         <activity android:name=".CommonActivities.ClearCacheActivity" />
-        <activity android:name=".titlebarAlpha.TitleBarAlphaActivity"></activity>
+        <activity android:name=".titlebarAlpha.TitleBarAlphaActivity" />
+        <activity android:name=".CommonActivities.HeaderZoomActivity"></activity>
     </application>
 
 </manifest>

@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.BRAVHAdapter.BRAVHAdapterActivity;
 import com.CommonActivities.ClearCacheActivity;
+import com.CommonActivities.HeaderZoomActivity;
 import com.androidwebviewdemo.mddemo.Change_Animation_Activity;
 import com.androidwebviewdemo.mddemo.Circle_Reveal_Activity;
 import com.androidwebviewdemo.mddemo.ClipingActivity;
@@ -63,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tv_mengBan).setOnClickListener(this);
         findViewById(R.id.tv_clear_cache).setOnClickListener(this);
         findViewById(R.id.tv_titlebar_alpha).setOnClickListener(this);
+        findViewById(R.id.tv_head_zoom_scrollview).setOnClickListener(this);
     }
 
     @Override
@@ -78,22 +80,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this, TintingActivity.class));
                 break;
             case R.id.tv_cliping:
-                startActivity(new Intent(this,ClipingActivity.class));
+                startActivity(new Intent(this, ClipingActivity.class));
                 break;
             case R.id.tv_recyclerview_cardview:
                 startActivity(new Intent(this, RecyclerView_CardViewActivity.class));
                 break;
             case R.id.tv_activity_animation:
-                startActivity(new Intent(this,SecondActivity.class));
+                startActivity(new Intent(this, SecondActivity.class));
                 break;
             case R.id.tv_ripple:
-                startActivity(new Intent(this,RippleAcitvity.class));
+                startActivity(new Intent(this, RippleAcitvity.class));
                 break;
             case R.id.circle_reveal:
-                startActivity(new Intent(this,Circle_Reveal_Activity.class));
+                startActivity(new Intent(this, Circle_Reveal_Activity.class));
                 break;
             case R.id.change_animation:
-                startActivity(new Intent(this,Change_Animation_Activity.class));
+                startActivity(new Intent(this, Change_Animation_Activity.class));
                 break;
             case R.id.catch_expection:
 //                startActivity(new Intent(this, ExceptionCatchActivity.class));
@@ -123,21 +125,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this, NumberRunnerMainActivity.class));
                 break;
             case R.id.tv_notification:
-                startActivity(new Intent(this,NotificationActivity.class));
+                startActivity(new Intent(this, NotificationActivity.class));
                 break;
             case R.id.tv_take_photo_with_perssion:
-                startActivity(new Intent(this,TakePhotoWithPerssionActivity.class));
+                startActivity(new Intent(this, TakePhotoWithPerssionActivity.class));
                 break;
             case R.id.tv_recycler_user_adapter:
-                startActivity(new Intent(this,BRAVHAdapterActivity.class));
+                startActivity(new Intent(this, BRAVHAdapterActivity.class));
                 break;
             case R.id.tv_mengBan:
-                startActivity(new Intent(this,MengBanActivity.class));
+                startActivity(new Intent(this, MengBanActivity.class));
             case R.id.tv_clear_cache:
-                startActivity(new Intent(this,ClearCacheActivity.class));
+                startActivity(new Intent(this, ClearCacheActivity.class));
                 break;
             case R.id.tv_titlebar_alpha:
-                startActivity(new Intent(this,TitleBarAlphaActivity.class));
+                startActivity(new Intent(this, TitleBarAlphaActivity.class));
+                break;
+            case R.id.tv_head_zoom_scrollview:
+                startActivity(new Intent(this, HeaderZoomActivity.class));
                 break;
         }
     }

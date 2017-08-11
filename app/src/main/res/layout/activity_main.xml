@@ -179,6 +179,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="标题栏透明度" />
+        <TextView
+            android:id="@+id/tv_head_zoom_scrollview"
+            style="@style/main_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="图片下拉放大" />
 
     </LinearLayout>
 

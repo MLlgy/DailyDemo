@@ -5,9 +5,10 @@
     android:id="@+id/activity_drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:openDrawer="start"
-    tools:context="com.androidwebviewdemo.mddemo.MD.DrawerLayoutActivity">
+    tools:context=".meterial_design.DrawerLayoutActivity"
+    tools:openDrawer="start">
 
+    // Toolbar
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -31,10 +32,12 @@
             android:id="@+id/coordinatorLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <FrameLayout
                 android:id="@+id/contentFrame"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
+
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/fab_btn"
                 android:layout_width="wrap_content"
@@ -53,9 +56,8 @@
         android:id="@+id/nav_menu"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
         android:layout_gravity="start"
+        android:fitsSystemWindows="true"
         app:headerLayout="@layout/nv_header"
-        app:menu="@menu/drawer_action"
-        />
+        app:menu="@menu/drawer_action" />
 </android.support.v4.widget.DrawerLayout>
