@@ -67,8 +67,9 @@
         </provider>
 
         <activity android:name=".BRAVHAdapter.BRAVHAdapterActivity" />
-        <activity android:name=".mengban.MengBanActivity"></activity>
-        <activity android:name=".CommonActivities.ClearCacheActivity"></activity>
+        <activity android:name=".mengban.MengBanActivity" />
+        <activity android:name=".CommonActivities.ClearCacheActivity" />
+        <activity android:name=".titlebarAlpha.TitleBarAlphaActivity"></activity>
     </application>
 
 </manifest>

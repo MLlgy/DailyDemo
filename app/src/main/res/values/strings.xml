@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AndroidDemo</string>
     <string name="down_show_text">文件下载</string>
+    <string name="title">我是透明度会变的 Titlebar </string>
 </resources>

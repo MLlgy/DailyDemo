@@ -6,8 +6,6 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.mengban.MengBanActivity;
-import com.mengban.MengBanActivity1;
 import com.BRAVHAdapter.BRAVHAdapterActivity;
 import com.CommonActivities.ClearCacheActivity;
 import com.androidwebviewdemo.mddemo.Change_Animation_Activity;
@@ -19,6 +17,7 @@ import com.androidwebviewdemo.mddemo.SecondActivity;
 import com.androidwebviewdemo.mddemo.TintingActivity;
 import com.androidwebviewdemo.mddemo.ZActivity;
 import com.designer.DesignerModeActivity;
+import com.mengban.MengBanActivity;
 import com.meterial_design.DrawerLayoutActivity;
 import com.mutiThreadsDownloadFile.MutiThreadsDownloadFileActivity;
 import com.mvp.view.UserActivity;
@@ -28,6 +27,7 @@ import com.numberRunner.NumberRunnerMainActivity;
 import com.permissionRequest_6.PerssionRequestTestActivity;
 import com.sigleThreadDownloadFile.DownloaderFileActivity;
 import com.takePhotoWithPerssion.TakePhotoWithPerssionActivity;
+import com.titlebarAlpha.TitleBarAlphaActivity;
 import com.touchRightLef.TouchRightLeftActivity;
 
 //import ExceptionCatch.ExceptionCatchActivity;
@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tv_recycler_user_adapter).setOnClickListener(this);
         findViewById(R.id.tv_mengBan).setOnClickListener(this);
         findViewById(R.id.tv_clear_cache).setOnClickListener(this);
+        findViewById(R.id.tv_titlebar_alpha).setOnClickListener(this);
     }
 
     @Override
@@ -134,6 +135,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this,MengBanActivity.class));
             case R.id.tv_clear_cache:
                 startActivity(new Intent(this,ClearCacheActivity.class));
+                break;
+            case R.id.tv_titlebar_alpha:
+                startActivity(new Intent(this,TitleBarAlphaActivity.class));
                 break;
         }
     }

@@ -173,6 +173,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="内存清理" />
+        <TextView
+            android:id="@+id/tv_titlebar_alpha"
+            style="@style/main_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="标题栏透明度" />
+
     </LinearLayout>
 
 
