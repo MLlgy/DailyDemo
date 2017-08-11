@@ -49,14 +49,14 @@ public class TitleBarAlphaActivity extends AppCompatActivity implements ScrollVi
                 + "       " + oldy);
 
         if (y <= 0) {
-            mRlTitleContainer.setBackgroundColor(Color.argb((int) 0, 255, 119, 8));//AGB由相关工具获得，或者美工提供
+            mRlTitleContainer.setBackgroundColor(Color.argb((int) 0, 255, 119, 8));// 完全透明的titlebar AGB由相关工具获得，或者美工提供
         } else if (y > 0 && y <= mIvTitleBg.getHeight() - mRlTitleContainer.getHeight()) {
             float scale = (float) y / (mIvTitleBg.getHeight() - mRlTitleContainer.getHeight());
             float alpha = (255 * scale);
             // title背景透明
-            mRlTitleContainer.setBackgroundColor(Color.argb((int) alpha, 0, 119, 8));
+            mRlTitleContainer.setBackgroundColor(Color.argb((int) alpha, 10, 10, 228));//alpha 变化的 titlebar
         } else {
-            mRlTitleContainer.setBackgroundColor(Color.argb((int) 255, 0, 119, 8));
+            mRlTitleContainer.setBackgroundColor(Color.argb((int) 255, 10, 10, 228));//最终的颜色
         }
     }
 }
