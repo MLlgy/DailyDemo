@@ -48,8 +48,6 @@
                 android:src="@mipmap/search_graph" />
 
         </LinearLayout>
-
-
     </com.titlebarAlpha.ObservableScrollView>
 
 
