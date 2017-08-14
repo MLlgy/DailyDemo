@@ -30,14 +30,15 @@
         android:layout_height="wrap_content"
         android:onClick="share"
         android:text="share" />
-
+    <!--android:transitionName="fab" 共享元素的标示-->
     <Button
         android:id="@+id/fab_button"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:background="@drawable/iv_guide1"
-        android:transitionName="fab"
-        android:elevation="5dp"/>
+        android:elevation="5dp"
+        android:transitionName="fab" />
+
     <View
         android:id="@+id/share_view_second"
         android:layout_width="100dp"
