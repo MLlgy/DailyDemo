@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--最后提一下，对于5.0由于提供了setStatusBarColor去设置状态栏颜色，-->
+    <!--但是这个方法不能在主题中设置windowTranslucentStatus属性。-->
+    <!--所以，可以编写一个value-v21文件夹，里面styles.xml写入：-->
+    <style name="StatusBarAppTheme" parent="@style/BaseAppTheme">
+    </style>
+</resources>

@@ -75,7 +75,11 @@
         <activity android:name=".meterial_design.SumMDActivity" />
         <activity android:name=".meterial_design.CoordinatorActivity" />
         <activity android:name=".meterial_design.CoorAppBarActivity" />
-        <activity android:name=".meterial_design.CoorToolBarActivity"></activity>
+        <activity android:name=".meterial_design.CoorToolBarActivity" />
+        <activity
+            android:name=".meterial_design.StatusBarActivity"
+           />
+        <!--android:theme="@style/StatusBarAppTheme"-->
     </application>
 
 </manifest>
