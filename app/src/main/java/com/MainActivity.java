@@ -19,7 +19,7 @@ import com.androidwebviewdemo.mddemo.TintingActivity;
 import com.androidwebviewdemo.mddemo.ZActivity;
 import com.designer.DesignerModeActivity;
 import com.mengban.MengBanActivity;
-import com.meterial_design.DrawerLayoutActivity;
+import com.meterial_design.SumMDActivity;
 import com.mutiThreadsDownloadFile.MutiThreadsDownloadFileActivity;
 import com.mvp.view.UserActivity;
 import com.myrecyclerview.NotificationActivity;
@@ -101,7 +101,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                startActivity(new Intent(this, ExceptionCatchActivity.class));
                 break;
             case R.id.tv_md_design:
-                startActivity(new Intent(this, DrawerLayoutActivity.class));
+//                startActivity(new Intent(this, DrawerLayoutActivity.class));
+//                startActivity(new Intent(this, ScrollingActivity.class));
+                startActivity(new Intent(this, SumMDActivity.class));
                 break;
             case R.id.tv_mvp:
                 startActivity(new Intent(this, UserActivity.class));

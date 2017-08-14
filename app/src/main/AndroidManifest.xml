@@ -70,7 +70,12 @@
         <activity android:name=".mengban.MengBanActivity" />
         <activity android:name=".CommonActivities.ClearCacheActivity" />
         <activity android:name=".titlebarAlpha.TitleBarAlphaActivity" />
-        <activity android:name=".CommonActivities.HeaderZoomActivity"></activity>
+        <activity android:name=".CommonActivities.HeaderZoomActivity" />
+        <activity android:name=".meterial_design.ScrollingActivity" />
+        <activity android:name=".meterial_design.SumMDActivity" />
+        <activity android:name=".meterial_design.CoordinatorActivity" />
+        <activity android:name=".meterial_design.CoorAppBarActivity" />
+        <activity android:name=".meterial_design.CoorToolBarActivity"></activity>
     </application>
 
 </manifest>
