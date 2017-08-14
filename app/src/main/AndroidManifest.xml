@@ -6,10 +6,6 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <uses-feature android:name="android.hardware.camera" />
-    <uses-feature android:name="android.hardware.camera.autofocus" />
-
-    <uses-permission android:name="android.permission.CAMERA" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -76,10 +72,13 @@
         <activity android:name=".meterial_design.CoordinatorActivity" />
         <activity android:name=".meterial_design.CoorAppBarActivity" />
         <activity android:name=".meterial_design.CoorToolBarActivity" />
-        <activity
-            android:name=".meterial_design.StatusBarActivity"
-           />
         <!--android:theme="@style/StatusBarAppTheme"-->
+        <activity android:name=".meterial_design.StatusBarActivity" />
     </application>
+
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
 
 </manifest>

@@ -18,7 +18,6 @@ public class StatusBarCompat {
     private static final int COLOR_DEFAULT = Color.parseColor("#20000000");
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-
     public static void compat(Activity activity, int statusColor) {
         // v21 后设置 statusbar 的颜色
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

@@ -1,6 +1,7 @@
 package com.meterial_design;
 
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -19,9 +20,11 @@ public class StatusBarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_status_bar);
         Toolbar toolbar = (Toolbar) findViewById(R.id.id_toolbar);
+        DrawerLayout drawerLayout = findViewById(R.id.dl_holder);
         setSupportActionBar(toolbar);
         //自己在代码中设置 statusbar 的颜色
         StatusBarCompat.compat(this, getResources().getColor(R.color.tomato));
+//        StatusBarUtil.setColorForDrawerLayout(this, drawerLayout, getResources().getColor(R.color.tomato));
 
         //自己在代码中设置 statusbar 的颜色
 //        StatusBarCompat.compat(this, getResources().getColor(R.color.tomato));
