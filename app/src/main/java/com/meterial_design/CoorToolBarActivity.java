@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
 import com.R;
+import com.utils.TranslateTitlebarUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +23,7 @@ public class CoorToolBarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coor_tool_bar);
+        TranslateTitlebarUtils.translucentStatusBar(this,false);
         initViews();
         initToolBar(mToolbar, false, "");
         initVariables();

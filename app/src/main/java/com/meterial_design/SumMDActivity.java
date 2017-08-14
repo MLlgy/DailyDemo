@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.R;
+import com.utils.TranslateTitlebarUtils;
 
 public class SumMDActivity extends AppCompatActivity {
 
@@ -13,6 +14,7 @@ public class SumMDActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sum_md);
+        TranslateTitlebarUtils.setStatusBarLightMode(this,R.color.tomato);
     }
     public void btnClick1(View view) {
         startActivity(new Intent(this,CoordinatorActivity.class));
