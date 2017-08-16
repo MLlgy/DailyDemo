@@ -30,6 +30,7 @@ import com.sigleThreadDownloadFile.DownloaderFileActivity;
 import com.takePhotoWithPerssion.TakePhotoWithPerssionActivity;
 import com.titlebarAlpha.TitleBarAlphaActivity;
 import com.touchRightLef.TouchRightLeftActivity;
+import com.tracedraw.TraceDrawActivity;
 
 //import ExceptionCatch.ExceptionCatchActivity;
 
@@ -65,6 +66,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tv_clear_cache).setOnClickListener(this);
         findViewById(R.id.tv_titlebar_alpha).setOnClickListener(this);
         findViewById(R.id.tv_head_zoom_scrollview).setOnClickListener(this);
+        findViewById(R.id.tv_trace_draw).setOnClickListener(this);
+
     }
 
     @Override
@@ -145,6 +148,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tv_head_zoom_scrollview:
                 startActivity(new Intent(this, HeaderZoomActivity.class));
+                break;
+            case R.id.tv_trace_draw:
+                startActivity(new Intent(this, TraceDrawActivity.class));
                 break;
         }
     }
