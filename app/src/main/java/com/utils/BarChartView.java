@@ -21,6 +21,8 @@ import java.util.List;
 /**
  * 柱状图 可滑动
  * http://blog.csdn.net/yulu5216/article/details/53215101
+ *
+ * 来源库地址：http://blog.coderclock.com/2017/08/01/android/open-source-android-chart-library/
  */
 public class BarChartView extends View {
     /**
