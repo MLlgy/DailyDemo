@@ -6,6 +6,8 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <!--第三方字体的引用-->
+        <item name="textFieldStyle">@style/TextField</item>
     </style>
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -57,5 +59,8 @@
     <!-- Base application theme. -->
     <style name="StatusBarAppTheme" parent="@style/BaseAppTheme"/>
 
-
+    <!--自定义字体样式和继承关系-->
+    <style name="TextField" parent="android:Widget.Holo.Light.TextView">
+        <item name="fontPath">fonts/qiaoqiao.ttf</item>
+    </style>
 </resources>

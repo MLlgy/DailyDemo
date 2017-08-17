@@ -1,5 +1,6 @@
 package com;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -33,6 +34,8 @@ import com.takePhotoWithPerssion.TakePhotoWithPerssionActivity;
 import com.titlebarAlpha.TitleBarAlphaActivity;
 import com.touchRightLef.TouchRightLeftActivity;
 import com.tracedraw.TraceDrawActivity;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 //import ExceptionCatch.ExceptionCatchActivity;
 
@@ -72,6 +75,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tv_bar_chart_draw).setOnClickListener(this);
         findViewById(R.id.tv_font).setOnClickListener(this);
 
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        //// TODO: 2017/6/26 在activity中的attachBaseContext方法中引用Calligraphy
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
     @Override
