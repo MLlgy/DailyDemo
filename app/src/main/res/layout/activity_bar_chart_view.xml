@@ -4,10 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.CommonActivities.BarChartViewActivity">
 
     <com.utils.BarChartView
         android:id="@+id/bcv_show"
         android:layout_width="match_parent"
         android:layout_height="200dp" />
+
+    <com.widget.FontsTextView
+        android:id="@+id/tv_ftw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        tools:text="我的" />
 </LinearLayout>

@@ -5,12 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.R;
 import com.utils.BarChartView;
+import com.widget.FontsTextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class BarChartViewActivity extends AppCompatActivity {
     private BarChartView mBarChartView;
+    private FontsTextView mFontsTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +24,11 @@ public class BarChartViewActivity extends AppCompatActivity {
 
     private void initView() {
         mBarChartView = findViewById(R.id.bcv_show);
+        mFontsTextView = findViewById(R.id.tv_ftw);
     }
 
     private void initData() {
+        mFontsTextView.setText("我是自定义的第三方字体View");
         List<String> taggings = new ArrayList<>();
         taggings.add("北京");
 //        taggings.add("上海");
