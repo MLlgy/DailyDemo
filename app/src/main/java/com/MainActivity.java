@@ -9,6 +9,7 @@ import android.view.View;
 import com.BRAVHAdapter.BRAVHAdapterActivity;
 import com.CommonActivities.BarChartViewActivity;
 import com.CommonActivities.ClearCacheActivity;
+import com.CommonActivities.FontActivity;
 import com.CommonActivities.HeaderZoomActivity;
 import com.androidwebviewdemo.mddemo.Change_Animation_Activity;
 import com.androidwebviewdemo.mddemo.Circle_Reveal_Activity;
@@ -69,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tv_head_zoom_scrollview).setOnClickListener(this);
         findViewById(R.id.tv_trace_draw).setOnClickListener(this);
         findViewById(R.id.tv_bar_chart_draw).setOnClickListener(this);
+        findViewById(R.id.tv_font).setOnClickListener(this);
 
     }
 
@@ -154,8 +156,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.tv_trace_draw:
                 startActivity(new Intent(this, TraceDrawActivity.class));
                 break;
-                case R.id.tv_bar_chart_draw:
+            case R.id.tv_bar_chart_draw:
                 startActivity(new Intent(this, BarChartViewActivity.class));
+                break;
+                case R.id.tv_font:
+                startActivity(new Intent(this, FontActivity.class));
                 break;
         }
     }

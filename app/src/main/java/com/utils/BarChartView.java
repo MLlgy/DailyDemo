@@ -19,7 +19,8 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * 柱状图
+ * 柱状图 可滑动
+ * http://blog.csdn.net/yulu5216/article/details/53215101
  */
 public class BarChartView extends View {
     /**

@@ -9,5 +9,5 @@
     <com.utils.BarChartView
         android:id="@+id/bcv_show"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="200dp" />
 </LinearLayout>

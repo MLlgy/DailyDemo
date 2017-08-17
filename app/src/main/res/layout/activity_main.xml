@@ -202,6 +202,13 @@
             android:layout_height="wrap_content"
             android:text="柱状图绘制" />
 
+        <TextView
+            android:id="@+id/tv_font"
+            style="@style/main_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="第三方字体" />
+
     </LinearLayout>
 
 
