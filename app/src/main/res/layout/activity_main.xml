@@ -173,18 +173,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="内存清理" />
+
         <TextView
             android:id="@+id/tv_titlebar_alpha"
             style="@style/main_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="标题栏透明度" />
+
         <TextView
-        android:id="@+id/tv_head_zoom_scrollview"
-        style="@style/main_textview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="图片下拉放大" />
+            android:id="@+id/tv_head_zoom_scrollview"
+            style="@style/main_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="图片下拉放大" />
 
         <TextView
             android:id="@+id/tv_trace_draw"
@@ -192,6 +194,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="轨迹绘制" />
+
+        <TextView
+            android:id="@+id/tv_bar_chart_draw"
+            style="@style/main_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="柱状图绘制" />
 
     </LinearLayout>
 

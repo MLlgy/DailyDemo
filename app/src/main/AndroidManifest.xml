@@ -79,7 +79,8 @@
         <activity android:name=".meterial_design.CoorToolBarActivity" />
         <!-- android:theme="@style/StatusBarAppTheme" -->
         <activity android:name=".meterial_design.StatusBarActivity" />
-        <activity android:name=".tracedraw.TraceDrawActivity"></activity>
+        <activity android:name=".tracedraw.TraceDrawActivity" />
+        <activity android:name=".CommonActivities.BarChartViewActivity"></activity>
     </application>
 
 </manifest>
