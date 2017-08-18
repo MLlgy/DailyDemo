@@ -157,6 +157,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tv_mengBan:
                 startActivity(new Intent(this, MengBanActivity.class));
+                break;
             case R.id.tv_clear_cache:
                 startActivity(new Intent(this, ClearCacheActivity.class));
                 break;
