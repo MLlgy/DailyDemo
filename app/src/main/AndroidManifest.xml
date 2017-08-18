@@ -81,7 +81,8 @@
         <activity android:name=".meterial_design.StatusBarActivity" />
         <activity android:name=".tracedraw.TraceDrawActivity" />
         <activity android:name=".CommonActivities.BarChartViewActivity" />
-        <activity android:name=".CommonActivities.FontActivity"></activity>
+        <activity android:name=".CommonActivities.FontActivity" />
+        <activity android:name=".CommonActivities.ClickBtnActivity"></activity>
     </application>
 
 </manifest>

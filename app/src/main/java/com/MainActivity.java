@@ -10,6 +10,7 @@ import android.view.View;
 import com.BRAVHAdapter.BRAVHAdapterActivity;
 import com.CommonActivities.BarChartViewActivity;
 import com.CommonActivities.ClearCacheActivity;
+import com.CommonActivities.ClickBtnActivity;
 import com.CommonActivities.FontActivity;
 import com.CommonActivities.HeaderZoomActivity;
 import com.androidwebviewdemo.mddemo.Change_Animation_Activity;
@@ -74,6 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tv_trace_draw).setOnClickListener(this);
         findViewById(R.id.tv_bar_chart_draw).setOnClickListener(this);
         findViewById(R.id.tv_font).setOnClickListener(this);
+        findViewById(R.id.tv_btn_animation).setOnClickListener(this);
 
     }
 
@@ -168,8 +170,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.tv_bar_chart_draw:
                 startActivity(new Intent(this, BarChartViewActivity.class));
                 break;
-                case R.id.tv_font:
+            case R.id.tv_font:
                 startActivity(new Intent(this, FontActivity.class));
+                break;
+            case R.id.tv_btn_animation:
+                startActivity(new Intent(this, ClickBtnActivity.class));
                 break;
         }
     }
