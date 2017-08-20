@@ -13,6 +13,7 @@ import com.CommonActivities.ClearCacheActivity;
 import com.CommonActivities.ClickBtnActivity;
 import com.CommonActivities.FontActivity;
 import com.CommonActivities.HeaderZoomActivity;
+import com.CommonActivities.ImageScaleTypeActivity;
 import com.androidwebviewdemo.mddemo.Change_Animation_Activity;
 import com.androidwebviewdemo.mddemo.Circle_Reveal_Activity;
 import com.androidwebviewdemo.mddemo.ClipingActivity;
@@ -76,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tv_bar_chart_draw).setOnClickListener(this);
         findViewById(R.id.tv_font).setOnClickListener(this);
         findViewById(R.id.tv_btn_animation).setOnClickListener(this);
+        findViewById(R.id.tv_image_scale_type).setOnClickListener(this);
 
     }
 
@@ -175,6 +177,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tv_btn_animation:
                 startActivity(new Intent(this, ClickBtnActivity.class));
+                break;
+            case R.id.tv_image_scale_type:
+                startActivity(new Intent(this, ImageScaleTypeActivity.class));
                 break;
         }
     }

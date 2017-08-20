@@ -82,7 +82,8 @@
         <activity android:name=".tracedraw.TraceDrawActivity" />
         <activity android:name=".CommonActivities.BarChartViewActivity" />
         <activity android:name=".CommonActivities.FontActivity" />
-        <activity android:name=".CommonActivities.ClickBtnActivity"></activity>
+        <activity android:name=".CommonActivities.ClickBtnActivity" />
+        <activity android:name=".CommonActivities.ImageScaleTypeActivity"></activity>
     </application>
 
 </manifest>

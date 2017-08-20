@@ -216,6 +216,13 @@
             android:layout_height="wrap_content"
             android:text="点击按钮" />
 
+        <TextView
+            android:id="@+id/tv_image_scale_type"
+            style="@style/main_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ScaleType" />
+
     </LinearLayout>
 
 
