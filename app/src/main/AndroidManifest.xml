@@ -83,8 +83,9 @@
         <activity android:name=".CommonActivities.BarChartViewActivity" />
         <activity android:name=".CommonActivities.FontActivity" />
         <activity android:name=".CommonActivities.ClickBtnActivity" />
-        <activity android:name=".CommonActivities.ImageScaleTypeActivity"></activity>
-        <activity android:name=".CommonActivities.LargeImageActivity"></activity>
+        <activity android:name=".CommonActivities.ImageScaleTypeActivity" />
+        <activity android:name=".CommonActivities.LargeImageActivity" />
+        <activity android:name=".CommonActivities.ScrollerActivity"></activity>
     </application>
 
 </manifest>

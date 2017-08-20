@@ -23,6 +23,17 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
+    }
+    flavorDimensions "color"
+    productFlavors {
+        dev {
+            dimension "color"
+            minSdkVersion 19
+        }
+        prod {
+            dimension "color"
+        }
     }
 }
 
