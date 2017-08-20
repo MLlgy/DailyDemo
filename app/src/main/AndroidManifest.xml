@@ -84,6 +84,7 @@
         <activity android:name=".CommonActivities.FontActivity" />
         <activity android:name=".CommonActivities.ClickBtnActivity" />
         <activity android:name=".CommonActivities.ImageScaleTypeActivity"></activity>
+        <activity android:name=".CommonActivities.LargeImageActivity"></activity>
     </application>
 
 </manifest>
