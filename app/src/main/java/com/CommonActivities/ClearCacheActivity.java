@@ -8,11 +8,13 @@ import android.widget.TextView;
 
 import com.R;
 import com.utils.DataCleanManager;
+import com.widget.DialogView;
 
 public class ClearCacheActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView tv_cache_size;
     private Button btn_clear_cache;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,7 @@ public class ClearCacheActivity extends AppCompatActivity implements View.OnClic
         tv_cache_size = (TextView) findViewById(R.id.tv_cache_size);
         btn_clear_cache = (Button) findViewById(R.id.btn_clear_cache);
         btn_clear_cache.setOnClickListener(this);
+        new DialogView(this).show();
     }
 
     @Override

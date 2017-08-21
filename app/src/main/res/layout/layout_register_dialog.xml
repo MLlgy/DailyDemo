@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_marginTop="223dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_newer_guide"
+            android:layout_width="180dp"
+            android:layout_height="98dp"
+            android:background="@mipmap/guild"
+            android:orientation="vertical"></LinearLayout>
+
+        <Button
+            android:id="@+id/btn_end_guild"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="i konw" />
+
+    </LinearLayout>
+
+</LinearLayout>
