@@ -62,8 +62,9 @@ public class DragViewOne extends View {
                 layout(getLeft() + offsetX, getTop() + offsetY, getRight() + offsetX, getBottom() + offsetY);
 //                lastX = x;
 //                lastY = y;
-                offsetLeftAndRight(offsetX);
-                offsetTopAndBottom(offsetY);
+//                offsetLeftAndRight(offsetX);
+//                offsetTopAndBottom(offsetY);
+                Log.e(TAG + "m", "onTouchEvent: " + " x: " + x + " y: " + y + " lastX： " + lastX + " lastY: " + lastY + " offsetX: " + offsetX + " offsetY " + offsetY);
                 Log.e(TAG + "ACTION_MOVE", "onTouchEvent: " + "offsetx: " + offsetX + " offsety: " + offsetY
                         + " l: " + getLeft() + " t: " + getTop() + " r:" + getRight() + " b:" + getBottom() + " " + lastY + " " + lastX);
 
