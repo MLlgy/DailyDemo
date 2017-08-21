@@ -10,6 +10,10 @@ import android.view.View;
 
 /**
  * Created by mk.io on 17-8-21.
+ * 手指点击该 View，会触发该 View 的 一次 onTouchEvent() 方法，触发了 ACTION_DOWN 事件
+ * 手指松开该 View，会触发该 View 的 一次 onTouchEvent() 方法，触发了 ACTION_UP 事件
+ * 注意： 以上的次数为一次
+ * 手指在该 view 上滑动或者一直按在该 view 上，会一直触发（像个几毫秒） onTouchEvent() ，同时也会一直触发 ACITON_MOVE 事件，执行相关代码
  */
 
 public class DragViewOne extends View {
@@ -41,8 +45,8 @@ public class DragViewOne extends View {
     @Override
     public boolean onTouchEvent(MotionEvent event) {//长时间按住不移动也会触发该方法
         int action = event.getAction();
-        int x = (int) event.getX();
-        int y = (int) event.getY();
+        int x = (int) event.getRawX();
+        int y = (int) event.getRawY();
         Log.e(TAG+"li", "onTouchEvent 1: " + x + "  " + y + "**" + getLeft() + " " + getTop() + "" + getRight() + " " + getBottom());
         switch (action) {
             case MotionEvent.ACTION_DOWN:
