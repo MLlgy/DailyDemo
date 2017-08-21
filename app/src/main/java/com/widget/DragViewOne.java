@@ -45,9 +45,11 @@ public class DragViewOne extends View {
     @Override
     public boolean onTouchEvent(MotionEvent event) {//长时间按住不移动也会触发该方法
         int action = event.getAction();
-        int x = (int) event.getRawX();
-        int y = (int) event.getRawY();
-        Log.e(TAG+"li", "onTouchEvent 1: " + x + "  " + y + "**" + getLeft() + " " + getTop() + "" + getRight() + " " + getBottom());
+//        int x = (int) event.getRawX();
+//        int y = (int) event.getRawY();
+        int x = (int) event.getX();
+        int y = (int) event.getY();
+        Log.e(TAG + "li", "onTouchEvent 1: " + x + "  " + y + "**" + getLeft() + " " + getTop() + " " + getRight() + " " + getBottom());
         switch (action) {
             case MotionEvent.ACTION_DOWN:
                 lastX = x;
@@ -58,8 +60,11 @@ public class DragViewOne extends View {
                 int offsetX = x - lastX;
                 int offsetY = y - lastY;
                 layout(getLeft() + offsetX, getTop() + offsetY, getRight() + offsetX, getBottom() + offsetY);
+//                lastX = x;
+//                lastY = y;
                 Log.e(TAG + "ACTION_MOVE", "onTouchEvent: " + "offsetx: " + offsetX + " offsety: " + offsetY
-                        + " l:" + getLeft() + " t: " + getTop() + " r:" + getRight() + " b:" + getBottom()+" "+lastY+" "+lastX);
+                        + " l: " + getLeft() + " t: " + getTop() + " r:" + getRight() + " b:" + getBottom() + " " + lastY + " " + lastX);
+
                 break;
             case MotionEvent.ACTION_UP:
                 Log.e(TAG + "ACTION_UP", "onTouchEvent: " + " l:" + getLeft() + " t: " + getTop() + " r:" + getRight() + " b:" + getBottom());
