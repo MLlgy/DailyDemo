@@ -85,7 +85,8 @@
         <activity android:name=".CommonActivities.ClickBtnActivity" />
         <activity android:name=".CommonActivities.ImageScaleTypeActivity" />
         <activity android:name=".CommonActivities.LargeImageActivity" />
-        <activity android:name=".CommonActivities.ScrollerActivity"></activity>
+        <activity android:name=".CommonActivities.ScrollerActivity" />
+        <activity android:name=".showCase.ShowCaseActivity"></activity>
     </application>
 
 </manifest>

@@ -15,7 +15,6 @@ import com.CommonActivities.FontActivity;
 import com.CommonActivities.HeaderZoomActivity;
 import com.CommonActivities.ImageScaleTypeActivity;
 import com.CommonActivities.LargeImageActivity;
-import com.CommonActivities.ScrollerActivity;
 import com.androidwebviewdemo.mddemo.Change_Animation_Activity;
 import com.androidwebviewdemo.mddemo.Circle_Reveal_Activity;
 import com.androidwebviewdemo.mddemo.ClipingActivity;
@@ -33,6 +32,7 @@ import com.myrecyclerview.NotificationActivity;
 import com.myrecyclerview.RecyclerView_CardViewActivity;
 import com.numberRunner.NumberRunnerMainActivity;
 import com.permissionRequest_6.PerssionRequestTestActivity;
+import com.showCase.ShowCaseActivity;
 import com.sigleThreadDownloadFile.DownloaderFileActivity;
 import com.takePhotoWithPerssion.TakePhotoWithPerssionActivity;
 import com.titlebarAlpha.TitleBarAlphaActivity;
@@ -189,7 +189,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this, LargeImageActivity.class));
                 break;
             case R.id.tv_scoroller:
-                startActivity(new Intent(this, ScrollerActivity.class));
+                startActivity(new Intent(this, ShowCaseActivity.class));
                 break;
 
         }
