@@ -237,6 +237,12 @@
             android:layout_height="wrap_content"
             android:text="移动 view" />
 
+        <TextView
+            android:id="@+id/tv_showCase"
+            style="@style/main_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="showCase" />
     </LinearLayout>
 
 

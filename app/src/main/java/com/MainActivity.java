@@ -15,6 +15,7 @@ import com.CommonActivities.FontActivity;
 import com.CommonActivities.HeaderZoomActivity;
 import com.CommonActivities.ImageScaleTypeActivity;
 import com.CommonActivities.LargeImageActivity;
+import com.CommonActivities.ScrollerActivity;
 import com.androidwebviewdemo.mddemo.Change_Animation_Activity;
 import com.androidwebviewdemo.mddemo.Circle_Reveal_Activity;
 import com.androidwebviewdemo.mddemo.ClipingActivity;
@@ -82,6 +83,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tv_image_scale_type).setOnClickListener(this);
         findViewById(R.id.tv_long_image).setOnClickListener(this);
         findViewById(R.id.tv_scoroller).setOnClickListener(this);
+        findViewById(R.id.tv_showCase).setOnClickListener(this);
 
     }
 
@@ -185,10 +187,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tv_image_scale_type:
                 startActivity(new Intent(this, ImageScaleTypeActivity.class));
+                break;
             case R.id.tv_long_image:
                 startActivity(new Intent(this, LargeImageActivity.class));
                 break;
             case R.id.tv_scoroller:
+                startActivity(new Intent(this, ScrollerActivity.class));
+                break;
+            case R.id.tv_showCase:
                 startActivity(new Intent(this, ShowCaseActivity.class));
                 break;
 

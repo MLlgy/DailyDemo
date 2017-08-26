@@ -9,7 +9,7 @@
     <!--<com.widget.DragViewOne-->
         <!--android:layout_width="100dp"-->
         <!--android:layout_height="100dp" />-->
-    <com.widget.DragViewTwo
+    <com.widget.DragViewThree
         android:layout_width="100dp"
         android:layout_height="100dp" />
 </LinearLayout>
