@@ -41,7 +41,7 @@ public class DragViewThree extends View {
         int x = (int) event.getX();
         int y = (int) event.getY();
         switch (action) {
-            case MotionEvent.ACTION_UP:
+            case MotionEvent.ACTION_DOWN:
                 lastX = (int) event.getX();
                 lastY = (int) event.getY();
                 break;
@@ -49,7 +49,7 @@ public class DragViewThree extends View {
                 int offsetX = x - lastX;
                 int offsetY = y - lastY;
                 ((View) getParent()).scrollBy(-offsetX, -offsetY);
-
+//                ((View) getParent()).scrollTo(-x, -y);//此方法view会一直闪 疑问
                 break;
         }
         return true;
