@@ -19,6 +19,9 @@ import java.util.ArrayList;
 
 /**
  * Created by liguoying on 2017/8/22.
+ *
+ * http://www.2cto.com/kf/201708/669281.html 人脸检测
+ * http://www.2cto.com/kf/201604/504116.html qq 侧滑删除  http://www.cnblogs.com/guop/p/5066062.html
  */
 
 public class ShowCaseImageView extends ImageView {

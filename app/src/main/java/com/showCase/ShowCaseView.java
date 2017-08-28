@@ -23,19 +23,23 @@ public class ShowCaseView {
     }
 
     public void addViews(ArrayList<View> views) {
-        mQueue=new LinkedList<>();
+        mQueue = new LinkedList<>();
         mQueue.addAll(views);
     }
 
+    /**
+     * 将VIEW 添加到屏幕上
+     */
     public void show() {
         if (!mQueue.isEmpty()) {
-            currentView=mQueue.poll();
+            currentView = mQueue.poll();
             ((ViewGroup) context.getWindow().getDecorView()).addView(currentView);
         }
     }
 
+    //    将VIEW 移除屏幕
     public void dismiss() {
-        if (currentView!=null) {
+        if (currentView != null) {
             ((ViewGroup) context.getWindow().getDecorView()).removeView(currentView);
         }
         show();
@@ -45,7 +49,7 @@ public class ShowCaseView {
         if (!mQueue.isEmpty()) {
             mQueue.clear();
         }
-        if (currentView!=null) {
+        if (currentView != null) {
             ((ViewGroup) context.getWindow().getDecorView()).removeView(currentView);
         }
     }
