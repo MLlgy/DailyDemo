@@ -63,4 +63,9 @@
     <style name="TextField" parent="android:Widget.Holo.Light.TextView">
         <item name="fontPath">fonts/qiaoqiao.ttf</item>
     </style>
+
+    <style name="main_menu_animstyle">
+        <item name="android:windowEnterAnimation">@anim/photo_dialog_in_anim</item>
+        <item name="android:windowExitAnimation">@anim/photo_dialog_out_anim</item>
+    </style>
 </resources>
