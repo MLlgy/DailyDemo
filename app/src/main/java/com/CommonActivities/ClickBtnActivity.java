@@ -8,16 +8,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.R;
 import com.utils.UIUtils;
 import com.widget.CircleMenu;
 
-public class ClickBtnActivity extends AppCompatActivity {
+public class ClickBtnActivity extends AppCompatActivity implements View.OnClickListener {
     private CircleMenu circleMenu;
     private ImageView imageView1, imageView2, imageView3, imageView4, imageView5;
     private boolean isShow = true;
+
+    private Button start;
+    private Button pause;
+    private Button stop;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +38,12 @@ public class ClickBtnActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        start = findViewById(R.id.btn_start);
+        pause = findViewById(R.id.btn_pause);
+        stop = findViewById(R.id.btn_stop);
+        start.setOnClickListener(this);
+        pause.setOnClickListener(this);
+        stop.setOnClickListener(this);
         imageView1 = (ImageView) findViewById(R.id.imageview1);
         imageView2 = (ImageView) findViewById(R.id.imageview2);
         imageView3 = (ImageView) findViewById(R.id.imageview3);
@@ -230,5 +243,45 @@ public class ClickBtnActivity extends AppCompatActivity {
                 .with(animatorAlpha1).with(animatorAlpha2)
                 .before(animatorTranslateX1).before(animatorTranslateX2);
         animatorSet.start();
+    }
+
+    /**
+     * 此处的属性动画的变化值的基点为 view的原本的位置， 即：移动后再次属性动画的基点还是原来view的位置，
+     * 所以有点击start时的 0 -> ObjectAnimator mObjectAnimatorA = ObjectAnimator.ofFloat(start, "translationX", 0);
+
+     * @param view
+     */
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btn_start:
+                ObjectAnimator mObjectAnimatorA = ObjectAnimator.ofFloat(start, "translationX", 0);
+                mObjectAnimatorA.setDuration(300);
+                ObjectAnimator mObjectAnimatorB = ObjectAnimator.ofFloat(stop, "translationX", 0);
+                mObjectAnimatorB.setDuration(300);
+                ObjectAnimator mObjectAnimatorC = ObjectAnimator.ofFloat(pause, "alpha", 0f, 1f);
+                mObjectAnimatorC.setDuration(300);
+                mObjectAnimatorA.start();
+                mObjectAnimatorB.start();
+                mObjectAnimatorC.start();
+
+                break;
+            case R.id.btn_stop:
+
+                Toast.makeText(ClickBtnActivity.this, "stop", Toast.LENGTH_SHORT).show();
+
+                break;
+            case R.id.btn_pause:
+                ObjectAnimator mObjectAnimator = ObjectAnimator.ofFloat(start, "translationX", 300);
+                mObjectAnimator.setDuration(300);
+                ObjectAnimator mObjectAnimator1 = ObjectAnimator.ofFloat(stop, "translationX", -300);
+                mObjectAnimator1.setDuration(300);
+                ObjectAnimator mObjectAnimator2 = ObjectAnimator.ofFloat(pause, "alpha", 1f, 0f);
+                mObjectAnimator2.setDuration(300);
+                mObjectAnimator.start();
+                mObjectAnimator1.start();
+                mObjectAnimator2.start();
+                break;
+        }
     }
 }

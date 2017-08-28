@@ -7,22 +7,50 @@
     tools:context="com.CommonActivities.ClickBtnActivity">
 
     <com.widget.CircleMenu
-        android:id="@+id/circle_menu"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:background="@drawable/menubkground" />
+    android:id="@+id/circle_menu"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:background="@drawable/menubkground" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="点击第三个Button呦" />
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:text="点击第三个Button呦" />-->
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_alignParentBottom="true">
+        android:layout_centerInParent="true">
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="start" />
+
+
+        <Button
+            android:id="@+id/btn_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="stop" />
+
+        <Button
+            android:id="@+id/btn_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="pause" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
