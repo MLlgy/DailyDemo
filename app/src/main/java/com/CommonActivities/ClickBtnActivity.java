@@ -256,11 +256,11 @@ public class ClickBtnActivity extends AppCompatActivity implements View.OnClickL
         switch (view.getId()) {
             case R.id.btn_start:
                 ObjectAnimator mObjectAnimatorA = ObjectAnimator.ofFloat(start, "translationX", 0);
-                mObjectAnimatorA.setDuration(300);
+                mObjectAnimatorA.setDuration(500);
                 ObjectAnimator mObjectAnimatorB = ObjectAnimator.ofFloat(stop, "translationX", 0);
-                mObjectAnimatorB.setDuration(300);
+                mObjectAnimatorB.setDuration(500);
                 ObjectAnimator mObjectAnimatorC = ObjectAnimator.ofFloat(pause, "alpha", 0f, 1f);
-                mObjectAnimatorC.setDuration(300);
+                mObjectAnimatorC.setDuration(500);
                 mObjectAnimatorA.start();
                 mObjectAnimatorB.start();
                 mObjectAnimatorC.start();
@@ -273,11 +273,11 @@ public class ClickBtnActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.btn_pause:
                 ObjectAnimator mObjectAnimator = ObjectAnimator.ofFloat(start, "translationX", 300);
-                mObjectAnimator.setDuration(300);
+                mObjectAnimator.setDuration(500);
                 ObjectAnimator mObjectAnimator1 = ObjectAnimator.ofFloat(stop, "translationX", -300);
-                mObjectAnimator1.setDuration(300);
+                mObjectAnimator1.setDuration(500);
                 ObjectAnimator mObjectAnimator2 = ObjectAnimator.ofFloat(pause, "alpha", 1f, 0f);
-                mObjectAnimator2.setDuration(300);
+                mObjectAnimator2.setDuration(500);
                 mObjectAnimator.start();
                 mObjectAnimator1.start();
                 mObjectAnimator2.start();
