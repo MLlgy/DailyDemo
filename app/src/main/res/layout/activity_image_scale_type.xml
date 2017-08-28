@@ -9,6 +9,7 @@
 
     <LinearLayout
         android:orientation="vertical"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -18,8 +19,9 @@
             android:background="@mipmap/service_with_zxing"
             android:scaleType="center" />
         <ImageView
-            android:layout_width="240dp"
-            android:layout_height="200dp"
+            android:id="@+id/iv_draw_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="@mipmap/service_with_zxing"
             android:scaleType="centerCrop" />
     </LinearLayout>
