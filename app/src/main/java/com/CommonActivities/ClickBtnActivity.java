@@ -278,6 +278,7 @@ public class ClickBtnActivity extends AppCompatActivity implements View.OnClickL
                 mObjectAnimator1.setDuration(500);
                 ObjectAnimator mObjectAnimator2 = ObjectAnimator.ofFloat(pause, "alpha", 1f, 0f);
                 mObjectAnimator2.setDuration(500);
+                Toast.makeText(ClickBtnActivity.this, "pause", Toast.LENGTH_SHORT).show();
                 mObjectAnimator.start();
                 mObjectAnimator1.start();
                 mObjectAnimator2.start();
