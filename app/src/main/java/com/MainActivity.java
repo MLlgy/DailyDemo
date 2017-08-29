@@ -15,6 +15,7 @@ import com.CommonActivities.FontActivity;
 import com.CommonActivities.HeaderZoomActivity;
 import com.CommonActivities.ImageScaleTypeActivity;
 import com.CommonActivities.LargeImageActivity;
+import com.CommonActivities.MiddlSelectedActivity;
 import com.CommonActivities.ScrollerActivity;
 import com.androidwebviewdemo.mddemo.Change_Animation_Activity;
 import com.androidwebviewdemo.mddemo.Circle_Reveal_Activity;
@@ -84,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tv_long_image).setOnClickListener(this);
         findViewById(R.id.tv_scoroller).setOnClickListener(this);
         findViewById(R.id.tv_showCase).setOnClickListener(this);
-
+        findViewById(R.id.tv_select_middle).setOnClickListener(this);
     }
 
     @Override
@@ -196,6 +197,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tv_showCase:
                 startActivity(new Intent(this, ShowCaseActivity.class));
+                break;
+            case R.id.tv_select_middle:
+                startActivity(new Intent(this, MiddlSelectedActivity.class));
                 break;
 
         }
