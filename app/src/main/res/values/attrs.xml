@@ -23,6 +23,11 @@
         <attr name="svb_animation" format="reference" />
 
         <!--定义名称-->
-        <attr name="textFieldStyle" format="reference"/>
+        <attr name="textFieldStyle" format="reference" />
     </declare-styleable>
+
+    <declare-styleable name="ColumnView">
+        <attr name="column_color" format="color" />
+    </declare-styleable>
+
 </resources>

@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 /**
@@ -18,6 +19,7 @@ import android.widget.TextView;
  */
 
 public class MiddleHorizal extends HorizontalScrollView {
+    private static final int DEFAULT_COLUMN_PER_SCREEN = 7;
     private onMiddleItemChangedListener middleItemChangedListener;
     private Handler mHandler = new Handler();
     private int currentX = 0;//记录当前滚动的距离
@@ -25,11 +27,14 @@ public class MiddleHorizal extends HorizontalScrollView {
     int current = -1; //当前位于中间item的位置
     double halfScreenWidth; //屏幕的一半宽度
     LinearLayout content; //内容view
+    private int mColumnPerScreen = DEFAULT_COLUMN_PER_SCREEN;
+    private int mColumnWid = 0;
 
 
     public MiddleHorizal(Context context, AttributeSet attrs) {
         super(context, attrs);
         halfScreenWidth = 1.0 * getScreenWidth(context) / 2;
+        mColumnWid =  getScreenWidth(context) / mColumnPerScreen;
     }
 
     public MiddleHorizal(Context context) {

@@ -60,5 +60,4 @@ public class UIUtils {
         return ((float) screen_height) / screen_width;
     }
 
-
 }
