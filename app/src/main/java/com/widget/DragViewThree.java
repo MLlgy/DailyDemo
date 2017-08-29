@@ -48,7 +48,7 @@ public class DragViewThree extends View {
             case MotionEvent.ACTION_MOVE:
                 int offsetX = x - lastX;
                 int offsetY = y - lastY;
-                ((View) getParent()).scrollBy(-offsetX, -offsetY);
+                ((View) getParent()).scrollBy(-offsetX, -offsetY);//移动坐标系，使原点发生变化，所以所以的view的位置都会发生变化
 //                ((View) getParent()).scrollTo(-x, -y);//此方法view会一直闪 疑问
                 break;
         }

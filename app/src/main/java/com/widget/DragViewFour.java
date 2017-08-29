@@ -7,6 +7,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Scroller;
 
 /**
@@ -41,6 +42,7 @@ public class DragViewFour extends View {
 
     /**
      * compute : 计算 推断
+     * getCurrX() getCurrY() 获得当前的滚动值
      */
     @Override
     public void computeScroll() {
@@ -66,7 +68,13 @@ public class DragViewFour extends View {
             case MotionEvent.ACTION_MOVE:
                 int offsetX = x - lastX;
                 int offsetY = y - lastY;
-
+                ((View) getParent()).scrollBy(-offsetX, -offsetY);
+                break;
+            case MotionEvent.ACTION_UP://手放开，返回原位置
+                ViewGroup mViewGroup = (ViewGroup) getParent();
+                mScroller.startScroll(mViewGroup.getScrollX(), mViewGroup.getScrollY(),
+                        -mViewGroup.getScrollX(), -mViewGroup.getScrollY(), 2000);
+                invalidate();//在此处触发computeScroll 方法， invalidate  -> draw()  ->   computeScroll()
                 break;
         }
         return true;

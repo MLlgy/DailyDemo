@@ -16,7 +16,11 @@
         android:layout_height="wrap_content"
         android:text="show dialog" />
 
-    <com.widget.DragViewThree
+    <!--<com.widget.DragViewThree-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="100dp" />-->
+
+    <com.widget.DragViewFour
         android:layout_width="100dp"
         android:layout_height="100dp" />
 </LinearLayout>
