@@ -26,6 +26,6 @@ private DrawText mDrawText;
                         .decodeResource(getResources(),R.mipmap.service_with_zxing),
                         BitmapFactory
                                 .decodeResource(getResources(),R.mipmap.ic_launcher),
-                        "12344",R.color.black,50,400,200,200));
+                        "12344",R.color.black,50,400,600,200));
     }
 }
