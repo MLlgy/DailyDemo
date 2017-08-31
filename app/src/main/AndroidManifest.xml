@@ -87,7 +87,8 @@
         <activity android:name=".CommonActivities.LargeImageActivity" />
         <activity android:name=".CommonActivities.ScrollerActivity" />
         <activity android:name=".showCase.ShowCaseActivity" />
-        <activity android:name=".CommonActivities.MiddlSelectedActivity"></activity>
+        <activity android:name=".CommonActivities.MiddlSelectedActivity" />
+        <activity android:name=".CommonActivities.BadgeNumberActivity"></activity>
     </application>
 
 </manifest>

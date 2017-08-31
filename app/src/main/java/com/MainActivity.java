@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.BRAVHAdapter.BRAVHAdapterActivity;
+import com.CommonActivities.BadgeNumberActivity;
 import com.CommonActivities.BarChartViewActivity;
 import com.CommonActivities.ClearCacheActivity;
 import com.CommonActivities.ClickBtnActivity;
@@ -86,6 +87,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tv_scoroller).setOnClickListener(this);
         findViewById(R.id.tv_showCase).setOnClickListener(this);
         findViewById(R.id.tv_select_middle).setOnClickListener(this);
+        findViewById(R.id.tv_badge_num).setOnClickListener(this);
+
     }
 
     @Override
@@ -200,6 +203,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tv_select_middle:
                 startActivity(new Intent(this, MiddlSelectedActivity.class));
+                break;
+            case R.id.tv_badge_num:
+                startActivity(new Intent(this, BadgeNumberActivity.class));
                 break;
 
         }
