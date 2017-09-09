@@ -258,6 +258,20 @@
             android:layout_height="wrap_content"
             android:text="badge number" />
 
+        <TextView
+            android:id="@+id/tv_time_duration"
+            style="@style/main_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="倒计时" />
+
+        <TextView
+            android:id="@+id/tv_time_upper"
+            style="@style/main_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="秒表" />
+
 
     </LinearLayout>
 

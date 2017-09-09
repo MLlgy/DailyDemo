@@ -272,16 +272,7 @@ public class ClickBtnActivity extends AppCompatActivity implements View.OnClickL
 
                 break;
             case R.id.btn_pause:
-                ObjectAnimator mObjectAnimator = ObjectAnimator.ofFloat(start, "translationX", 300);
-                mObjectAnimator.setDuration(500);
-                ObjectAnimator mObjectAnimator1 = ObjectAnimator.ofFloat(stop, "translationX", -300);
-                mObjectAnimator1.setDuration(500);
-                ObjectAnimator mObjectAnimator2 = ObjectAnimator.ofFloat(pause, "alpha", 1f, 0f);
-                mObjectAnimator2.setDuration(500);
-                Toast.makeText(ClickBtnActivity.this, "pause", Toast.LENGTH_SHORT).show();
-                mObjectAnimator.start();
-                mObjectAnimator1.start();
-                mObjectAnimator2.start();
+
                 break;
         }
     }

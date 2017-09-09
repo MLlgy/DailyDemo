@@ -12,6 +12,7 @@ import com.CommonActivities.BadgeNumberActivity;
 import com.CommonActivities.BarChartViewActivity;
 import com.CommonActivities.ClearCacheActivity;
 import com.CommonActivities.ClickBtnActivity;
+import com.CommonActivities.DurationActivity;
 import com.CommonActivities.FontActivity;
 import com.CommonActivities.HeaderZoomActivity;
 import com.CommonActivities.ImageScaleTypeActivity;
@@ -38,6 +39,7 @@ import com.permissionRequest_6.PerssionRequestTestActivity;
 import com.showCase.ShowCaseActivity;
 import com.sigleThreadDownloadFile.DownloaderFileActivity;
 import com.takePhotoWithPerssion.TakePhotoWithPerssionActivity;
+import com.timercountdown.TimeActivity;
 import com.titlebarAlpha.TitleBarAlphaActivity;
 import com.touchRightLef.TouchRightLeftActivity;
 import com.tracedraw.TraceDrawActivity;
@@ -88,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tv_showCase).setOnClickListener(this);
         findViewById(R.id.tv_select_middle).setOnClickListener(this);
         findViewById(R.id.tv_badge_num).setOnClickListener(this);
-
+        findViewById(R.id.tv_time_upper).setOnClickListener(this);
     }
 
     @Override
@@ -206,6 +208,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tv_badge_num:
                 startActivity(new Intent(this, BadgeNumberActivity.class));
+                break;
+            case R.id.tv_time_duration:
+                startActivity(new Intent(this, DurationActivity.class));
+                break;
+            case R.id.tv_time_upper:
+                startActivity(new Intent(this, TimeActivity.class));
                 break;
 
         }

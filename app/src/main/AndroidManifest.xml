@@ -88,7 +88,9 @@
         <activity android:name=".CommonActivities.ScrollerActivity" />
         <activity android:name=".showCase.ShowCaseActivity" />
         <activity android:name=".CommonActivities.MiddlSelectedActivity" />
-        <activity android:name=".CommonActivities.BadgeNumberActivity"></activity>
+        <activity android:name=".CommonActivities.BadgeNumberActivity" />
+        <activity android:name=".CommonActivities.DurationActivity" />
+        <activity android:name=".timercountdown.TimeActivity"></activity>
     </application>
 
 </manifest>
