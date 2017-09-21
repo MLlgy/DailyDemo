@@ -45,6 +45,7 @@ import com.titlebarAlpha.TitleBarAlphaActivity;
 import com.touchRightLef.TouchRightLeftActivity;
 import com.tracedraw.TraceDrawActivity;
 import com.widget.SuperEditText;
+import com.widget.drag_recyclerview.DragRecyclerViewActivity;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -94,6 +95,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tv_badge_num).setOnClickListener(this);
         findViewById(R.id.tv_time_upper).setOnClickListener(this);
         findViewById(R.id.ed_super_edit).setOnClickListener(this);
+        findViewById(R.id.tv_drag_recyclerview).setOnClickListener(this);
     }
 
     @Override
@@ -220,6 +222,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.ed_super_edit:
                 startActivity(new Intent(this, SuperEditTextActivity.class));
+                break;
+            case R.id.tv_drag_recyclerview:
+                startActivity(new Intent(this, DragRecyclerViewActivity.class));
                 break;
 
         }

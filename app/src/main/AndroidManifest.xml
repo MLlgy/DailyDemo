@@ -3,6 +3,7 @@
     package="com">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <uses-feature android:name="android.hardware.camera" />
@@ -92,6 +93,7 @@
         <activity android:name=".CommonActivities.DurationActivity" />
         <activity android:name=".timercountdown.TimeActivity" />
         <activity android:name=".CommonActivities.SuperEditTextActivity"></activity>
+        <activity android:name=".widget.drag_recyclerview.DragRecyclerViewActivity" />
     </application>
 
 </manifest>
