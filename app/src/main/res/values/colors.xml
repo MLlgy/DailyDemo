@@ -81,4 +81,9 @@
     <color name="primary">#FF03A9F4</color>
     <color name="primary_dark">#FF0288D1</color>
     <color name="status_bar_color">@color/primary_dark</color>
+
+    <color name="lineColor_click">#1296db</color>
+    <color name="lineColor_unclick">#9b9b9b</color>
+    <color name="colorDeafult">#9b9b9b</color>
+    <color name="colorfocus">#1296db</color>
 </resources>

@@ -90,7 +90,8 @@
         <activity android:name=".CommonActivities.MiddlSelectedActivity" />
         <activity android:name=".CommonActivities.BadgeNumberActivity" />
         <activity android:name=".CommonActivities.DurationActivity" />
-        <activity android:name=".timercountdown.TimeActivity"></activity>
+        <activity android:name=".timercountdown.TimeActivity" />
+        <activity android:name=".CommonActivities.SuperEditTextActivity"></activity>
     </application>
 
 </manifest>

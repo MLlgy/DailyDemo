@@ -19,6 +19,7 @@ import com.CommonActivities.ImageScaleTypeActivity;
 import com.CommonActivities.LargeImageActivity;
 import com.CommonActivities.MiddlSelectedActivity;
 import com.CommonActivities.ScrollerActivity;
+import com.CommonActivities.SuperEditTextActivity;
 import com.androidwebviewdemo.mddemo.Change_Animation_Activity;
 import com.androidwebviewdemo.mddemo.Circle_Reveal_Activity;
 import com.androidwebviewdemo.mddemo.ClipingActivity;
@@ -43,6 +44,7 @@ import com.timercountdown.TimeActivity;
 import com.titlebarAlpha.TitleBarAlphaActivity;
 import com.touchRightLef.TouchRightLeftActivity;
 import com.tracedraw.TraceDrawActivity;
+import com.widget.SuperEditText;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -91,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tv_select_middle).setOnClickListener(this);
         findViewById(R.id.tv_badge_num).setOnClickListener(this);
         findViewById(R.id.tv_time_upper).setOnClickListener(this);
+        findViewById(R.id.ed_super_edit).setOnClickListener(this);
     }
 
     @Override
@@ -214,6 +217,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tv_time_upper:
                 startActivity(new Intent(this, TimeActivity.class));
+                break;
+            case R.id.ed_super_edit:
+                startActivity(new Intent(this, SuperEditTextActivity.class));
                 break;
 
         }
