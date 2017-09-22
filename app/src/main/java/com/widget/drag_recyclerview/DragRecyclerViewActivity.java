@@ -53,8 +53,8 @@ public class DragRecyclerViewActivity
     private void initView() {
         mRecyclerView = (SwipeRecyclerView) findViewById(R.id.recyclerView);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mRecyclerView.addItemDecoration(new android.support.v7.widget.DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-//        mRecyclerView.setLayoutManager(new GridLayoutManager(this, 4));
+//        mRecyclerView.addItemDecoration(new android.support.v7.widget.DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+        mRecyclerView.setLayoutManager(new GridLayoutManager(this, 4));
 //        mRecyclerView.addItemDecoration(new DividerGridItemDecoration(this));
         myAdapter = new MyAdapter(datas, mContext);
         mRecyclerView.setAdapter(myAdapter);
@@ -67,14 +67,14 @@ public class DragRecyclerViewActivity
             @Override
             public void onItemLongClick(RecyclerView.ViewHolder vh) {
                 //判断被拖拽的是否是前两个，如果不是则执行拖拽
-                if (vh.getLayoutPosition() != 0 && vh.getLayoutPosition() != 1) {
+//                if (vh.getLayoutPosition() != 0 && vh.getLayoutPosition() != 1) {
                     mItemTouchHelper.startDrag(vh);
 
                     //获取系统震动服务
                     Vibrator vib = (Vibrator) getSystemService(Service.VIBRATOR_SERVICE);//震动70毫秒
                     vib.vibrate(70);
 
-                }
+//                }
             }
         });
 

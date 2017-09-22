@@ -13,6 +13,7 @@ import com.CommonActivities.BarChartViewActivity;
 import com.CommonActivities.ClearCacheActivity;
 import com.CommonActivities.ClickBtnActivity;
 import com.CommonActivities.DurationActivity;
+import com.CommonActivities.EditMenuActivity;
 import com.CommonActivities.FontActivity;
 import com.CommonActivities.HeaderZoomActivity;
 import com.CommonActivities.ImageScaleTypeActivity;
@@ -96,6 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.tv_time_upper).setOnClickListener(this);
         findViewById(R.id.ed_super_edit).setOnClickListener(this);
         findViewById(R.id.tv_drag_recyclerview).setOnClickListener(this);
+        findViewById(R.id.tv_edit_menu).setOnClickListener(this);
     }
 
     @Override
@@ -225,6 +227,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.tv_drag_recyclerview:
                 startActivity(new Intent(this, DragRecyclerViewActivity.class));
+                break;
+            case R.id.tv_edit_menu:
+                startActivity(new Intent(this, EditMenuActivity.class));
                 break;
 
         }
