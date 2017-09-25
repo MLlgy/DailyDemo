@@ -4,13 +4,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.R;
 import com.adapter.EditMenuAdapter;
-import com.adapter.EditaItemAdapter;
 import com.entity.DayEntity;
 import com.google.gson.Gson;
 
@@ -27,6 +29,12 @@ public class EditMenuActivity extends AppCompatActivity {
     private ImageView mImageView;
     private RecyclerView mRecyclerView;
     private EditMenuAdapter mEditMenuAdapter;
+    private RelativeLayout mEditemuTitleBar;
+    private TextView editMenu;
+    private TextView mEditCancle;
+    private TextView mEditOk;
+    private RecyclerView mMyApplicationRecyclerView;
+    private LinearLayout mMyApplicationShow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,5 +100,33 @@ public class EditMenuActivity extends AppCompatActivity {
     private void initView() {
         mRecyclerView = findViewById(R.id.rv_edit_menu);
         mLinearLayout = findViewById(R.id.ll_use_application);
+        mEditemuTitleBar = findViewById(R.id.rl_edit_menu_titlebar);
+        editMenu = findViewById(R.id.tv_edit_application);
+        mEditCancle = findViewById(R.id.tv_edit_ok);
+        mEditOk = findViewById(R.id.tv_edit_cancle);
+        mMyApplicationShow = findViewById(R.id.ll_my_application_show);
+        mMyApplicationRecyclerView = findViewById(R.id.rl_my_application_menu);
+        editMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mEditemuTitleBar.setVisibility(View.GONE);
+                mMyApplicationShow.setVisibility(View.VISIBLE);
+            }
+        });
+
+        mEditOk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mEditemuTitleBar.setVisibility(View.VISIBLE);
+                mMyApplicationShow.setVisibility(View.GONE);
+            }
+        });
+        mEditCancle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mEditemuTitleBar.setVisibility(View.VISIBLE);
+                mMyApplicationShow.setVisibility(View.GONE);
+            }
+        });
     }
 }

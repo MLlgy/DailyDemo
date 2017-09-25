@@ -11,6 +11,8 @@ import com.lidroid.xutils.util.LogUtils;
 /**
  * Created by liguoying on 2017/9/25.
  * 实现的功能： 只有在手指滑动时，Scrollerview 才会拦截事件 ，在惯性的滑动时滑动事件交给了子控件(此例子中的 Recyclerview)
+ *
+ * http://blog.csdn.net/fangchao3652/article/details/46914987
  */
 
 public class MyScrollerView extends ScrollView {

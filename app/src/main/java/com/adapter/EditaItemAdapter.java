@@ -38,7 +38,7 @@ public class EditaItemAdapter extends RecyclerView.Adapter<EditaItemAdapter.Edit
     }
 
     @Override
-    public void onBindViewHolder(EditaItemAdapterViewHolder holder, final int position) {
+    public void onBindViewHolder(final EditaItemAdapterViewHolder holder, final int position) {
         holder.logo.setImageResource(R.mipmap.ic_category_0);
         holder.mCutOrAdd.setImageResource(R.mipmap.icon_add_menu);
         holder.name.setText(mDateBeans.get(position).getImage());
@@ -47,6 +47,7 @@ public class EditaItemAdapter extends RecyclerView.Adapter<EditaItemAdapter.Edit
             public void onClick(View view) {
                 mIItemSecondItemClick.secondItemClick(position, mFirstPosition);
                 LogUtils.e(position + "   " + mFirstPosition);
+                holder.mCutOrAdd.setImageResource(R.mipmap.icon_selected_yes);
             }
         });
     }
