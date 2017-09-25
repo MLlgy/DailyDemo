@@ -6,10 +6,9 @@
     android:orientation="vertical">
 
 
-    <ScrollView
+    <com.widget.MyScrollerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fillViewport="true"
         android:scrollbars="none">
 
         <LinearLayout
@@ -58,7 +57,7 @@
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
-    </ScrollView>
+    </com.widget.MyScrollerView>
 
 
 </LinearLayout>
