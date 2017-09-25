@@ -6,8 +6,11 @@ import android.view.MotionEvent;
 import android.view.ViewConfiguration;
 import android.widget.ScrollView;
 
+import com.lidroid.xutils.util.LogUtils;
+
 /**
  * Created by liguoying on 2017/9/25.
+ * 实现的功能： 只有在手指滑动时，Scrollerview 才会拦截事件 ，在惯性的滑动时滑动事件交给了子控件(此例子中的 Recyclerview)
  */
 
 public class MyScrollerView extends ScrollView {
@@ -45,9 +48,11 @@ public class MyScrollerView extends ScrollView {
             case MotionEvent.ACTION_MOVE:
                 int moveY = (int) e.getRawY();
                 if (Math.abs(moveY - downY) > mTouchSlop) {
+                    LogUtils.e("true");
                     return true;
                 }
         }
-        return super.onInterceptTouchEvent(e);
+        LogUtils.e(super.onInterceptTouchEvent(e) + "");
+        return super.onInterceptTouchEvent(e);//默认返回 false
     }
 }
