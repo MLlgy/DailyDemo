@@ -24,10 +24,20 @@ public class EditMenuAdapter extends RecyclerView.Adapter<EditMenuAdapter.EditMe
     private RecyclerView mEditRecyclerview;
     private EditaItemAdapter mAdapter;
     private IItemFirstItemClick mIItemSecondItemClick;
+    private boolean editAble;
 
-    public EditMenuAdapter(List<DayEntity.ContentBean> list, Context context) {
+    public boolean isEditAble() {
+        return editAble;
+    }
+
+    public void setEditAble(boolean editAble) {
+        this.editAble = editAble;
+    }
+
+    public EditMenuAdapter(List<DayEntity.ContentBean> list, Context context, boolean editAble) {
         mList = list;
         mContext = context;
+        this.editAble = editAble;
     }
 
     @Override
@@ -40,7 +50,7 @@ public class EditMenuAdapter extends RecyclerView.Adapter<EditMenuAdapter.EditMe
         mEditRecyclerview = holder.mRecyclerView;
         holder.mTitle.setText(mList.get(position).getName());
         GridLayoutManager gridLayoutManager = new GridLayoutManager(mContext, 4);
-        mAdapter = new EditaItemAdapter(mContext, mList.get(position).getDate(), position);
+        mAdapter = new EditaItemAdapter(mContext, mList.get(position).getDate(), position,editAble);
         mEditRecyclerview.setLayoutManager(gridLayoutManager);
         mEditRecyclerview.setAdapter(mAdapter);
         mAdapter.setSecondItemClick(new EditaItemAdapter.IItemSecondItemClick() {

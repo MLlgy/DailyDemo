@@ -25,11 +25,13 @@ public class EditaItemAdapter extends RecyclerView.Adapter<EditaItemAdapter.Edit
 
     private int mFirstPosition;
     private IItemSecondItemClick mIItemSecondItemClick;
+    private boolean editAble;
 
-    public EditaItemAdapter(Context context, List<DayEntity.ContentBean.DateBean> dateBeans, int position) {
+    public EditaItemAdapter(Context context, List<DayEntity.ContentBean.DateBean> dateBeans, int position, boolean editAble) {
         mContext = context;
         mDateBeans = dateBeans;
         this.mFirstPosition = position;
+        this.editAble = editAble;
     }
 
     @Override
@@ -39,6 +41,11 @@ public class EditaItemAdapter extends RecyclerView.Adapter<EditaItemAdapter.Edit
 
     @Override
     public void onBindViewHolder(final EditaItemAdapterViewHolder holder, final int position) {
+        if (!editAble) {
+            holder.mCutOrAdd.setVisibility(View.INVISIBLE);
+        } else {
+            holder.mCutOrAdd.setVisibility(View.VISIBLE);
+        }
         holder.logo.setImageResource(R.mipmap.ic_category_0);
         holder.mCutOrAdd.setImageResource(R.mipmap.icon_add_menu);
         holder.name.setText(mDateBeans.get(position).getImage());

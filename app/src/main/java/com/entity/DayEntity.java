@@ -8,12 +8,19 @@ import java.util.List;
 
 public class DayEntity {
 
+    @Override
+    public String toString() {
+        return "DayEntity{" +
+                "code='" + code + '\'' +
+                ", content=" + content +
+                '}';
+    }
+
     /**
-     *
-     * {"code" : ok ,"content" : [{"name":"今天","date":[{"title":"中间","image":"haha"},{"title":" 中间 ","image":"haha"},{"title":" 中间 ","image":"haha"}]},{"name":"明天","date":[{"title":"中间","image":"haha"},{"title":"中间","image":"haha"},{"title":"中间","image":"haha"}]},{"name":"明天","date":[{"title":"中间","image":"haha"},{"title":"中间","image":"haha"},{"title":"中间","image":"haha"}]}]}
-     * code : ok
+     * {"code":"ok","content":[{"name":"今天","date":[{"title":"中间","image":"haha"},{"title":" 中间 ","image":"haha"},{"title":" 中间 ","image":"haha"}]},{"name":"明天","date":[{"title":"中间","image":"haha"},{"title":"中间","image":"haha"},{"title":"中间","image":"haha"}]},{"name":"明天","date":[{"title":"中间","image":"haha"},{"title":"中间","image":"haha"},{"title":"中间","image":"haha"}]}]}* code : ok
      * content : [{"name":"今天","date":[{"title":"中间","image":"haha"},{"title":" 中间 ","image":"haha"},{"title":" 中间 ","image":"haha"}]},{"name":"明天","date":[{"title":"中间","image":"haha"},{"title":"中间","image":"haha"},{"title":"中间","image":"haha"}]},{"name":"明天","date":[{"title":"中间","image":"haha"},{"title":"中间","image":"haha"},{"title":"中间","image":"haha"}]}]
      */
+
 
     private String code;
     private List<ContentBean> content;
@@ -35,10 +42,19 @@ public class DayEntity {
     }
 
     public static class ContentBean {
+        @Override
+        public String toString() {
+            return "ContentBean{" +
+                    "name='" + name + '\'' +
+                    ", date=" + date +
+                    '}';
+        }
+
         /**
          * name : 今天
          * date : [{"title":"中间","image":"haha"},{"title":" 中间 ","image":"haha"},{"title":" 中间 ","image":"haha"}]
          */
+
 
         private String name;
         private List<DateBean> date;
@@ -60,10 +76,19 @@ public class DayEntity {
         }
 
         public static class DateBean {
+            @Override
+            public String toString() {
+                return "DateBean{" +
+                        "title='" + title + '\'' +
+                        ", image='" + image + '\'' +
+                        '}';
+            }
+
             /**
              * title : 中间
              * image : haha
              */
+
 
             private String title;
             private String image;

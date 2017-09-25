@@ -2,6 +2,7 @@ package com.CommonActivities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -13,9 +14,12 @@ import android.widget.Toast;
 
 import com.R;
 import com.adapter.EditMenuAdapter;
+import com.adapter.MyEditMenuAdapter;
 import com.entity.DayEntity;
 import com.google.gson.Gson;
+import com.lidroid.xutils.util.LogUtils;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class EditMenuActivity extends AppCompatActivity {
@@ -35,6 +39,10 @@ public class EditMenuActivity extends AppCompatActivity {
     private TextView mEditOk;
     private RecyclerView mMyApplicationRecyclerView;
     private LinearLayout mMyApplicationShow;
+    private List<DayEntity.ContentBean.DateBean> temMenu = new ArrayList();
+    private List<DayEntity.ContentBean.DateBean> lastMenu = new ArrayList();
+    private MyEditMenuAdapter mMyEditMenuAdapter;
+    private boolean editAble;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,19 +55,55 @@ public class EditMenuActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        mEditMenuAdapter = new EditMenuAdapter(mDayEntity.getContent(), this);
+        for (int i = 0; i < 5; i++) {
+            lastMenu.add(mDayEntity.getContent().get(0).getDate().get(i));
+        }
+
+        mEditMenuAdapter = new EditMenuAdapter(mDayEntity.getContent(), this, editAble);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-//        LinearLayoutManager linearLayoutManager2 = new LinearLayoutManager{
-//
-//        }
         mRecyclerView.setLayoutManager(linearLayoutManager);
         mRecyclerView.setAdapter(mEditMenuAdapter);
-        mEditMenuAdapter.setIItemFirstItemClick(new EditMenuAdapter.IItemFirstItemClick() {
+
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 4);
+        mMyEditMenuAdapter = new MyEditMenuAdapter(this, lastMenu);
+        mMyApplicationRecyclerView.setLayoutManager(gridLayoutManager);
+        mMyApplicationRecyclerView.setAdapter(mMyEditMenuAdapter);
+        mMyEditMenuAdapter.setSecondItemClick(new MyEditMenuAdapter.IMyApplicationItemClick() {
             @Override
-            public void setIItemFirstItemClick(int position, int seconPosition) {
-                Toast.makeText(EditMenuActivity.this, position + "  二  " + seconPosition, Toast.LENGTH_SHORT).show();
+            public void secondItemClick(int position) {
+                findSameItem(lastMenu.get(position));
+                lastMenu.remove(position);
+                mMyApplicationRecyclerView.getAdapter().notifyDataSetChanged();
             }
         });
+
+        mEditMenuAdapter.setIItemFirstItemClick(new EditMenuAdapter.IItemFirstItemClick() {
+            @Override
+            public void setIItemFirstItemClick(int secondPosition, int firstPosition) {
+                lastMenu.add(mDayEntity.getContent().get(firstPosition).getDate().get(secondPosition));
+                mMyApplicationRecyclerView.getAdapter().notifyDataSetChanged();
+                Toast.makeText(EditMenuActivity.this, firstPosition + "  二  " + secondPosition, Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void findSameItem(DayEntity.ContentBean.DateBean dateBean) {
+        LogUtils.e(mDayEntity.toString());
+        String key = dateBean.getImage();
+        int size = mDayEntity.getContent().size();
+        for (int i = 0; i < size; i++) {
+            DayEntity.ContentBean mContentBean = mDayEntity.getContent().get(i);
+            int mSize = mContentBean.getDate().size();
+            for (int j = 0; j < mSize; j++) {
+                DayEntity.ContentBean.DateBean mDataBean = mContentBean.getDate().get(j);
+                if (key.equals(mDataBean.getImage())) {
+                    mDataBean.setImage("3532");
+                }
+            }
+
+        }
+        LogUtils.e(mDayEntity.toString());
+        mRecyclerView.getAdapter().notifyDataSetChanged();
     }
 
     @Override
@@ -109,6 +153,9 @@ public class EditMenuActivity extends AppCompatActivity {
         editMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                editAble = true;
+                mEditMenuAdapter.setEditAble(editAble);
+                mRecyclerView.getAdapter().notifyDataSetChanged();
                 mEditemuTitleBar.setVisibility(View.GONE);
                 mMyApplicationShow.setVisibility(View.VISIBLE);
             }
@@ -117,6 +164,9 @@ public class EditMenuActivity extends AppCompatActivity {
         mEditOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                editAble = false;
+                mEditMenuAdapter.setEditAble(editAble);
+                mRecyclerView.getAdapter().notifyDataSetChanged();
                 mEditemuTitleBar.setVisibility(View.VISIBLE);
                 mMyApplicationShow.setVisibility(View.GONE);
             }
@@ -124,6 +174,9 @@ public class EditMenuActivity extends AppCompatActivity {
         mEditCancle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                editAble = false;
+                mEditMenuAdapter.setEditAble(editAble);
+                mRecyclerView.getAdapter().notifyDataSetChanged();
                 mEditemuTitleBar.setVisibility(View.VISIBLE);
                 mMyApplicationShow.setVisibility(View.GONE);
             }
