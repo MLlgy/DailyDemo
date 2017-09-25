@@ -47,7 +47,12 @@ public class EditaItemAdapter extends RecyclerView.Adapter<EditaItemAdapter.Edit
             holder.mCutOrAdd.setVisibility(View.VISIBLE);
         }
         holder.logo.setImageResource(R.mipmap.ic_category_0);
-        holder.mCutOrAdd.setImageResource(R.mipmap.icon_add_menu);
+        if (mDateBeans.get(position).getStatus() == 1) {
+            holder.mCutOrAdd.setImageResource(R.mipmap.icon_add_menu);
+        } else {
+            holder.mCutOrAdd.setImageResource(R.mipmap.icon_selected_yes);
+
+        }
         holder.name.setText(mDateBeans.get(position).getImage());
         holder.mRelativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override

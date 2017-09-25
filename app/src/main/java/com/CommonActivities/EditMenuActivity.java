@@ -26,6 +26,190 @@ public class EditMenuActivity extends AppCompatActivity {
     private String content = "{\"code\" : ok ,\"content\" : [{\"name\":\"今天\",\"date\":[{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\" 中间 \",\"image\":\"haha\"},{\"title\":\" 中间 \",\"image\":\"haha\"}]},{\"name\":\"明天\",\"date\":[{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"}]},{\"name\":\"明天\",\"date\":[{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"}]},{\"name\":\"明天\",\"date\":[{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"}]},{\"name\":\"明天\",\"date\":[{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"}]},{\"name\":\"明天\",\"date\":[{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"}]},{\"name\":\"明天\",\"date\":[{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"}]},{\"name\":\"明天\",\"date\":[{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"}]}]\n" +
             "     }";
 
+    private String content2 = "{\n" +
+            "    \"code\":\"ok\",\n" +
+            "    \"content\":[\n" +
+            "        {\n" +
+            "            \"name\":\"今天\",\n" +
+            "            \"date\":[\n" +
+            "                {   \"id\":0,\n" +
+            "                    \"status\":2,\n" +
+            "                    \"title\":\"中间\",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                },\n" +
+            "                {  \"id\":1,\n" +
+            "                    \"status\":2,\n" +
+            "                    \"title\":\" 中间 \",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                },\n" +
+            "                {   \"id\":2,\n" +
+            "                    \"status\":2,\n" +
+            "                    \"title\":\" 中间 \",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                }\n" +
+            "                ,\n" +
+            "                {   \"id\":21,\n" +
+            "                    \"status\":1,\n" +
+            "                    \"title\":\" 中间 \",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                }\n" +
+            "                ,\n" +
+            "                {   \"id\":22,\n" +
+            "                    \"status\":1,\n" +
+            "                    \"title\":\" 中间 \",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                }\n" +
+            "            ]\n" +
+            "        },\n" +
+            "        {\n" +
+            "            \"name\":\"明天\",\n" +
+            "            \"date\":[\n" +
+            "                {   \"id\":3,\n" +
+            "                    \"status\":1,\n" +
+            "                    \"title\":\"中间\",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                },\n" +
+            "                {   \"id\":4,\n" +
+            "                    \"status\":1,\n" +
+            "                    \"title\":\"中间\",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                },\n" +
+            "                {   \"id\":5,\n" +
+            "                    \"status\":1,\n" +
+            "                    \"title\":\"中间\",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                }\n" +
+            "            ]\n" +
+            "        },\n" +
+            "        {\n" +
+            "            \"name\":\"明天\",\n" +
+            "            \"date\":[\n" +
+            "                {   \"id\":6,\n" +
+            "                    \"status\":1,\n" +
+            "                    \"title\":\"中间\",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                },\n" +
+            "                {   \"id\":0,\n" +
+            "                    \"status\":1,\n" +
+            "                    \"title\":\"中间\",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                },\n" +
+            "                {    \"id\":7,\n" +
+            "                    \"status\":1,\n" +
+            "                    \"title\":\"中间\",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                }\n" +
+            "                ,\n" +
+            "                {   \"id\":23,\n" +
+            "                    \"status\":1,\n" +
+            "                    \"title\":\" 中间 \",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                }\n" +
+            "            ]\n" +
+            "        },\n" +
+            "\n" +
+            "\n" +
+            "\n" +
+            "\n" +
+            "        {\n" +
+            "            \"name\":\"明天\",\n" +
+            "            \"date\":[\n" +
+            "                {   \"id\":8,\n" +
+            "                    \"status\":1,\n" +
+            "                    \"title\":\"中间\",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                },\n" +
+            "                {   \"id\":9,\n" +
+            "                    \"status\":1,\n" +
+            "                    \"title\":\"中间\",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                },\n" +
+            "                {    \"id\":11,\n" +
+            "                    \"status\":1,\n" +
+            "                    \"title\":\"中间\",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                },\n" +
+            "                {   \"id\":24,\n" +
+            "                    \"status\":1,\n" +
+            "                    \"title\":\" 中间 \",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                },\n" +
+            "                {   \"id\":25,\n" +
+            "                    \"status\":1,\n" +
+            "                    \"title\":\" 中间 \",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                },\n" +
+            "                {   \"id\":26,\n" +
+            "                    \"status\":1,\n" +
+            "                    \"title\":\" 中间 \",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                }\n" +
+            "            ]\n" +
+            "        },\n" +
+            "        {\n" +
+            "            \"name\":\"明天\",\n" +
+            "            \"date\":[\n" +
+            "                {   \"id\":12,\n" +
+            "                    \"status\":1,\n" +
+            "                    \"title\":\"中间\",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                },\n" +
+            "                {   \"id\":13,\n" +
+            "                    \"status\":1,\n" +
+            "                    \"title\":\"中间\",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                },\n" +
+            "                {    \"id\":14,\n" +
+            "                    \"status\":1,\n" +
+            "                    \"title\":\"中间\",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                }\n" +
+            "            ]\n" +
+            "        },\n" +
+            "        {\n" +
+            "            \"name\":\"明天\",\n" +
+            "            \"date\":[\n" +
+            "                {   \"id\":15,\n" +
+            "                    \"status\":1,\n" +
+            "                    \"title\":\"中间\",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                },\n" +
+            "                {   \"id\":16,\n" +
+            "                    \"status\":1,\n" +
+            "                    \"title\":\"中间\",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                },\n" +
+            "                {    \"id\":17,\n" +
+            "                    \"status\":1,\n" +
+            "                    \"title\":\"中间\",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                }\n" +
+            "            ]\n" +
+            "        },\n" +
+            "        {\n" +
+            "            \"name\":\"明天\",\n" +
+            "            \"date\":[\n" +
+            "                {   \"id\":18,\n" +
+            "                    \"status\":1,\n" +
+            "                    \"title\":\"中间\",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                },\n" +
+            "                {   \"id\":19,\n" +
+            "                    \"status\":1,\n" +
+            "                    \"title\":\"中间\",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                },\n" +
+            "                {    \"id\":20,\n" +
+            "                    \"status\":1,\n" +
+            "                    \"title\":\"中间\",\n" +
+            "                    \"image\":\"haha\"\n" +
+            "                }\n" +
+            "            ]\n" +
+            "        }\n" +
+            "    ]\n" +
+            "}\n" +
+            "\n";
+
     private LinearLayout mLinearLayout;
     private DayEntity mDayEntity;
     private int mMllinearWitdh;
@@ -48,14 +232,14 @@ public class EditMenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_menu);
-        mDayEntity = new Gson().fromJson(content, DayEntity.class);
+        mDayEntity = new Gson().fromJson(content2, DayEntity.class);
         initView();
         getLinearlayoutWidth();
         initData();
     }
 
     private void initData() {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 3; i++) {
             lastMenu.add(mDayEntity.getContent().get(0).getDate().get(i));
         }
 
@@ -80,7 +264,12 @@ public class EditMenuActivity extends AppCompatActivity {
         mEditMenuAdapter.setIItemFirstItemClick(new EditMenuAdapter.IItemFirstItemClick() {
             @Override
             public void setIItemFirstItemClick(int secondPosition, int firstPosition) {
-                lastMenu.add(mDayEntity.getContent().get(firstPosition).getDate().get(secondPosition));
+//                if(lastMenu.size()>){
+//
+//                }
+                DayEntity.ContentBean.DateBean dateBean = mDayEntity.getContent().get(firstPosition).getDate().get(secondPosition);
+                dateBean.setStatus(2);
+                lastMenu.add(dateBean);
                 mMyApplicationRecyclerView.getAdapter().notifyDataSetChanged();
                 Toast.makeText(EditMenuActivity.this, firstPosition + "  二  " + secondPosition, Toast.LENGTH_SHORT).show();
             }
@@ -89,18 +278,17 @@ public class EditMenuActivity extends AppCompatActivity {
 
     private void findSameItem(DayEntity.ContentBean.DateBean dateBean) {
         LogUtils.e(mDayEntity.toString());
-        String key = dateBean.getImage();
+        int key = dateBean.getId();
         int size = mDayEntity.getContent().size();
         for (int i = 0; i < size; i++) {
             DayEntity.ContentBean mContentBean = mDayEntity.getContent().get(i);
             int mSize = mContentBean.getDate().size();
             for (int j = 0; j < mSize; j++) {
                 DayEntity.ContentBean.DateBean mDataBean = mContentBean.getDate().get(j);
-                if (key.equals(mDataBean.getImage())) {
-                    mDataBean.setImage("3532");
+                if (key == mDataBean.getId()) {
+                    mDataBean.setStatus(1);
                 }
             }
-
         }
         LogUtils.e(mDayEntity.toString());
         mRecyclerView.getAdapter().notifyDataSetChanged();
