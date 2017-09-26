@@ -57,9 +57,11 @@ public class EditaItemAdapter extends RecyclerView.Adapter<EditaItemAdapter.Edit
         holder.mRelativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mIItemSecondItemClick.secondItemClick(position, mFirstPosition);
+                if (mDateBeans.get(position).getStatus() == 1) {
+                    holder.mCutOrAdd.setImageResource(R.mipmap.icon_selected_yes);
+                    mIItemSecondItemClick.secondItemClick(position, mFirstPosition);
+                }
                 LogUtils.e(position + "   " + mFirstPosition);
-                holder.mCutOrAdd.setImageResource(R.mipmap.icon_selected_yes);
             }
         });
     }
