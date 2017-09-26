@@ -1,8 +1,8 @@
 package com.CommonActivities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -10,22 +10,17 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.R;
 import com.adapter.EditMenuAdapter;
 import com.adapter.MyEditMenuAdapter;
 import com.entity.DayEntity;
 import com.google.gson.Gson;
-import com.lidroid.xutils.util.LogUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class EditMenuActivity extends AppCompatActivity {
-    private String content = "{\"code\" : ok ,\"content\" : [{\"name\":\"今天\",\"date\":[{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\" 中间 \",\"image\":\"haha\"},{\"title\":\" 中间 \",\"image\":\"haha\"}]},{\"name\":\"明天\",\"date\":[{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"}]},{\"name\":\"明天\",\"date\":[{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"}]},{\"name\":\"明天\",\"date\":[{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"}]},{\"name\":\"明天\",\"date\":[{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"}]},{\"name\":\"明天\",\"date\":[{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"}]},{\"name\":\"明天\",\"date\":[{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"}]},{\"name\":\"明天\",\"date\":[{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"},{\"title\":\"中间\",\"image\":\"haha\"}]}]\n" +
-            "     }";
-
+public class TotalMenuActivity extends AppCompatActivity {
     private String content2 = "{\n" +
             "    \"code\":\"ok\",\n" +
             "    \"content\":[\n" +
@@ -231,73 +226,22 @@ public class EditMenuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_menu);
+        setContentView(R.layout.activity_total_menu);
         mDayEntity = new Gson().fromJson(content2, DayEntity.class);
         initView();
         getLinearlayoutWidth();
         initData();
     }
 
-    private void initData() {
-        for (int i = 0; i < 3; i++) {
-            lastMenu.add(mDayEntity.getContent().get(0).getDate().get(i));
-        }
-
-        mEditMenuAdapter = new EditMenuAdapter(mDayEntity.getContent(), this, editAble);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        mRecyclerView.setLayoutManager(linearLayoutManager);
-        mRecyclerView.setAdapter(mEditMenuAdapter);
-
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 4);
-        mMyEditMenuAdapter = new MyEditMenuAdapter(this, lastMenu);
-        mMyApplicationRecyclerView.setLayoutManager(gridLayoutManager);
-        mMyApplicationRecyclerView.setAdapter(mMyEditMenuAdapter);
-        mMyEditMenuAdapter.setSecondItemClick(new MyEditMenuAdapter.IMyApplicationItemClick() {
+    private void getLinearlayoutWidth() {
+        mLinearLayout.post(new Runnable() {
             @Override
-            public void secondItemClick(int position) {
-                findSameItem(lastMenu.get(position));
-                lastMenu.remove(position);
-                mMyApplicationRecyclerView.getAdapter().notifyDataSetChanged();
+            public void run() {
+                mMllinearWitdh = mLinearLayout.getMeasuredWidth();
+                perWidth = mMllinearWitdh / 7;
+                initTitleMenu();
             }
         });
-
-        mEditMenuAdapter.setIItemFirstItemClick(new EditMenuAdapter.IItemFirstItemClick() {
-            @Override
-            public void setIItemFirstItemClick(int secondPosition, int firstPosition) {
-//                if(lastMenu.size()>){
-//
-//                }
-                DayEntity.ContentBean.DateBean dateBean = mDayEntity.getContent().get(firstPosition).getDate().get(secondPosition);
-                dateBean.setStatus(2);
-                lastMenu.add(dateBean);
-                mMyApplicationRecyclerView.getAdapter().notifyDataSetChanged();
-                Toast.makeText(EditMenuActivity.this, firstPosition + "  二  " + secondPosition, Toast.LENGTH_SHORT).show();
-            }
-        });
-//        editMenu.performClick();
-    }
-
-    private void findSameItem(DayEntity.ContentBean.DateBean dateBean) {
-        LogUtils.e(mDayEntity.toString());
-        int key = dateBean.getId();
-        int size = mDayEntity.getContent().size();
-        for (int i = 0; i < size; i++) {
-            DayEntity.ContentBean mContentBean = mDayEntity.getContent().get(i);
-            int mSize = mContentBean.getDate().size();
-            for (int j = 0; j < mSize; j++) {
-                DayEntity.ContentBean.DateBean mDataBean = mContentBean.getDate().get(j);
-                if (key == mDataBean.getId()) {
-                    mDataBean.setStatus(1);
-                }
-            }
-        }
-        LogUtils.e(mDayEntity.toString());
-        mRecyclerView.getAdapter().notifyDataSetChanged();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
     }
 
     private void initTitleMenu() {
@@ -319,57 +263,22 @@ public class EditMenuActivity extends AppCompatActivity {
         }
     }
 
-    private void getLinearlayoutWidth() {
-        mLinearLayout.post(new Runnable() {
-            @Override
-            public void run() {
-                mMllinearWitdh = mLinearLayout.getMeasuredWidth();
-                perWidth = mMllinearWitdh / 7;
-                initTitleMenu();
-            }
-        });
+    private void initData() {
+        mEditMenuAdapter = new EditMenuAdapter(mDayEntity.getContent(), this, editAble);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        mRecyclerView.setLayoutManager(linearLayoutManager);
+        mRecyclerView.setAdapter(mEditMenuAdapter);
     }
 
     private void initView() {
-        mRecyclerView = findViewById(R.id.rv_edit_menu);
-        mLinearLayout = findViewById(R.id.ll_use_application);
-        mEditemuTitleBar = findViewById(R.id.rl_edit_menu_titlebar);
-        editMenu = findViewById(R.id.tv_edit_application);
-        mEditCancle = findViewById(R.id.tv_edit_ok);
-        mEditOk = findViewById(R.id.tv_edit_cancle);
-        mMyApplicationShow = findViewById(R.id.ll_my_application_show);
-        mMyApplicationRecyclerView = findViewById(R.id.rl_my_application_menu);
+        mRecyclerView = findViewById(R.id.rv_edit_menu_total);
+        mLinearLayout = findViewById(R.id.ll_use_application_total);
+        editMenu = findViewById(R.id.tv_edit_applicationa_total);
         editMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                editAble = true;
-                mEditMenuAdapter.setEditAble(editAble);
-                mRecyclerView.getAdapter().notifyDataSetChanged();
-                mEditemuTitleBar.setVisibility(View.GONE);
-                mMyApplicationShow.setVisibility(View.VISIBLE);
+                startActivity(new Intent(TotalMenuActivity.this, EditMenuActivity.class));
             }
         });
-
-        mEditOk.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                editAble = false;
-                mEditMenuAdapter.setEditAble(editAble);
-                mRecyclerView.getAdapter().notifyDataSetChanged();
-                mEditemuTitleBar.setVisibility(View.VISIBLE);
-                mMyApplicationShow.setVisibility(View.GONE);
-            }
-        });
-        mEditCancle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                editAble = false;
-                mEditMenuAdapter.setEditAble(editAble);
-                mRecyclerView.getAdapter().notifyDataSetChanged();
-                mEditemuTitleBar.setVisibility(View.VISIBLE);
-                mMyApplicationShow.setVisibility(View.GONE);
-            }
-        });
-
     }
 }

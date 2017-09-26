@@ -21,6 +21,7 @@ import com.CommonActivities.LargeImageActivity;
 import com.CommonActivities.MiddlSelectedActivity;
 import com.CommonActivities.ScrollerActivity;
 import com.CommonActivities.SuperEditTextActivity;
+import com.CommonActivities.TotalMenuActivity;
 import com.androidwebviewdemo.mddemo.Change_Animation_Activity;
 import com.androidwebviewdemo.mddemo.Circle_Reveal_Activity;
 import com.androidwebviewdemo.mddemo.ClipingActivity;
@@ -229,7 +230,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this, DragRecyclerViewActivity.class));
                 break;
             case R.id.tv_edit_menu:
-                startActivity(new Intent(this, EditMenuActivity.class));
+                startActivity(new Intent(this, TotalMenuActivity.class));
+//                startActivity(new Intent(this, EditMenuActivity.class));
                 break;
 
         }
