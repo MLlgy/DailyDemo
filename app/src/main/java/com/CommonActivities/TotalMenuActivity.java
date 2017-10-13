@@ -16,6 +16,7 @@ import com.adapter.EditMenuAdapter;
 import com.adapter.MyEditMenuAdapter;
 import com.entity.DayEntity;
 import com.google.gson.Gson;
+import com.widget.FullyLinearLayoutManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -180,7 +181,10 @@ public class TotalMenuActivity extends AppCompatActivity {
             "                    \"image\":\"haha\"\n" +
             "                }\n" +
             "            ]\n" +
-            "        },\n" +
+            "        },{\"name\":\"今天\",\"date\":[{\"id\":0,\"status\":1,\"title\":\"中间\",\"image\":\"haha\"},{\"id\":1,\"status\":1,\"title\":\" 中间 \",\"image\":\"haha\"},{\"id\":2,\"status\":1,\"title\":\" 中间 \",\"image\":\"haha\"},{\"id\":21,\"status\":1,\"title\":\" 中间 \",\"image\":\"haha\"},{\"id\":22,\"status\":1,\"title\":\" 中间 \",\"image\":\"haha\"}]},{\"name\":\"今天\",\"date\":[{\"id\":0,\"status\":1,\"title\":\"中间\",\"image\":\"haha\"},{\"id\":1,\"status\":1,\"title\":\" 中间 \",\"image\":\"haha\"},{\"id\":2,\"status\":1,\"title\":\" 中间 \",\"image\":\"haha\"},{\"id\":21,\"status\":1,\"title\":\" 中间 \",\"image\":\"haha\"},{\"id\":22,\"status\":1,\"title\":\" 中间 \",\"image\":\"haha\"}]},{\"name\":\"今天\",\"date\":[{\"id\":0,\"status\":1,\"title\":\"中间\",\"image\":\"haha\"},{\"id\":1,\"status\":1,\"title\":\" 中间 \",\"image\":\"haha\"},{\"id\":2,\"status\":1,\"title\":\" 中间 \",\"image\":\"haha\"},{\"id\":21,\"status\":1,\"title\":\" 中间 \",\"image\":\"haha\"},{\"id\":22,\"status\":1,\"title\":\" 中间 \",\"image\":\"haha\"}]},{\"name\":\"今天\",\"date\":[{\"id\":0,\"status\":1,\"title\":\"中间\",\"image\":\"haha\"},{\"id\":1,\"status\":1,\"title\":\" 中间 \",\"image\":\"haha\"},{\"id\":2,\"status\":1,\"title\":\" 中间 \",\"image\":\"haha\"},{\"id\":21,\"status\":1,\"title\":\" 中间 \",\"image\":\"haha\"},{\"id\":22,\"status\":1,\"title\":\" 中间 \",\"image\":\"haha\"}]},{\"name\":\"今天\",\"date\":[{\"id\":0,\"status\":1,\"title\":\"中间\",\"image\":\"haha\"},{\"id\":1,\"status\":1,\"title\":\" 中间 \",\"image\":\"haha\"},{\"id\":2,\"status\":1,\"title\":\" 中间 \",\"image\":\"haha\"},{\"id\":21,\"status\":1,\"title\":\" 中间 \",\"image\":\"haha\"},{\"id\":22,\"status\":1,\"title\":\" 中间 \",\"image\":\"haha\"}]},        " +
+            "" +
+            "" +
+            "\n" +
             "        {\n" +
             "            \"name\":\"明天\",\n" +
             "            \"date\":[\n" +

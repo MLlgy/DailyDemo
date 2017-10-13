@@ -54,43 +54,49 @@
             </RelativeLayout>
 
             <!--<RelativeLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:background="@color/grey1">-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/grey1">-->
 
-                <!--<TextView-->
-                    <!--android:id="@+id/tv_my_appliction_totalr"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:padding="@dimen/dp_12"-->
-                    <!--android:text="我的应用"-->
-                    <!--android:textColor="@color/black" />-->
+            <!--<TextView-->
+            <!--android:id="@+id/tv_my_appliction_totalr"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="@dimen/dp_12"-->
+            <!--android:text="我的应用"-->
+            <!--android:textColor="@color/black" />-->
 
-                <!--<TextView-->
-                    <!--android:id="@+id/tv_edit_applicationa_total"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="match_parent"-->
-                    <!--android:layout_alignParentEnd="true"-->
-                    <!--android:layout_centerVertical="true"-->
-                    <!--android:layout_marginEnd="@dimen/dp_12"-->
-                    <!--android:text="编辑"-->
-                    <!--android:textColor="@color/blue" />-->
+            <!--<TextView-->
+            <!--android:id="@+id/tv_edit_applicationa_total"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginEnd="@dimen/dp_12"-->
+            <!--android:text="编辑"-->
+            <!--android:textColor="@color/blue" />-->
 
-                <!--<LinearLayout-->
-                    <!--android:id="@+id/ll_use_application_total"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_centerVertical="true"-->
-                    <!--android:layout_toStartOf="@id/tv_edit_applicationa_total"-->
-                    <!--android:layout_toEndOf="@id/tv_my_appliction_totalr"-->
-                    <!--android:gravity="center_vertical"-->
-                    <!--android:orientation="horizontal" />-->
+            <!--<LinearLayout-->
+            <!--android:id="@+id/ll_use_application_total"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_toStartOf="@id/tv_edit_applicationa_total"-->
+            <!--android:layout_toEndOf="@id/tv_my_appliction_totalr"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:orientation="horizontal" />-->
             <!--</RelativeLayout>-->
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/rv_edit_menu_total"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_edit_menu_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
 
         </LinearLayout>
     </com.widget.MyScrollerView>
