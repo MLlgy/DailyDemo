@@ -17,7 +17,7 @@ import com.lidroid.xutils.util.LogUtils
  * Created by liguoying on 2017/9/22.
  */
 
-class EditaItemAdapter(private val mContext: Context, private val mDateBeans: List<DayEntity.ContentBean.DateBean>, private val mFirstPosition: Int, private val editAble: Boolean) : RecyclerView.Adapter<EditaItemAdapter.EditaItemAdapterViewHolder>() {
+class EditaItemAdapter(val mContext: Context, val mDateBeans: List<DayEntity.ContentBean.DateBean>, val mFirstPosition: Int, val editAble: Boolean) : RecyclerView.Adapter<EditaItemAdapter.EditaItemAdapterViewHolder>() {
     private var mIItemSecondItemClick: IItemSecondItemClick? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EditaItemAdapterViewHolder {
@@ -51,12 +51,12 @@ class EditaItemAdapter(private val mContext: Context, private val mDateBeans: Li
         return mDateBeans.size
     }
 
-    internal inner class EditaItemAdapterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class EditaItemAdapterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        private val logo: ImageView
-        private val name: TextView
-        private val mCutOrAdd: ImageView
-        private val mRelativeLayout: RelativeLayout
+        val logo: ImageView
+        val name: TextView
+        val mCutOrAdd: ImageView
+        val mRelativeLayout: RelativeLayout
 
         init {
             logo = itemView.findViewById<ImageView>(R.id.iv_image_edite_sigle)
