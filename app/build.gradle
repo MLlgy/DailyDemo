@@ -1,10 +1,12 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 
 repositories {
     flatDir {
         dirs 'libs'
     }
+    mavenCentral()
 }
 
 android {
@@ -59,4 +61,5 @@ dependencies {
     compile 'me.leolin:ShortcutBadger:1.1.18@aar'
     //app 图标未读信息
     implementation 'com.google.code.gson:gson:2.8.2'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 }
