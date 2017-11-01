@@ -7,20 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 
 import com.BRAVHAdapter.BRAVHAdapterActivity
-import com.CommonActivities.BadgeNumberActivity
-import com.CommonActivities.BarChartViewActivity
-import com.CommonActivities.ClearCacheActivity
-import com.CommonActivities.ClickBtnActivity
-import com.CommonActivities.DurationActivity
-import com.CommonActivities.EditMenuActivity
-import com.CommonActivities.FontActivity
-import com.CommonActivities.HeaderZoomActivity
-import com.CommonActivities.ImageScaleTypeActivity
-import com.CommonActivities.LargeImageActivity
-import com.CommonActivities.MiddlSelectedActivity
-import com.CommonActivities.ScrollerActivity
-import com.CommonActivities.SuperEditTextActivity
-import com.CommonActivities.TotalMenuActivity
+import com.CommonActivities.*
 import com.androidwebviewdemo.mddemo.Change_Animation_Activity
 import com.androidwebviewdemo.mddemo.Circle_Reveal_Activity
 import com.androidwebviewdemo.mddemo.ClipingActivity
@@ -52,7 +39,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
 //import ExceptionCatch.ExceptionCatchActivity;
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : BaseActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

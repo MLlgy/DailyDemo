@@ -20,7 +20,7 @@ import me.leolin.shortcutbadger.ShortcutBadger;
  * Android系统 小米/三星/索尼 应用启动图标未读消息数(BadgeNumber)动态提醒 http://blog.csdn.net/janice0529/article/details/44344169
  */
 
-public class BadgeNumberActivity extends AppCompatActivity {
+public class BadgeNumberActivity extends BaseActivity {
 
     private int mCount = 5;
     private Notification mNotification;

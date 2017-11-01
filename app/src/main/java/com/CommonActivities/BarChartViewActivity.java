@@ -10,7 +10,7 @@ import com.widget.FontsTextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BarChartViewActivity extends AppCompatActivity {
+public class BarChartViewActivity extends BaseActivity {
     private BarChartView mBarChartView;
     private FontsTextView mFontsTextView;
 

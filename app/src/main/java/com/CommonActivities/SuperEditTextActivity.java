@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.R;
 
-public class SuperEditTextActivity extends AppCompatActivity {
+public class SuperEditTextActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

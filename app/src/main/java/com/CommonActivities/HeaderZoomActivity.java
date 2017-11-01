@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import com.R;
 import com.bumptech.glide.Glide;
 
-public class HeaderZoomActivity extends AppCompatActivity {
+public class HeaderZoomActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -68,6 +68,13 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="59f99ca98f4a9d6911000016"></meta-data>
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="0996dc191d3aa2725132dfa3fc8f2c57"></meta-data>
+
         <activity android:name=".BRAVHAdapter.BRAVHAdapterActivity" />
         <activity android:name=".mengban.MengBanActivity" />
         <activity android:name=".CommonActivities.ClearCacheActivity" />
@@ -95,7 +102,8 @@
         <activity android:name=".CommonActivities.SuperEditTextActivity" />
         <activity android:name=".widget.drag_recyclerview.DragRecyclerViewActivity" />
         <activity android:name=".CommonActivities.EditMenuActivity" />
-        <activity android:name=".CommonActivities.TotalMenuActivity"></activity>
+        <activity android:name=".CommonActivities.TotalMenuActivity" />
+        <activity android:name=".CommonActivities.BaseActivity"></activity>
     </application>
 
 </manifest>

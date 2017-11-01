@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import com.R;
 
-public class ScrollerActivity extends AppCompatActivity {
+public class ScrollerActivity extends BaseActivity {
 
     private Button showDialog;
     private Dialog mDialog;

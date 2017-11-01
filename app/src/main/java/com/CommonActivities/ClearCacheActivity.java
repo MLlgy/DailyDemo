@@ -10,7 +10,7 @@ import com.R;
 import com.utils.DataCleanManager;
 import com.widget.DialogView;
 
-public class ClearCacheActivity extends AppCompatActivity implements View.OnClickListener {
+public class ClearCacheActivity extends BaseActivity implements View.OnClickListener {
 
     private TextView tv_cache_size;
     private Button btn_clear_cache;

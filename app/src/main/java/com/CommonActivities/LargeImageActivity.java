@@ -15,7 +15,7 @@ import com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LargeImageActivity extends AppCompatActivity {
+public class LargeImageActivity extends BaseActivity {
     private Bitmap bitmap;
     SubsamplingScaleImageView imageView;
     private LinearLayout mLinearLayout;

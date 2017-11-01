@@ -16,7 +16,7 @@ import com.R;
 import com.utils.UIUtils;
 import com.widget.CircleMenu;
 
-public class ClickBtnActivity extends AppCompatActivity implements View.OnClickListener {
+public class ClickBtnActivity extends BaseActivity implements View.OnClickListener {
     private CircleMenu circleMenu;
     private ImageView imageView1, imageView2, imageView3, imageView4, imageView5;
     private boolean isShow = true;

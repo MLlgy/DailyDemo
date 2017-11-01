@@ -21,7 +21,7 @@ import com.widget.FullyLinearLayoutManager;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TotalMenuActivity extends AppCompatActivity {
+public class TotalMenuActivity extends BaseActivity {
     private String content2 = "{\n" +
             "    \"code\":\"ok\",\n" +
             "    \"content\":[\n" +

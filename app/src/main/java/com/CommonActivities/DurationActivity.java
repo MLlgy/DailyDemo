@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.R;
 
-public class DurationActivity extends AppCompatActivity implements View.OnClickListener {
+public class DurationActivity extends BaseActivity implements View.OnClickListener {
 
     private TextView mTextView;
     private Button mStart, mStop;

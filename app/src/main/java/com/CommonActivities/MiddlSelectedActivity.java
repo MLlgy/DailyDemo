@@ -15,7 +15,7 @@ import com.widget.MiddleHorizal;
 
 import java.util.ArrayList;
 
-public class MiddlSelectedActivity extends AppCompatActivity implements MiddleHorizal.onMiddleItemChangedListener {
+public class MiddlSelectedActivity extends BaseActivity implements MiddleHorizal.onMiddleItemChangedListener {
     LinearLayout contentLinear;
     MiddleHorizal horizontalScrollView;
     private ArrayList<String> items = new ArrayList<>();

@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import com.R;
 import com.utils.DrawText;
 
-public class ImageScaleTypeActivity extends AppCompatActivity {
+public class ImageScaleTypeActivity extends BaseActivity {
 private ImageView mImageView;
 private DrawText mDrawText;
     @Override

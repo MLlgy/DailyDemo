@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import com.R;
 
-public class FontActivity extends AppCompatActivity {
+public class FontActivity extends BaseActivity {
 
     private Typeface mTypeface;
     private TextView mTextView;
