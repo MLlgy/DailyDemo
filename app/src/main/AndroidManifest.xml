@@ -90,9 +90,9 @@
 
         <activity android:name="com.BRAVHAdapter.BRAVHAdapterActivity" />
         <activity android:name="com.mengban.MengBanActivity" />
-        <activity android:name="com.CommonActivities.ClearCacheActivity" />
+        <activity android:name="com.commonActivities.ClearCacheActivity" />
         <activity android:name="com.titlebarAlpha.TitleBarAlphaActivity" />
-        <activity android:name="com.CommonActivities.HeaderZoomActivity" />
+        <activity android:name="com.commonActivities.HeaderZoomActivity" />
         <activity android:name="com.meterial_design.ScrollingActivity" />
         <activity android:name="com.meterial_design.SumMDActivity" />
         <activity android:name="com.meterial_design.CoordinatorActivity" />
@@ -101,22 +101,22 @@
         <!-- android:theme="@style/StatusBarAppTheme" -->
         <activity android:name="com.meterial_design.StatusBarActivity" />
         <activity android:name="com.tracedraw.TraceDrawActivity" />
-        <activity android:name="com.CommonActivities.BarChartViewActivity" />
-        <activity android:name="com.CommonActivities.FontActivity" />
-        <activity android:name="com.CommonActivities.ClickBtnActivity" />
-        <activity android:name="com.CommonActivities.ImageScaleTypeActivity" />
-        <activity android:name="com.CommonActivities.LargeImageActivity" />
-        <activity android:name="com.CommonActivities.ScrollerActivity" />
+        <activity android:name="com.commonActivities.BarChartViewActivity" />
+        <activity android:name="com.commonActivities.FontActivity" />
+        <activity android:name="com.commonActivities.ClickBtnActivity" />
+        <activity android:name="com.commonActivities.ImageScaleTypeActivity" />
+        <activity android:name="com.commonActivities.LargeImageActivity" />
+        <activity android:name="com.commonActivities.ScrollerActivity" />
         <activity android:name="com.showCase.ShowCaseActivity" />
-        <activity android:name="com.CommonActivities.MiddlSelectedActivity" />
-        <activity android:name="com.CommonActivities.BadgeNumberActivity" />
-        <activity android:name="com.CommonActivities.DurationActivity" />
+        <activity android:name="com.commonActivities.MiddlSelectedActivity" />
+        <activity android:name="com.commonActivities.BadgeNumberActivity" />
+        <activity android:name="com.commonActivities.DurationActivity" />
         <activity android:name="com.timercountdown.TimeActivity" />
-        <activity android:name="com.CommonActivities.SuperEditTextActivity" />
+        <activity android:name="com.commonActivities.SuperEditTextActivity" />
         <activity android:name="com.widget.drag_recyclerview.DragRecyclerViewActivity" />
-        <activity android:name="com.CommonActivities.EditMenuActivity" />
-        <activity android:name="com.CommonActivities.TotalMenuActivity" />
-        <activity android:name="com.CommonActivities.BaseActivity"></activity>
+        <activity android:name="com.commonActivities.EditMenuActivity" />
+        <activity android:name="com.commonActivities.TotalMenuActivity" />
+        <activity android:name="com.commonActivities.BaseActivity"></activity>
     </application>
 
 </manifest>

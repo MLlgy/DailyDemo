@@ -1,14 +1,12 @@
-package com.CommonActivities;
+package com.commonActivities;
 
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
 import com.androidwebviewdemo.mddemo.R;
-import com.utils.BadgeUtil;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;

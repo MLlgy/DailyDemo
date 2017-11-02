@@ -1,8 +1,7 @@
-package com.CommonActivities;
+package com.commonActivities;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.androidwebviewdemo.mddemo.R;

@@ -1,7 +1,6 @@
-package com.CommonActivities;
+package com.commonActivities;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import com.androidwebviewdemo.mddemo.R;
 import com.utils.BarChartView;

@@ -1,4 +1,4 @@
-package com.CommonActivities.testService
+package com.commonActivities.testService
 
 import android.app.Service
 import android.content.Intent

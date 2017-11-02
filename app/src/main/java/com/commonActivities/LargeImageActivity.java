@@ -1,9 +1,8 @@
-package com.CommonActivities;
+package com.commonActivities;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;

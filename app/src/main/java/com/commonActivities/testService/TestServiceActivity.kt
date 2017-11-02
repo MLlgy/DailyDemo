@@ -1,4 +1,4 @@
-package com.CommonActivities.testService
+package com.commonActivities.testService
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle

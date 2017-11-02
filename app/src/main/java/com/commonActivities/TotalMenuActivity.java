@@ -1,7 +1,6 @@
-package com.CommonActivities;
+package com.commonActivities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -16,7 +15,6 @@ import com.adapter.EditMenuAdapter;
 import com.adapter.MyEditMenuAdapter;
 import com.entity.DayEntity;
 import com.google.gson.Gson;
-import com.widget.FullyLinearLayoutManager;
 
 import java.util.ArrayList;
 import java.util.List;

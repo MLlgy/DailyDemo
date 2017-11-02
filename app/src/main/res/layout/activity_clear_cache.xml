@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.CommonActivities.ClearCacheActivity">
+    tools:context="com.commonActivities.ClearCacheActivity">
 
     <TextView
         android:id="@+id/tv_cache_size"

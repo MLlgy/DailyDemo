@@ -3,12 +3,11 @@ package com
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
 
 import com.BRAVHAdapter.BRAVHAdapterActivity
-import com.CommonActivities.*
+import com.commonActivities.*
 import com.androidwebviewdemo.mddemo.*
 import com.designer.DesignerModeActivity
 import com.interfaces.CheckPermissionsListener
@@ -29,7 +28,6 @@ import com.timercountdown.TimeActivity
 import com.titlebarAlpha.TitleBarAlphaActivity
 import com.touchRightLef.TouchRightLeftActivity
 import com.tracedraw.TraceDrawActivity
-import com.widget.SuperEditText
 import com.widget.drag_recyclerview.DragRecyclerViewActivity
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper

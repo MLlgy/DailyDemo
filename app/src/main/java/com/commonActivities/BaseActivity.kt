@@ -1,4 +1,4 @@
-package com.CommonActivities
+package com.commonActivities
 
 import android.Manifest
 import android.app.Activity

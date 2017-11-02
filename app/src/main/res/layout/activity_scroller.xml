@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.CommonActivities.ScrollerActivity">
+    tools:context="com.commonActivities.ScrollerActivity">
 
     <!--<com.widget.DragViewOne-->
     <!--android:layout_width="100dp"-->
