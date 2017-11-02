@@ -137,8 +137,7 @@ class MainActivity : BaseActivity(), View.OnClickListener, CheckPermissionsListe
             R.id.tv_drag_recyclerview -> startActivity(Intent(this, DragRecyclerViewActivity::class.java))
             R.id.tv_edit_menu -> startActivity(Intent(this, TotalMenuActivity::class.java))
             R.id.tv_get_permission -> requestPermission(this, needPermission, this)
-            else -> {
-            }
+            else -> {}
         }//                startActivity(new Intent(this, ExceptionCatchActivity.class));
         //                startActivity(new Intent(this, EditMenuActivity.class));
     }

@@ -31,15 +31,19 @@ open class BaseActivity : AppCompatActivity() {
     open fun requestPermission(activity: Activity, permissions: Array<String>, listener: CheckPermissionsListener) {
         if (activity == null) return
         mListener = listener
-        val deniedPermission = findDeniedPermission(activity, permissions)
+        val deniedPermission = findDeniedPermission(activity, *permissions)
+        val deniedPermissionArray= arrayOfNulls<String>(deniedPermission.size)
+        for (i in 0..deniedPermission.size - 1) {
+            deniedPermissionArray[i] = deniedPermission.get(i)
+        }
         if (!deniedPermission.isEmpty()) {
-            ActivityCompat.requestPermissions(activity, permissions, REQUEST_CODE)
+            ActivityCompat.requestPermissions(activity, deniedPermissionArray, REQUEST_CODE)
         } else {
             mListener!!.onGranted()
         }
     }
 
-    private fun findDeniedPermission(activity: Activity, permissions: Array<String>): ArrayList<String> {
+    private fun findDeniedPermission(activity: Activity, vararg permissions: String): ArrayList<String> {
         val deniedPermissions = ArrayList<String>()
         for (permission in permissions) {
             if (ActivityCompat.checkSelfPermission(activity, permission) != PackageManager.PERMISSION_GRANTED)
@@ -61,11 +65,12 @@ open class BaseActivity : AppCompatActivity() {
                 }
                 if (deneiedPermission.size > 0) {
                     mListener!!.onDenied(deneiedPermission)
-                }else{
+                } else {
                     mListener!!.onGranted()
                 }
             }
-            else -> {}
+            else -> {
+            }
         }
     }
 }
