@@ -31,6 +31,7 @@ open class BaseActivity : AppCompatActivity() {
     open fun requestPermission(activity: Activity, permissions: Array<String>, listener: CheckPermissionsListener) {
         if (activity == null) return
         mListener = listener
+        //  permissions前使用 * 表示 这个array会被分解成一个 vararg 的参数
         val deniedPermission = findDeniedPermission(activity, *permissions)
         val deniedPermissionArray= arrayOfNulls<String>(deniedPermission.size)
         for (i in 0..deniedPermission.size - 1) {
