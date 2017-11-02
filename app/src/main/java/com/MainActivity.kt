@@ -5,18 +5,14 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
+import android.widget.Toast
 
 import com.BRAVHAdapter.BRAVHAdapterActivity
 import com.CommonActivities.*
-import com.androidwebviewdemo.mddemo.Change_Animation_Activity
-import com.androidwebviewdemo.mddemo.Circle_Reveal_Activity
-import com.androidwebviewdemo.mddemo.ClipingActivity
-import com.androidwebviewdemo.mddemo.PaletteActivity
-import com.androidwebviewdemo.mddemo.RippleAcitvity
-import com.androidwebviewdemo.mddemo.SecondActivity
-import com.androidwebviewdemo.mddemo.TintingActivity
-import com.androidwebviewdemo.mddemo.ZActivity
+import com.androidwebviewdemo.mddemo.*
 import com.designer.DesignerModeActivity
+import com.interfaces.CheckPermissionsListener
+import com.lidroid.xutils.util.LogUtils
 import com.mengban.MengBanActivity
 import com.meterial_design.SumMDActivity
 import com.mutiThreadsDownloadFile.MutiThreadsDownloadFileActivity
@@ -28,6 +24,7 @@ import com.permissionRequest_6.PerssionRequestTestActivity
 import com.showCase.ShowCaseActivity
 import com.sigleThreadDownloadFile.DownloaderFileActivity
 import com.takePhotoWithPerssion.TakePhotoWithPerssionActivity
+import com.takePhotoWithPerssion.ToastUtils
 import com.timercountdown.TimeActivity
 import com.titlebarAlpha.TitleBarAlphaActivity
 import com.touchRightLef.TouchRightLeftActivity
@@ -39,7 +36,9 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper
 
 //import ExceptionCatch.ExceptionCatchActivity;
 
-class MainActivity : BaseActivity(), View.OnClickListener {
+class MainActivity : BaseActivity(), View.OnClickListener, CheckPermissionsListener {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -83,6 +82,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
         findViewById<View>(R.id.ed_super_edit).setOnClickListener(this)
         findViewById<View>(R.id.tv_drag_recyclerview).setOnClickListener(this)
         findViewById<View>(R.id.tv_edit_menu).setOnClickListener(this)
+        findViewById<View>(R.id.tv_get_permission).setOnClickListener(this)
     }
 
     override fun attachBaseContext(newBase: Context) {
@@ -136,9 +136,24 @@ class MainActivity : BaseActivity(), View.OnClickListener {
             R.id.ed_super_edit -> startActivity(Intent(this, SuperEditTextActivity::class.java))
             R.id.tv_drag_recyclerview -> startActivity(Intent(this, DragRecyclerViewActivity::class.java))
             R.id.tv_edit_menu -> startActivity(Intent(this, TotalMenuActivity::class.java))
+            R.id.tv_get_permission -> requestPermission(this, needPermission, this)
             else -> {
             }
         }//                startActivity(new Intent(this, ExceptionCatchActivity.class));
         //                startActivity(new Intent(this, EditMenuActivity.class));
+    }
+
+    override fun onGranted() {
+        LogUtils.d("success push") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun onDenied(permissions: ArrayList<String>) {
+        val length = permissions?.size
+        var deniedStr = StringBuffer()
+        for (i in 0..length - 1) {
+            deniedStr.append(permissions[i] + "  ")
+        }
+        LogUtils.e(deniedStr.toString())
+        ToastUtils.show(this, deniedStr, Toast.LENGTH_SHORT)
     }
 }

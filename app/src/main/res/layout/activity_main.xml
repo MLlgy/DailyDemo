@@ -14,6 +14,13 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/tv_get_permission"
+            style="@style/main_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="点击获得手机权限" />
+
+        <TextView
             android:id="@+id/tv_edit_menu"
             style="@style/main_textview"
             android:layout_width="match_parent"

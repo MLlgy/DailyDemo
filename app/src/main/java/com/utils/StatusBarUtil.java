@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 /**
  * Created by liguoying on 2017/8/14.

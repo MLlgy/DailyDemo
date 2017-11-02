@@ -8,7 +8,7 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 public class TitleBarAlphaActivity extends AppCompatActivity implements ScrollViewListener {
 

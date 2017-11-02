@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 import com.designer.watchMode.WatchModeActivity;
 
 public class DesignerModeActivity extends AppCompatActivity implements View.OnClickListener{

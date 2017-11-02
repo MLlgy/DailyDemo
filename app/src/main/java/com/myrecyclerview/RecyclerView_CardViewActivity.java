@@ -13,7 +13,7 @@ import android.widget.AdapterView;
 import android.widget.Spinner;
 
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 import java.util.ArrayList;
 import java.util.List;

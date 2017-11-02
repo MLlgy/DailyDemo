@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 import java.util.ArrayList;
 import java.util.List;

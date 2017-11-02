@@ -4,7 +4,7 @@ import android.animation.AnimatorInflater;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 public class Change_Animation_Activity extends AppCompatActivity {
 

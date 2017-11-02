@@ -10,7 +10,7 @@ import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 import com.utils.DisplayUtil;
 import com.utils.UIUtils;
 

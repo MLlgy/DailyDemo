@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 public class SecondActivity extends AppCompatActivity {
     private Intent intent;

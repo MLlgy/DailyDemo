@@ -3,7 +3,7 @@ package com.CommonActivities;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 public class SuperEditTextActivity extends BaseActivity {
 

@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 import com.widget.MiddleHorizal;
 
 import java.util.ArrayList;

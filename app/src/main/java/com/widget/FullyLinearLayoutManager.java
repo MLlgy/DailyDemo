@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 
-import com.BuildConfig;
+import com.androidwebviewdemo.mddemo.BuildConfig;
 
 import java.lang.reflect.Field;
 

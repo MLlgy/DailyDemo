@@ -3,7 +3,7 @@ package com.permissionRequest_6;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 
 /**

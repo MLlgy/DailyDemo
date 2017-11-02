@@ -11,7 +11,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 import com.sigleThreadDownloadFile.entities.FileInfo;
 import com.sigleThreadDownloadFile.services.DownLoadService;
 

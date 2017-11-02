@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 import com.utils.UIUtils;
 import com.widget.CircleMenu;
 

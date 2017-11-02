@@ -16,7 +16,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 import java.util.ArrayList;
 

@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 
 import com.mvp.presenter.UserPresenter;
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 public class UserActivity extends AppCompatActivity implements IUserView, OnClickListener {
 

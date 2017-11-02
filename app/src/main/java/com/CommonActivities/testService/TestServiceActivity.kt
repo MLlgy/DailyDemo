@@ -2,8 +2,8 @@ package com.CommonActivities.testService
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.androidwebviewdemo.mddemo.R
 
-import com.R
 
 class TestServiceActivity : AppCompatActivity() {
 

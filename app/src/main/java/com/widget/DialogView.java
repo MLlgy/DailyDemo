@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 /**
  * Created by liguoying on 2017/8/21.

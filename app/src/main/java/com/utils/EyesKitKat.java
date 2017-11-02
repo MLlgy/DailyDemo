@@ -18,7 +18,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 import java.lang.reflect.Field;
 

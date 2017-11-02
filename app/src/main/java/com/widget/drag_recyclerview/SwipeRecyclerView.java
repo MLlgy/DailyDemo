@@ -14,7 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.Scroller;
 import android.widget.TextView;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 
 public class SwipeRecyclerView extends RecyclerView {

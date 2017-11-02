@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Handler;
 import android.view.View;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 /**
  * Created by xufangzhen on 2016/6/15.

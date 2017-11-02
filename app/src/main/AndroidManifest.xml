@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com">
+    package="com.androidwebviewdemo.mddemo">
 
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -10,49 +11,51 @@
     <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION " />
+    <uses-permission android:name=" android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
-        android:name=".DemoApplication"
+        android:name="com.DemoApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/app_style">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".androidwebviewdemo.mddemo.PaletteActivity" />
-        <activity android:name=".androidwebviewdemo.mddemo.ZActivity" />
-        <activity android:name=".androidwebviewdemo.mddemo.TintingActivity" />
-        <activity android:name=".androidwebviewdemo.mddemo.ClipingActivity" />
-        <activity android:name=".myrecyclerview.RecyclerView_CardViewActivity" />
-        <activity android:name=".androidwebviewdemo.mddemo.SecondActivity" />
-        <activity android:name=".androidwebviewdemo.mddemo.TransitionsActivity" />
-        <activity android:name=".androidwebviewdemo.mddemo.RippleAcitvity" />
-        <activity android:name=".androidwebviewdemo.mddemo.Circle_Reveal_Activity" />
-        <activity android:name=".androidwebviewdemo.mddemo.Change_Animation_Activity" />
-        <activity android:name=".mvp.view.UserActivity" />
+        <activity android:name="com.androidwebviewdemo.mddemo.PaletteActivity" />
+        <activity android:name="com.androidwebviewdemo.mddemo.ZActivity" />
+        <activity android:name="com.androidwebviewdemo.mddemo.TintingActivity" />
+        <activity android:name="com.androidwebviewdemo.mddemo.ClipingActivity" />
+        <activity android:name="com.myrecyclerview.RecyclerView_CardViewActivity" />
+        <activity android:name="com.androidwebviewdemo.mddemo.SecondActivity" />
+        <activity android:name="com.androidwebviewdemo.mddemo.TransitionsActivity" />
+        <activity android:name="com.androidwebviewdemo.mddemo.RippleAcitvity" />
+        <activity android:name="com.androidwebviewdemo.mddemo.Circle_Reveal_Activity" />
+        <activity android:name="com.androidwebviewdemo.mddemo.Change_Animation_Activity" />
+        <activity android:name="com.mvp.view.UserActivity" />
         <activity
-            android:name=".meterial_design.DrawerLayoutActivity"
+            android:name="com.meterial_design.DrawerLayoutActivity"
             android:theme="@style/StatusBarAppTheme" />
-        <activity android:name=".touchRightLef.TouchRightLeftActivity" />
-        <activity android:name=".designer.DesignerModeActivity" />
-        <activity android:name=".sigleThreadDownloadFile.DownloaderFileActivity" />
-        <activity android:name=".mutiThreadsDownloadFile.MutiThreadsDownloadFileActivity" />
-        <activity android:name=".permissionRequest_6.PerssionRequestTestActivity" />
-        <activity android:name=".numberRunner.NumberRunnerMainActivity" />
+        <activity android:name="com.touchRightLef.TouchRightLeftActivity" />
+        <activity android:name="com.designer.DesignerModeActivity" />
+        <activity android:name="com.sigleThreadDownloadFile.DownloaderFileActivity" />
+        <activity android:name="com.mutiThreadsDownloadFile.MutiThreadsDownloadFileActivity" />
+        <activity android:name="com.permissionRequest_6.PerssionRequestTestActivity" />
+        <activity android:name="com.numberRunner.NumberRunnerMainActivity" />
         <!-- 服务 -->
-        <service android:name=".sigleThreadDownloadFile.services.DownLoadService" />
-        <service android:name=".mutiThreadsDownloadFile.services.MutThreadsDownLoadService" />
+        <service android:name="com.sigleThreadDownloadFile.services.DownLoadService" />
+        <service android:name="com.mutiThreadsDownloadFile.services.MutThreadsDownLoadService" />
 
-        <activity android:name=".designer.watchMode.WatchModeActivity" />
-        <activity android:name=".exceptionCatch.ExceptionCatchActivity" />
-        <activity android:name=".myrecyclerview.NotificationActivity" />
-        <activity android:name=".takePhotoWithPerssion.TakePhotoWithPerssionActivity" />
+        <activity android:name="com.designer.watchMode.WatchModeActivity" />
+        <activity android:name="com.exceptionCatch.ExceptionCatchActivity" />
+        <activity android:name="com.myrecyclerview.NotificationActivity" />
+        <activity android:name="com.takePhotoWithPerssion.TakePhotoWithPerssionActivity" />
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -70,40 +73,40 @@
 
         <meta-data
             android:name="UMENG_APPKEY"
-            android:value="59f99ca98f4a9d6911000016"></meta-data>
+            android:value="59f99ca98f4a9d6911000016"/>
         <meta-data
             android:name="UMENG_MESSAGE_SECRET"
-            android:value="0996dc191d3aa2725132dfa3fc8f2c57"></meta-data>
+            android:value="0996dc191d3aa2725132dfa3fc8f2c57"/>
 
-        <activity android:name=".BRAVHAdapter.BRAVHAdapterActivity" />
-        <activity android:name=".mengban.MengBanActivity" />
-        <activity android:name=".CommonActivities.ClearCacheActivity" />
-        <activity android:name=".titlebarAlpha.TitleBarAlphaActivity" />
-        <activity android:name=".CommonActivities.HeaderZoomActivity" />
-        <activity android:name=".meterial_design.ScrollingActivity" />
-        <activity android:name=".meterial_design.SumMDActivity" />
-        <activity android:name=".meterial_design.CoordinatorActivity" />
-        <activity android:name=".meterial_design.CoorAppBarActivity" />
-        <activity android:name=".meterial_design.CoorToolBarActivity" />
+        <activity android:name="com.BRAVHAdapter.BRAVHAdapterActivity" />
+        <activity android:name="com.mengban.MengBanActivity" />
+        <activity android:name="com.CommonActivities.ClearCacheActivity" />
+        <activity android:name="com.titlebarAlpha.TitleBarAlphaActivity" />
+        <activity android:name="com.CommonActivities.HeaderZoomActivity" />
+        <activity android:name="com.meterial_design.ScrollingActivity" />
+        <activity android:name="com.meterial_design.SumMDActivity" />
+        <activity android:name="com.meterial_design.CoordinatorActivity" />
+        <activity android:name="com.meterial_design.CoorAppBarActivity" />
+        <activity android:name="com.meterial_design.CoorToolBarActivity" />
         <!-- android:theme="@style/StatusBarAppTheme" -->
-        <activity android:name=".meterial_design.StatusBarActivity" />
-        <activity android:name=".tracedraw.TraceDrawActivity" />
-        <activity android:name=".CommonActivities.BarChartViewActivity" />
-        <activity android:name=".CommonActivities.FontActivity" />
-        <activity android:name=".CommonActivities.ClickBtnActivity" />
-        <activity android:name=".CommonActivities.ImageScaleTypeActivity" />
-        <activity android:name=".CommonActivities.LargeImageActivity" />
-        <activity android:name=".CommonActivities.ScrollerActivity" />
-        <activity android:name=".showCase.ShowCaseActivity" />
-        <activity android:name=".CommonActivities.MiddlSelectedActivity" />
-        <activity android:name=".CommonActivities.BadgeNumberActivity" />
-        <activity android:name=".CommonActivities.DurationActivity" />
-        <activity android:name=".timercountdown.TimeActivity" />
-        <activity android:name=".CommonActivities.SuperEditTextActivity" />
-        <activity android:name=".widget.drag_recyclerview.DragRecyclerViewActivity" />
-        <activity android:name=".CommonActivities.EditMenuActivity" />
-        <activity android:name=".CommonActivities.TotalMenuActivity" />
-        <activity android:name=".CommonActivities.BaseActivity"></activity>
+        <activity android:name="com.meterial_design.StatusBarActivity" />
+        <activity android:name="com.tracedraw.TraceDrawActivity" />
+        <activity android:name="com.CommonActivities.BarChartViewActivity" />
+        <activity android:name="com.CommonActivities.FontActivity" />
+        <activity android:name="com.CommonActivities.ClickBtnActivity" />
+        <activity android:name="com.CommonActivities.ImageScaleTypeActivity" />
+        <activity android:name="com.CommonActivities.LargeImageActivity" />
+        <activity android:name="com.CommonActivities.ScrollerActivity" />
+        <activity android:name="com.showCase.ShowCaseActivity" />
+        <activity android:name="com.CommonActivities.MiddlSelectedActivity" />
+        <activity android:name="com.CommonActivities.BadgeNumberActivity" />
+        <activity android:name="com.CommonActivities.DurationActivity" />
+        <activity android:name="com.timercountdown.TimeActivity" />
+        <activity android:name="com.CommonActivities.SuperEditTextActivity" />
+        <activity android:name="com.widget.drag_recyclerview.DragRecyclerViewActivity" />
+        <activity android:name="com.CommonActivities.EditMenuActivity" />
+        <activity android:name="com.CommonActivities.TotalMenuActivity" />
+        <activity android:name="com.CommonActivities.BaseActivity"></activity>
     </application>
 
 </manifest>

@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 import com.utils.DrawText;
 
 public class ImageScaleTypeActivity extends BaseActivity {

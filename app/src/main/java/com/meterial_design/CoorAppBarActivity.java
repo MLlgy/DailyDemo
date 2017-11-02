@@ -6,7 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 import java.util.ArrayList;
 import java.util.List;

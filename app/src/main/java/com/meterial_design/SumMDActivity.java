@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 import com.utils.TranslateTitlebarUtils;
 
 public class SumMDActivity extends AppCompatActivity {

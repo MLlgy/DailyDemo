@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.RelativeLayout;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 
 public class TouchRightLeftActivity extends Activity {

@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 import com.entity.DayEntity;
 
 import java.util.List;

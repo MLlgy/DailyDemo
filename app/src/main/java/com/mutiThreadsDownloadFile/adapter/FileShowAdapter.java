@@ -15,7 +15,7 @@ import java.util.List;
 
 import com.mutiThreadsDownloadFile.entities.FileInfo;
 import com.mutiThreadsDownloadFile.services.MutThreadsDownLoadService;
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 /**
  * Created by Monkey

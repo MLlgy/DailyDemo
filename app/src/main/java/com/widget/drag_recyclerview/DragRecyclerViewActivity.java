@@ -11,7 +11,7 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.widget.Toast;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 import java.util.ArrayList;
 import java.util.Collections;

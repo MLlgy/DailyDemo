@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.RemoteViews;
 
 import com.entity.BasicNotificationEvent;
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;

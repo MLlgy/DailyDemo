@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 import com.adapter.EditMenuAdapter;
 import com.adapter.MyEditMenuAdapter;
 import com.entity.DayEntity;

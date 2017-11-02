@@ -17,7 +17,7 @@ import java.util.List;
 import com.mutiThreadsDownloadFile.adapter.FileShowAdapter;
 import com.mutiThreadsDownloadFile.entities.FileInfo;
 import com.mutiThreadsDownloadFile.services.MutThreadsDownLoadService;
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 public class MutiThreadsDownloadFileActivity extends AppCompatActivity {
 

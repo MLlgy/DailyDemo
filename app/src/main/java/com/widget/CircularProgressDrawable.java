@@ -18,7 +18,7 @@ import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 import static com.widget.CircularProgressBarUtils.checkAngle;
 import static com.widget.CircularProgressBarUtils.checkColors;

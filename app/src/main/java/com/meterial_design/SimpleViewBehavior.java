@@ -12,7 +12,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.Transformation;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 /**
  * Created by liguoying on 2017/8/14.

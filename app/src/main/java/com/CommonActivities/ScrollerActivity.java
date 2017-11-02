@@ -11,7 +11,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 public class ScrollerActivity extends BaseActivity {
 

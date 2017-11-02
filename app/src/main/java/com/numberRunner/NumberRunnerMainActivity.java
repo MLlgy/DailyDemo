@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 public class NumberRunnerMainActivity extends Activity {
 

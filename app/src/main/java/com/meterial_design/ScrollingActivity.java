@@ -3,7 +3,7 @@ package com.meterial_design;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 public class ScrollingActivity extends AppCompatActivity {
 

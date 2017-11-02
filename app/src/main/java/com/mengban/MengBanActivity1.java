@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 public class MengBanActivity1 extends AppCompatActivity implements View.OnClickListener {
 

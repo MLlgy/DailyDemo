@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewOutlineProvider;
 import android.widget.TextView;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 public class ClipingActivity extends AppCompatActivity {
 

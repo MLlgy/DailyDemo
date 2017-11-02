@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.support.v7.graphics.Palette;
 import android.view.Window;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 public class PaletteActivity extends AppCompatActivity {
 

@@ -1,6 +1,6 @@
 package com.BRAVHAdapter;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 

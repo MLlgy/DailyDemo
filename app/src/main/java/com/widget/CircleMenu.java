@@ -18,7 +18,7 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 /**
  * Created by liguoying on 2017/8/18.

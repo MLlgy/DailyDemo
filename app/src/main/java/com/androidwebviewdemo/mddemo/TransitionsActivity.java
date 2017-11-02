@@ -8,7 +8,7 @@ import android.transition.Fade;
 import android.transition.Slide;
 import android.view.Window;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 /**
  * Created by Monkey

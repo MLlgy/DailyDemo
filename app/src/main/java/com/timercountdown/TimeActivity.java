@@ -4,7 +4,7 @@ import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

@@ -12,7 +12,7 @@ import android.view.SurfaceView;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 /**
  * 1280*720 �ܶ�2���ݲ�֧������

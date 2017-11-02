@@ -2,7 +2,9 @@ package com;
 
 import android.app.Application;
 import android.graphics.Typeface;
+import android.util.Log;
 
+import com.androidwebviewdemo.mddemo.R;
 import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.message.PushAgent;
 
@@ -33,11 +35,12 @@ public class DemoApplication extends Application {
             @Override
             public void onSuccess(String deviceToken) {
                 //注册成功会返回device token
+                Log.e("push", deviceToken);
             }
 
             @Override
             public void onFailure(String s, String s1) {
-
+                Log.e("push failure", s + "   " + s1);
             }
         });
     }

@@ -7,7 +7,7 @@ import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.widget.ProgressBar;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 
 
 /**

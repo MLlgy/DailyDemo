@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 import com.utils.BadgeUtil;
 
 import java.lang.reflect.Field;

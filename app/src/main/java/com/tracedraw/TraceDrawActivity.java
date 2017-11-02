@@ -4,7 +4,7 @@ import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.R;
+import com.androidwebviewdemo.mddemo.R;
 import com.utils.RecordPathAnimUtil;
 
 public class TraceDrawActivity extends AppCompatActivity {
