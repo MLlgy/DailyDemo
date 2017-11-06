@@ -2,27 +2,29 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.androidwebviewdemo.mddemo">
 
-    <!--用于进行网络定位-->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <!--用于访问GPS定位-->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <!--用于获取运营商信息，用于支持提供运营商信息相关的接口-->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <!--用于访问wifi网络信息，wifi信息会用于进行网络定位-->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <!--用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <!--用于访问网络，网络定位需要上网-->
+    <!-- 用于访问网络，网络定位需要上网 -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <!--用于读取手机当前的状态-->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <!--用于写入缓存数据到扩展存储卡-->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <!--用于申请调用A-GPS模块-->
-    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
-    <!--用于申请获取蓝牙信息进行室内定位-->
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 用于写入缓存数据到扩展存储卡 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!--锁屏权限-->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
 
     <application
         android:name="com.DemoApplication"
@@ -38,16 +40,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.androidwebviewdemo.mddemo.PaletteActivity" />
-        <activity android:name="com.androidwebviewdemo.mddemo.ZActivity" />
-        <activity android:name="com.androidwebviewdemo.mddemo.TintingActivity" />
-        <activity android:name="com.androidwebviewdemo.mddemo.ClipingActivity" />
+        <activity android:name=".PaletteActivity" />
+        <activity android:name=".ZActivity" />
+        <activity android:name=".TintingActivity" />
+        <activity android:name=".ClipingActivity" />
         <activity android:name="com.myrecyclerview.RecyclerView_CardViewActivity" />
-        <activity android:name="com.androidwebviewdemo.mddemo.SecondActivity" />
-        <activity android:name="com.androidwebviewdemo.mddemo.TransitionsActivity" />
-        <activity android:name="com.androidwebviewdemo.mddemo.RippleAcitvity" />
-        <activity android:name="com.androidwebviewdemo.mddemo.Circle_Reveal_Activity" />
-        <activity android:name="com.androidwebviewdemo.mddemo.Change_Animation_Activity" />
+        <activity android:name=".SecondActivity" />
+        <activity android:name=".TransitionsActivity" />
+        <activity android:name=".RippleAcitvity" />
+        <activity android:name=".Circle_Reveal_Activity" />
+        <activity android:name=".Change_Animation_Activity" />
         <activity android:name="com.mvp.view.UserActivity" />
         <activity
             android:name="com.meterial_design.DrawerLayoutActivity"
@@ -83,10 +85,10 @@
 
         <meta-data
             android:name="UMENG_APPKEY"
-            android:value="59f99ca98f4a9d6911000016"/>
+            android:value="59f99ca98f4a9d6911000016" />
         <meta-data
             android:name="UMENG_MESSAGE_SECRET"
-            android:value="0996dc191d3aa2725132dfa3fc8f2c57"/>
+            android:value="0996dc191d3aa2725132dfa3fc8f2c57" />
 
         <activity android:name="com.BRAVHAdapter.BRAVHAdapterActivity" />
         <activity android:name="com.mengban.MengBanActivity" />
@@ -116,7 +118,14 @@
         <activity android:name="com.widget.drag_recyclerview.DragRecyclerViewActivity" />
         <activity android:name="com.commonActivities.EditMenuActivity" />
         <activity android:name="com.commonActivities.TotalMenuActivity" />
-        <activity android:name="com.commonActivities.BaseActivity"></activity>
+        <activity android:name="com.commonActivities.BaseActivity" />
+
+        <service
+            android:name="com.lockscreen.LockScreenService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name="com.lockscreen.LockMainActivity"></activity>
     </application>
 
 </manifest>

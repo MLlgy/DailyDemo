@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.support.v4.app.ActivityCompat
 import com.interfaces.CheckPermissionsListener
 import com.umeng.message.PushAgent
+import com.utils.isAppLive
 
 open class BaseActivity : AppCompatActivity() {
 
@@ -30,10 +31,13 @@ open class BaseActivity : AppCompatActivity() {
 
     open fun requestPermission(activity: Activity, permissions: Array<String>, listener: CheckPermissionsListener) {
         if (activity == null) return
+
+        isAppLive(this, "")
+
         mListener = listener
         //  permissions前使用 * 表示 这个array会被分解成一个 vararg 的参数
         val deniedPermission = findDeniedPermission(activity, *permissions)
-        val deniedPermissionArray= arrayOfNulls<String>(deniedPermission.size)
+        val deniedPermissionArray = arrayOfNulls<String>(deniedPermission.size)
         for (i in 0..deniedPermission.size - 1) {
             deniedPermissionArray[i] = deniedPermission.get(i)
         }
