@@ -23,8 +23,8 @@
     <!-- 用于申请获取蓝牙信息进行室内定位 -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-    <!--锁屏权限-->
-    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <!-- 锁屏权限 -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
 
     <application
         android:name="com.DemoApplication"
@@ -125,7 +125,8 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name="com.lockscreen.LockMainActivity"></activity>
+        <activity android:name="com.lockscreen.LockMainActivity" />
+        <activity android:name="com.commonActivities.CityPickerActivity"></activity>
     </application>
 
 </manifest>

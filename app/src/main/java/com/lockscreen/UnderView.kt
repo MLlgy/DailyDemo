@@ -39,6 +39,6 @@ class UnderView : View {
 
     private fun handToMoveView(nx: Float) {
         var moveX: Float = nx - mStartx!!.toInt()
-        moveX =
+        if (moveX < 0) moveX = 0F
     }
 }

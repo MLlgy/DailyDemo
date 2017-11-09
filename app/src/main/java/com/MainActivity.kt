@@ -81,6 +81,7 @@ class MainActivity : BaseActivity(), View.OnClickListener, CheckPermissionsListe
         findViewById<View>(R.id.tv_drag_recyclerview).setOnClickListener(this)
         findViewById<View>(R.id.tv_edit_menu).setOnClickListener(this)
         findViewById<View>(R.id.tv_get_permission).setOnClickListener(this)
+        findViewById<View>(R.id.tv_city_picker).setOnClickListener(this)
     }
 
     override fun attachBaseContext(newBase: Context) {
@@ -135,6 +136,7 @@ class MainActivity : BaseActivity(), View.OnClickListener, CheckPermissionsListe
             R.id.tv_drag_recyclerview -> startActivity(Intent(this, DragRecyclerViewActivity::class.java))
             R.id.tv_edit_menu -> startActivity(Intent(this, TotalMenuActivity::class.java))
             R.id.tv_get_permission -> requestPermission(this, needPermission, this)
+            R.id.tv_city_picker -> startActivity(Intent(this,CityPickerActivity::class.java))
             else -> {}
         }//                startActivity(new Intent(this, ExceptionCatchActivity.class));
         //                startActivity(new Intent(this, EditMenuActivity.class));

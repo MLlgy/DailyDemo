@@ -97,8 +97,8 @@ public class UnderViews extends View {
             animator.addListener(new AnimatorListenerAdapter() {
                 @Override
                 public void onAnimationEnd(Animator animation) {
-                    mainHandler.obtainMessage(LockscreenActivity.MSG_LAUNCH_HOME).sendToTarget();
-                    super.onAnimationEnd(animation);
+//                    mainHandler.obtainMessage(LockscreenActivity.MSG_LAUNCH_HOME).sendToTarget();
+//                    super.onAnimationEnd(animation);
                 }
             });
         }
