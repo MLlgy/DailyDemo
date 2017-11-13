@@ -2,6 +2,7 @@ package com
 
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -82,6 +83,7 @@ class MainActivity : BaseActivity(), View.OnClickListener, CheckPermissionsListe
         findViewById<View>(R.id.tv_edit_menu).setOnClickListener(this)
         findViewById<View>(R.id.tv_get_permission).setOnClickListener(this)
         findViewById<View>(R.id.tv_city_picker).setOnClickListener(this)
+        findViewById<View>(R.id.tv_open_app).setOnClickListener(this)
     }
 
     override fun attachBaseContext(newBase: Context) {
@@ -136,8 +138,13 @@ class MainActivity : BaseActivity(), View.OnClickListener, CheckPermissionsListe
             R.id.tv_drag_recyclerview -> startActivity(Intent(this, DragRecyclerViewActivity::class.java))
             R.id.tv_edit_menu -> startActivity(Intent(this, TotalMenuActivity::class.java))
             R.id.tv_get_permission -> requestPermission(this, needPermission, this)
-            R.id.tv_city_picker -> startActivity(Intent(this,CityPickerActivity::class.java))
-            else -> {}
+            R.id.tv_city_picker -> startActivity(Intent(this, CityPickerActivity::class.java))
+            R.id.tv_open_app -> {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("muheda://muheda"))
+                startActivity(intent)
+            }
+            else -> {
+            }
         }//                startActivity(new Intent(this, ExceptionCatchActivity.class));
         //                startActivity(new Intent(this, EditMenuActivity.class));
     }

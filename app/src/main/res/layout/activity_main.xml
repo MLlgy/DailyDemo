@@ -14,6 +14,13 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/tv_open_app"
+            style="@style/main_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="打开app" />
+
+        <TextView
             android:id="@+id/tv_city_picker"
             style="@style/main_textview"
             android:layout_width="match_parent"
