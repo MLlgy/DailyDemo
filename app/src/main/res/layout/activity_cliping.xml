@@ -4,23 +4,27 @@
     android:id="@+id/activity_cliping"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     android:orientation="vertical"
     tools:context="com.androidwebviewdemo.mddemo.ClipingActivity">
 
     <TextView
         android:id="@+id/tv_rect"
-        android:layout_marginTop="20dp"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:elevation="1dp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:elevation="1dp" />
+
     <TextView
         android:id="@+id/tv_circle"
-        android:layout_marginTop="20dp"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:elevation="1dp"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:elevation="1dp" />
 
 
 </LinearLayout>
