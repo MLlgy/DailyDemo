@@ -126,7 +126,8 @@
             android:exported="true" />
 
         <activity android:name="com.lockscreen.LockMainActivity" />
-        <activity android:name="com.commonActivities.CityPickerActivity"></activity>
+        <activity android:name="com.commonActivities.CityPickerActivity" />
+        <activity android:name="com.commonActivities.ScrollViewActivity"></activity>
     </application>
 
 </manifest>

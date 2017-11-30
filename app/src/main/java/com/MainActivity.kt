@@ -84,6 +84,7 @@ class MainActivity : BaseActivity(), View.OnClickListener, CheckPermissionsListe
         findViewById<View>(R.id.tv_get_permission).setOnClickListener(this)
         findViewById<View>(R.id.tv_city_picker).setOnClickListener(this)
         findViewById<View>(R.id.tv_open_app).setOnClickListener(this)
+        findViewById<View>(R.id.tv_image_scroll).setOnClickListener(this)
     }
 
     override fun attachBaseContext(newBase: Context) {
@@ -139,6 +140,7 @@ class MainActivity : BaseActivity(), View.OnClickListener, CheckPermissionsListe
             R.id.tv_edit_menu -> startActivity(Intent(this, TotalMenuActivity::class.java))
             R.id.tv_get_permission -> requestPermission(this, needPermission, this)
             R.id.tv_city_picker -> startActivity(Intent(this, CityPickerActivity::class.java))
+            R.id.tv_image_scroll -> startActivity(Intent(this, ScrollViewActivity::class.java))
             R.id.tv_open_app -> {
                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse("muheda://muheda"))
                 startActivity(intent)
