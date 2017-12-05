@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.commonActivities.AndPermissionActivity">
+
+    <TextView
+        android:id="@+id/tv_permission_request_listener_callback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/trans_blue2"
+        android:gravity="center"
+        android:padding="@dimen/dp_20"
+        android:text="listener回调"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_large" />
+</LinearLayout>
