@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_coor_app_bar"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".meterial_design.CoorAppBarActivity">
+    android:layout_height="match_parent">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

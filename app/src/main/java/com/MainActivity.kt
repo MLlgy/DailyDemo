@@ -41,7 +41,6 @@ class MainActivity : BaseActivity(), View.OnClickListener, CheckPermissionsListe
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         findViewById<View>(R.id.tv_palette).setOnClickListener(this)
         findViewById<View>(R.id.tv_z_show).setOnClickListener(this)
         findViewById<View>(R.id.tv_tinting).setOnClickListener(this)
@@ -86,6 +85,7 @@ class MainActivity : BaseActivity(), View.OnClickListener, CheckPermissionsListe
         findViewById<View>(R.id.tv_open_app).setOnClickListener(this)
         findViewById<View>(R.id.tv_image_scroll).setOnClickListener(this)
         findViewById<View>(R.id.tv_add_permission).setOnClickListener(this)
+        findViewById<View>(R.id.tv_icon_bang).setOnClickListener(this)
     }
 
     override fun attachBaseContext(newBase: Context) {
@@ -143,6 +143,7 @@ class MainActivity : BaseActivity(), View.OnClickListener, CheckPermissionsListe
             R.id.tv_city_picker -> startActivity(Intent(this, CityPickerActivity::class.java))
             R.id.tv_image_scroll -> startActivity(Intent(this, ScrollViewActivity::class.java))
             R.id.tv_add_permission -> startActivity(Intent(this, AdActivity::class.java))
+            R.id.tv_icon_bang -> startActivity(Intent(this, IconBangActivity::class.java))
             R.id.tv_open_app -> {
                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse("muheda://muheda"))
                 startActivity(intent)

@@ -128,8 +128,9 @@
         <activity android:name="com.lockscreen.LockMainActivity" />
         <activity android:name="com.commonActivities.CityPickerActivity" />
         <activity android:name="com.commonActivities.ScrollViewActivity" />
-        <activity android:name="com.commonActivities.AndPermissionActivity"/>
+        <activity android:name="com.commonActivities.AndPermissionActivity" />
         <activity android:name="com.commonActivities.AdActivity" />
+        <activity android:name="com.commonActivities.IconBangActivity"></activity>
     </application>
 
 </manifest>

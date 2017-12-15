@@ -13,6 +13,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <TextView
+            android:id="@+id/tv_icon_bang"
+            style="@style/main_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="IconBang" />
+
+        <TextView
             android:id="@+id/tv_add_permission"
             style="@style/main_textview"
             android:layout_width="match_parent"
