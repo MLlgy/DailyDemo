@@ -130,7 +130,8 @@
         <activity android:name="com.commonActivities.ScrollViewActivity" />
         <activity android:name="com.commonActivities.AndPermissionActivity" />
         <activity android:name="com.commonActivities.AdActivity" />
-        <activity android:name="com.commonActivities.IconBangActivity"></activity>
+        <activity android:name="com.commonActivities.IconBangActivity" />
+        <activity android:name="com.commonActivities.CustomEditActivity"></activity>
     </application>
 
 </manifest>

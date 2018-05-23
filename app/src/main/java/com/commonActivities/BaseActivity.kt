@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.ActivityCompat
 import com.interfaces.CheckPermissionsListener
-import com.umeng.message.PushAgent
+//import com.umeng.message.PushAgent
 import com.utils.isAppLive
 
 open class BaseActivity : AppCompatActivity() {
@@ -26,7 +26,7 @@ open class BaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        PushAgent.getInstance(this).onAppStart();
+//        PushAgent.getInstance(this).onAppStart()
     }
 
     open fun requestPermission(activity: Activity, permissions: Array<String>, listener: CheckPermissionsListener) {

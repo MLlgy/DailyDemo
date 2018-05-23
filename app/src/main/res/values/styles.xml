@@ -18,7 +18,9 @@
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="android:Theme.Material.Light" />
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
+
     <style name="base_tint">
         <item name="android:layout_width">90dp</item>
         <item name="android:layout_height">90dp</item>
@@ -40,13 +42,13 @@
 
     <!--加载提示-->
     <declare-styleable name="CircularProgressBar">
-        <attr name="cpbStyle" format="reference"/>
-        <attr name="cpb_color" format="color"/>
-        <attr name="cpb_stroke_width" format="dimension"/>
-        <attr name="cpb_min_sweep_angle" format="integer"/>
-        <attr name="cpb_max_sweep_angle" format="integer"/>
-        <attr name="cpb_sweep_speed" format="float"/>
-        <attr name="cpb_rotation_speed" format="float"/>
+        <attr name="cpbStyle" format="reference" />
+        <attr name="cpb_color" format="color" />
+        <attr name="cpb_stroke_width" format="dimension" />
+        <attr name="cpb_min_sweep_angle" format="integer" />
+        <attr name="cpb_max_sweep_angle" format="integer" />
+        <attr name="cpb_sweep_speed" format="float" />
+        <attr name="cpb_rotation_speed" format="float" />
     </declare-styleable>
 
     <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -57,7 +59,7 @@
     </style>
 
     <!-- Base application theme. -->
-    <style name="StatusBarAppTheme" parent="@style/BaseAppTheme"/>
+    <style name="StatusBarAppTheme" parent="@style/BaseAppTheme" />
 
     <!--自定义字体样式和继承关系-->
     <style name="TextField" parent="android:Widget.Holo.Light.TextView">
@@ -73,11 +75,13 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
     </style>
+
     <style name="ButtonTheme">
         <item name="android:textSize">15.0sp</item>
         <item name="android:textColor">@drawable/text_button</item>
         <item name="android:background">@drawable/back_button</item>
     </style>
+
     <style name="LeftButton">
         <item name="android:textSize">15.0sp</item>
         <item name="android:textColor">@drawable/text_button</item>
@@ -85,6 +89,7 @@
         <item name="android:typeface">sans</item>
         <item name="android:textAllCaps">false</item>
     </style>
+
     <style name="RightButton">
         <item name="android:textSize">15.0sp</item>
         <item name="android:textColor">@drawable/text_button</item>
@@ -92,20 +97,42 @@
         <item name="android:typeface">sans</item>
         <item name="android:textAllCaps">false</item>
     </style>
+
     <style name="TextThemeOne">
         <item name="android:textSize">20.0sp</item>
         <item name="android:textColor">#2d2d2d</item>
         <item name="android:background">@drawable/back_text</item>
     </style>
+
     <style name="TextThemeTwo">
         <item name="android:textSize">17.0sp</item>
         <item name="android:textColor">#7d7d7d</item>
         <item name="android:background">#ffffff</item>
     </style>
+
     <style name="TextThemeThree">
         <item name="android:textSize">14.0sp</item>
         <item name="android:textColor">#cccccc</item>
         <item name="android:background">#ffffff</item>
     </style>
+
+    <style name="CustomPasswordViewEditText">
+        <item name="android:cursorVisible">false</item>
+    </style>
+
+    <style name="CustomPasswordViewTextView">
+
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">37.5dp</item>
+        <!--<item name="android:background">@null</item>-->
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@drawable/login_mobile_msg_gray_line</item>
+    </style>
+
+    <!--<style name="app_style.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />-->
+
+    <!--<style name="app_style.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->
 
 </resources>

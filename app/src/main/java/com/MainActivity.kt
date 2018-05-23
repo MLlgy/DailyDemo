@@ -41,6 +41,7 @@ class MainActivity : BaseActivity(), View.OnClickListener, CheckPermissionsListe
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        findViewById<View>(R.id.tv_custom_edit).setOnClickListener(this)
         findViewById<View>(R.id.tv_palette).setOnClickListener(this)
         findViewById<View>(R.id.tv_z_show).setOnClickListener(this)
         findViewById<View>(R.id.tv_tinting).setOnClickListener(this)
@@ -95,6 +96,7 @@ class MainActivity : BaseActivity(), View.OnClickListener, CheckPermissionsListe
 
     override fun onClick(v: View) {
         when (v.id) {
+            R.id.tv_custom_edit -> startActivity(Intent(this,CustomEditActivity::class.java))
             R.id.tv_palette -> startActivity(Intent(this, PaletteActivity::class.java))
             R.id.tv_z_show -> startActivity(Intent(this, ZActivity::class.java))
             R.id.tv_tinting -> startActivity(Intent(this, TintingActivity::class.java))

@@ -86,4 +86,6 @@
     <color name="lineColor_unclick">#9b9b9b</color>
     <color name="colorDeafult">#9b9b9b</color>
     <color name="colorfocus">#1296db</color>
+    <color name="font_public_dark">#555555</color>
+    <color name="font_public_gray">#999999</color>
 </resources>

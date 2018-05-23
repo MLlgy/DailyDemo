@@ -50,4 +50,20 @@
 
         <attr name="cursor" format="reference" />
     </declare-styleable>
+
+    <declare-styleable name="CustomPasswordView">
+        <attr name="npvTextColor" format="color|reference" />
+        <attr name="npvTextSize" format="dimension" />
+        <attr name="npvLineColor" format="color" />
+        <attr name="npvGridColor" format="color" />
+        <attr name="npvLineWidth" format="dimension" />
+        <attr name="npvPasswordLength" format="integer" />
+        <attr name="npvPasswordTransformation" format="string" />
+        <attr name="npvPasswordType" format="enum">
+            <enum name="numberPassword" value="0" />
+            <enum name="textPassword" value="1" />
+            <enum name="textVisiblePassword" value="2" />
+            <enum name="textWebPassword" value="3" />
+        </attr>
+    </declare-styleable>
 </resources>

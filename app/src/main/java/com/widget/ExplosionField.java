@@ -21,7 +21,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-import anet.channel.util.Utils;
+//import anet.channel.util.Utils;
 
 /**
  * @author liguoying
