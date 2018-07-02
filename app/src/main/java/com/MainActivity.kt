@@ -42,6 +42,7 @@ class MainActivity : BaseActivity(), View.OnClickListener, CheckPermissionsListe
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         findViewById<View>(R.id.tv_custom_edit).setOnClickListener(this)
+        findViewById<View>(R.id.tv_custom_edit).setOnClickListener(this)
         findViewById<View>(R.id.tv_palette).setOnClickListener(this)
         findViewById<View>(R.id.tv_z_show).setOnClickListener(this)
         findViewById<View>(R.id.tv_tinting).setOnClickListener(this)
