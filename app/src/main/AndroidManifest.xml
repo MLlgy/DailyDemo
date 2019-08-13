@@ -1,30 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.androidwebviewdemo.mddemo">
-
     <!-- 用于进行网络定位 -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <!-- 用于访问GPS定位 -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <!-- 用于获取运营商信息，用于支持提供运营商信息相关的接口 -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <!-- 用于访问网络，网络定位需要上网 -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!-- 用于读取手机当前的状态 -->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <!-- 用于写入缓存数据到扩展存储卡 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 用于写入缓存数据到扩展存储卡 -->
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!-- 用于申请调用A-GPS模块 -->
-    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
-    <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" /> <!-- 用于申请获取蓝牙信息进行室内定位 -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-    <!-- 锁屏权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> <!-- 锁屏权限 -->
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
 
     <application
@@ -34,6 +23,10 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/app_style">
+        <activity android:name="com.learn_recyclerview.SectionActivity"></activity>
+        <activity android:name="com.learn_recyclerview.SeparatorLineActivity" />
+        <activity android:name="com.learn_recyclerview.PaddingRecyclerViewActivity" />
+        <activity android:name="com.learn_recyclerview.RecyclerViewLearnActivity" />
         <activity android:name="com.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -60,8 +53,7 @@
         <activity android:name="com.sigleThreadDownloadFile.DownloaderFileActivity" />
         <activity android:name="com.mutiThreadsDownloadFile.MutiThreadsDownloadFileActivity" />
         <activity android:name="com.permissionRequest_6.PerssionRequestTestActivity" />
-        <activity android:name="com.numberRunner.NumberRunnerMainActivity" />
-        <!-- 服务 -->
+        <activity android:name="com.numberRunner.NumberRunnerMainActivity" /> <!-- 服务 -->
         <service android:name="com.sigleThreadDownloadFile.services.DownLoadService" />
         <service android:name="com.mutiThreadsDownloadFile.services.MutThreadsDownLoadService" />
 
@@ -100,8 +92,7 @@
         <activity android:name="com.meterial_design.SumMDActivity" />
         <activity android:name="com.meterial_design.CoordinatorActivity" />
         <activity android:name="com.meterial_design.CoorAppBarActivity" />
-        <activity android:name="com.meterial_design.CoorToolBarActivity" />
-        <!-- android:theme="@style/StatusBarAppTheme" -->
+        <activity android:name="com.meterial_design.CoorToolBarActivity" /> <!-- android:theme="@style/StatusBarAppTheme" -->
         <activity android:name="com.meterial_design.StatusBarActivity" />
         <activity android:name="com.tracedraw.TraceDrawActivity" />
         <activity android:name="com.commonActivities.BarChartViewActivity" />
@@ -132,7 +123,7 @@
         <activity android:name="com.commonActivities.AndPermissionActivity" />
         <activity android:name="com.commonActivities.AdActivity" />
         <activity android:name="com.commonActivities.IconBangActivity" />
-        <activity android:name="com.commonActivities.CustomEditActivity"></activity>
+        <activity android:name="com.commonActivities.CustomEditActivity" />
     </application>
 
 </manifest>

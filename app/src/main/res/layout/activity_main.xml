@@ -14,7 +14,12 @@
         android:orientation="vertical">
 
 
-
+        <TextView
+            android:id="@+id/tv_recyclerview"
+            style="@style/main_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RecyclerView 学习" />
 
         <TextView
             android:id="@+id/tv_custom_edit"

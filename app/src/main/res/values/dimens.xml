@@ -18,6 +18,7 @@
     <dimen name="dp_16">16dp</dimen>
     <dimen name="dp_18">18dp</dimen>
     <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_40">40dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="appbar_padding_top">8dp</dimen>
 </resources>

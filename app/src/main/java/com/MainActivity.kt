@@ -12,6 +12,7 @@ import com.commonActivities.*
 import com.androidwebviewdemo.mddemo.*
 import com.designer.DesignerModeActivity
 import com.interfaces.CheckPermissionsListener
+import com.learn_recyclerview.RecyclerViewLearnActivity
 import com.lidroid.xutils.util.LogUtils
 import com.mengban.MengBanActivity
 import com.meterial_design.SumMDActivity
@@ -88,6 +89,7 @@ class MainActivity : BaseActivity(), View.OnClickListener, CheckPermissionsListe
         findViewById<View>(R.id.tv_image_scroll).setOnClickListener(this)
         findViewById<View>(R.id.tv_add_permission).setOnClickListener(this)
         findViewById<View>(R.id.tv_icon_bang).setOnClickListener(this)
+        findViewById<View>(R.id.tv_recyclerview).setOnClickListener(this)
     }
 
     override fun attachBaseContext(newBase: Context) {
@@ -97,6 +99,7 @@ class MainActivity : BaseActivity(), View.OnClickListener, CheckPermissionsListe
 
     override fun onClick(v: View) {
         when (v.id) {
+            R.id.tv_recyclerview ->startActivity(Intent(this, RecyclerViewLearnActivity::class.java))
             R.id.tv_custom_edit -> startActivity(Intent(this,CustomEditActivity::class.java))
             R.id.tv_palette -> startActivity(Intent(this, PaletteActivity::class.java))
             R.id.tv_z_show -> startActivity(Intent(this, ZActivity::class.java))
